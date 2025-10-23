@@ -1,0 +1,292 @@
+========================================
+🚀 FG-CLIP UCF 正式训练启动
+========================================
+📊 数据统计:
+  - 训练视频: 232个
+  - 数据文件: ucf_fgclip_train_final.json
+  - 数据大小: 1.6M
+
+🎯 训练配置:
+  - 帧数: 256
+  - 批次大小: 2
+  - 梯度累积: 8
+  - 有效批次: 16
+  - 训练轮数: 10
+
+� 模型配置:
+  - CLIP模型: ViT-B/32 (本地加载)
+  - 本地路径: ./fgclip/model/clip
+  - 网络需求: ❌ 无需联网
+
+�💾 输出目录: ./checkpoints/fgclip_ucf_full
+🖥️  GPU设备: 0
+========================================
+
+⏰ 训练开始时间: 2025-10-12 22:52:24
+/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+============================================================
+Loading CLIP components (LOCAL MODE - No Internet Required)
+============================================================
+Loading tokenizer for: ViT-B/32
+  ✓ Tokenizer loaded (local CLIP)
+Loading image processor for: ViT-B/32
+  ✓ Image processor loaded (local CLIP)
+Initializing FG-CLIP model: ViT-B/32
+  ✓ Model initialized (random weights)
+============================================================
+Loading data from: /data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_train_final.json
+  → Detected list format (new)
+Total videos loaded: 232
+  - Normal videos: 0
+  - Abnormal videos: 232
+  0%|          | 0/140 [00:00<?, ?it/s]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0001, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0039, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.6943359375
+[LOSS] Total: 0.8038 | Global: 0.7344 | Region: 0.6943 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0011, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0041, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.697265625
+[LOSS] Total: 0.8168 | Global: 0.7471 | Region: 0.6973 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0008, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0027, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.701171875
+[LOSS] Total: 0.8152 | Global: 0.7451 | Region: 0.7012 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=0.0016, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0024, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.6943359375
+[LOSS] Total: 0.7687 | Global: 0.6992 | Region: 0.6943 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0012, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0031, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.3515625
+[LOSS] Total: 0.7992 | Global: 0.6641 | Region: 1.3516 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0004, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0026, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.72021484375
+[LOSS] Total: 0.9993 | Global: 0.9272 | Region: 0.7202 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0007, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0029, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.693359375
+[LOSS] Total: 0.7969 | Global: 0.7275 | Region: 0.6934 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=0.0015, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0039, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.6923828125
+[LOSS] Total: 0.8893 | Global: 0.8201 | Region: 0.6924 | HardNeg: 0.0000
+  1%|          | 1/140 [00:23<53:36, 23.14s/it]
+[DEBUG Region] valid_count=4
+  bbox_image_embeds: shape=torch.Size([4, 512]), mean=0.0007, std=0.0383, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([4, 512]), mean=0.0037, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.35693359375
+[LOSS] Total: 1.2407 | Global: 1.1050 | Region: 1.3569 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0002, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0043, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.1126301288604736
+[LOSS] Total: 0.8784 | Global: 0.7671 | Region: 1.1126 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0009, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0027, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.72802734375
+[LOSS] Total: 0.7754 | Global: 0.7026 | Region: 0.7280 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0012, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0029, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.701171875
+[LOSS] Total: 0.8362 | Global: 0.7661 | Region: 0.7012 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0009, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0039, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.72509765625
+[LOSS] Total: 0.8958 | Global: 0.8232 | Region: 0.7251 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0006, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0039, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.3125
+[LOSS] Total: 0.9892 | Global: 0.8579 | Region: 1.3125 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0014, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0027, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.7119140625
+[LOSS] Total: 0.8329 | Global: 0.7617 | Region: 0.7119 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0011, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0043, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.19921875
+[LOSS] Total: 0.8821 | Global: 0.7622 | Region: 1.1992 | HardNeg: 0.0000
+  1%|▏         | 2/140 [00:58<1:09:38, 30.28s/it]
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0022, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0031, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.701171875
+[LOSS] Total: 0.7903 | Global: 0.7202 | Region: 0.7012 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=0.0004, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0024, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.1588541269302368
+[LOSS] Total: 0.9757 | Global: 0.8599 | Region: 1.1589 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0001, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0033, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.11328125
+[LOSS] Total: 0.8972 | Global: 0.7859 | Region: 1.1133 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=0.0010, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0032, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.73876953125
+[LOSS] Total: 0.9359 | Global: 0.8621 | Region: 0.7388 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0008, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0036, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.6923828125
+[LOSS] Total: 0.7616 | Global: 0.6924 | Region: 0.6924 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0004, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0032, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.171875
+[LOSS] Total: 0.8945 | Global: 0.7773 | Region: 1.1719 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0008, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0038, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.0670572519302368
+[LOSS] Total: 0.9275 | Global: 0.8208 | Region: 1.0671 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0006, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0045, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.7021484375
+[LOSS] Total: 0.8546 | Global: 0.7844 | Region: 0.7021 | HardNeg: 0.0000
+  2%|▏         | 3/140 [01:15<55:38, 24.37s/it]  
+[DEBUG Region] valid_count=5
+  bbox_image_embeds: shape=torch.Size([5, 512]), mean=-0.0004, std=0.0342, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([5, 512]), mean=0.0038, std=0.0440, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.599218726158142
+[LOSS] Total: 0.8543 | Global: 0.6943 | Region: 1.5992 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0009, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0034, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.693359375
+[LOSS] Total: 0.7949 | Global: 0.7256 | Region: 0.6934 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0007, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0035, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.1647136211395264
+[LOSS] Total: 0.8108 | Global: 0.6943 | Region: 1.1647 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=0.0010, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0035, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.69140625
+[LOSS] Total: 0.6907 | Global: 0.6216 | Region: 0.6914 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=0.0017, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0024, std=0.0442, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.697265625
+[LOSS] Total: 0.7885 | Global: 0.7188 | Region: 0.6973 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=3
+  bbox_image_embeds: shape=torch.Size([3, 512]), mean=-0.0012, std=0.0361, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([3, 512]), mean=0.0034, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 1.1458332538604736
+[LOSS] Total: 1.0472 | Global: 0.9326 | Region: 1.1458 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=0.0006, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0028, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.70703125
+[LOSS] Total: 0.7367 | Global: 0.6660 | Region: 0.7070 | HardNeg: 0.0000
+
+[DEBUG Region] valid_count=2
+  bbox_image_embeds: shape=torch.Size([2, 512]), mean=-0.0002, std=0.0442, has_nan=False, has_inf=False
+  bbox_text_embeds: shape=torch.Size([2, 512]), mean=0.0034, std=0.0441, has_nan=False, has_inf=False
+  logit_scale_finegraind: 2.6562
+  loss_bbox_itcl: 0.6953125
+[LOSS] Total: 0.7814 | Global: 0.7119 | Region: 0.6953 | HardNeg: 0.0000
+  3%|▎         | 4/140 [01:31<47:41, 21.04s/it]

@@ -1,0 +1,49 @@
+========================================
+🚀 FG-CLIP UCF 正式训练启动
+========================================
+📊 数据统计:
+  - 训练视频: 232个
+  - 数据文件: ucf_fgclip_train_final.json
+  - 数据大小: 1.6M
+
+🎯 训练配置:
+  - 帧数: 256
+  - 批次大小: 2
+  - 梯度累积: 8
+  - 有效批次: 16
+  - 训练轮数: 10
+
+� 模型配置:
+  - CLIP模型: ViT-B/32 (本地加载)
+  - 本地路径: ./fgclip/model/clip
+  - 网络需求: ❌ 无需联网
+
+�💾 输出目录: ./checkpoints/fgclip_ucf_full
+🖥️  GPU设备: 0
+========================================
+
+⏰ 训练开始时间: 2025-10-12 22:38:56
+Traceback (most recent call last):
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py", line 16, in <module>
+    from fgclip.train.clean_clip_trainer import CLIPTrainer
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/__init__.py", line 1, in <module>
+    from .model import *
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/__init__.py", line 1, in <module>
+    from .clip_strc.fgclip import *
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/clip_strc/__init__.py", line 1, in <module>
+    from .fgclip import *
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/clip_strc/fgclip.py", line 16
+    from transformers import (
+                             ^
+SyntaxError: '(' was never closed
+
+========================================
+❌ 训练异常退出 (Exit Code: 1)
+========================================
+⏰ 开始时间: 2025-10-12 22:38:56
+⏰ 结束时间: 2025-10-12 22:38:58
+
+📂 输出目录: ./checkpoints/fgclip_ucf_full
+📊 TensorBoard: tensorboard --logdir ./checkpoints/fgclip_ucf_full --port 6006
+📝 训练日志: tail -f ./checkpoints/fgclip_ucf_full/trainer_log.txt
+========================================

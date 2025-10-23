@@ -1,0 +1,1394 @@
+========================================
+🚀 FG-CLIP UCF 正式训练启动
+========================================
+📊 数据统计:
+  - 训练视频: 232个
+  - 数据文件: ucf_fgclip_train_final.json
+  - 数据大小: 1.6M
+
+🎯 训练配置:
+  - 帧数: 256
+  - 批次大小: 2
+  - 梯度累积: 8
+  - 有效批次: 16
+  - 训练轮数: 10
+
+� 模型配置:
+  - CLIP模型: ViT-B/32 (本地加载)
+  - 本地路径: ./fgclip/model/clip
+  - 网络需求: ❌ 无需联网
+
+�💾 输出目录: ./checkpoints/fgclip_ucf_full
+🖥️  GPU设备: 0
+========================================
+
+⏰ 训练开始时间: 2025-10-12 23:06:22
+/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+============================================================
+Loading CLIP components (LOCAL MODE - No Internet Required)
+============================================================
+Loading tokenizer for: ViT-B/32
+  ✓ Tokenizer loaded (local CLIP)
+Loading image processor for: ViT-B/32
+  ✓ Image processor loaded (local CLIP)
+Initializing FG-CLIP model: ViT-B/32
+  ✓ Model initialized (random weights)
+============================================================
+Loading data from: /data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_train_final.json
+  → Detected list format (new)
+Total videos loaded: 232
+  - Normal videos: 0
+  - Abnormal videos: 232
+  0%|          | 0/140 [00:00<?, ?it/s]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.7832 | Global: 0.7139 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8171 | Global: 0.7476 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8970 | Global: 0.8276 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8583 | Global: 0.7856 | Region: 0.7271 | HardNeg: 0.0000
+[LOSS] Total: 0.8762 | Global: 0.7734 | Region: 1.0280 | HardNeg: 0.0000
+[LOSS] Total: 0.8340 | Global: 0.7646 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7843 | Global: 0.7148 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7495 | Global: 0.6802 | Region: 0.6934 | HardNeg: 0.0000
+  1%|          | 1/140 [00:23<54:00, 23.31s/it][LOSS] Total: 1.0921 | Global: 0.9365 | Region: 1.5557 | HardNeg: 0.0000
+[LOSS] Total: 0.8686 | Global: 0.7583 | Region: 1.1029 | HardNeg: 0.0000
+[LOSS] Total: 0.7229 | Global: 0.6528 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7453 | Global: 0.6748 | Region: 0.7051 | HardNeg: 0.0000
+[LOSS] Total: 0.9871 | Global: 0.9170 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.8222 | Global: 0.7148 | Region: 1.0736 | HardNeg: 0.0000
+[LOSS] Total: 0.7637 | Global: 0.6943 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7977 | Global: 0.6826 | Region: 1.1510 | HardNeg: 0.0000
+  1%|▏         | 2/140 [00:58<1:09:55, 30.40s/it][LOSS] Total: 0.8118 | Global: 0.7422 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 1.0699 | Global: 0.9556 | Region: 1.1432 | HardNeg: 0.0000
+[LOSS] Total: 0.8661 | Global: 0.7451 | Region: 1.2103 | HardNeg: 0.0000
+[LOSS] Total: 0.7582 | Global: 0.6890 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8322 | Global: 0.7627 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8445 | Global: 0.7334 | Region: 1.1113 | HardNeg: 0.0000
+[LOSS] Total: 0.8444 | Global: 0.7329 | Region: 1.1146 | HardNeg: 0.0000
+[LOSS] Total: 0.7823 | Global: 0.7129 | Region: 0.6943 | HardNeg: 0.0000
+  2%|▏         | 3/140 [01:16<55:52, 24.47s/it]  [LOSS] Total: 0.8670 | Global: 0.6943 | Region: 1.7266 | HardNeg: 0.0000
+[LOSS] Total: 0.7300 | Global: 0.6606 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8064 | Global: 0.6914 | Region: 1.1497 | HardNeg: 0.0000
+[LOSS] Total: 0.8076 | Global: 0.7344 | Region: 0.7319 | HardNeg: 0.0000
+[LOSS] Total: 0.7989 | Global: 0.7285 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.8083 | Global: 0.6958 | Region: 1.1250 | HardNeg: 0.0000
+[LOSS] Total: 0.8518 | Global: 0.7822 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8410 | Global: 0.7705 | Region: 0.7051 | HardNeg: 0.0000
+  3%|▎         | 4/140 [01:32<47:55, 21.14s/it][LOSS] Total: 0.8711 | Global: 0.7354 | Region: 1.3574 | HardNeg: 0.0000
+[LOSS] Total: 0.8234 | Global: 0.7158 | Region: 1.0755 | HardNeg: 0.0000
+[LOSS] Total: 0.7059 | Global: 0.6362 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8438 | Global: 0.7734 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.8884 | Global: 0.7129 | Region: 1.7547 | HardNeg: 0.0000
+[LOSS] Total: 0.8209 | Global: 0.7515 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8991 | Global: 0.8296 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8877 | Global: 0.8184 | Region: 0.6934 | HardNeg: 0.0000
+  4%|▎         | 5/140 [03:29<2:05:19, 55.70s/it][LOSS] Total: 0.8000 | Global: 0.7280 | Region: 0.7202 | HardNeg: 0.0000
+[LOSS] Total: 0.8786 | Global: 0.6992 | Region: 1.7943 | HardNeg: 0.0000
+[LOSS] Total: 0.9070 | Global: 0.8320 | Region: 0.7500 | HardNeg: 0.0000
+[LOSS] Total: 0.9424 | Global: 0.8733 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8270 | Global: 0.6650 | Region: 1.6195 | HardNeg: 0.0000
+[LOSS] Total: 0.7688 | Global: 0.6992 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8122 | Global: 0.6934 | Region: 1.1882 | HardNeg: 0.0000
+[LOSS] Total: 0.9667 | Global: 0.8254 | Region: 1.4121 | HardNeg: 0.0000
+  4%|▍         | 6/140 [03:38<1:29:29, 40.07s/it][LOSS] Total: 0.7374 | Global: 0.6680 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8289 | Global: 0.7056 | Region: 1.2331 | HardNeg: 0.0000
+[LOSS] Total: 0.7853 | Global: 0.7158 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8212 | Global: 0.6821 | Region: 1.3906 | HardNeg: 0.0000
+[LOSS] Total: 0.8180 | Global: 0.6763 | Region: 1.4170 | HardNeg: 0.0000
+[LOSS] Total: 0.7781 | Global: 0.6709 | Region: 1.0723 | HardNeg: 0.0000
+[LOSS] Total: 0.9442 | Global: 0.8750 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8873 | Global: 0.8179 | Region: 0.6943 | HardNeg: 0.0000
+  5%|▌         | 7/140 [03:52<1:09:51, 31.52s/it][LOSS] Total: 0.8271 | Global: 0.7559 | Region: 0.7129 | HardNeg: 0.0000
+[LOSS] Total: 0.8480 | Global: 0.6807 | Region: 1.6738 | HardNeg: 0.0000
+[LOSS] Total: 0.7858 | Global: 0.7158 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 1.0112 | Global: 0.8750 | Region: 1.3623 | HardNeg: 0.0000
+[LOSS] Total: 0.7461 | Global: 0.6768 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7757 | Global: 0.7056 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7881 | Global: 0.6831 | Region: 1.0495 | HardNeg: 0.0000
+[LOSS] Total: 0.9721 | Global: 0.8567 | Region: 1.1536 | HardNeg: 0.0000
+  6%|▌         | 8/140 [04:07<57:38, 26.20s/it]  [LOSS] Total: 0.8012 | Global: 0.7319 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8173 | Global: 0.6572 | Region: 1.6012 | HardNeg: 0.0000
+[LOSS] Total: 0.7879 | Global: 0.7183 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8146 | Global: 0.6748 | Region: 1.3984 | HardNeg: 0.0000
+[LOSS] Total: 0.8502 | Global: 0.7349 | Region: 1.1530 | HardNeg: 0.0000
+[LOSS] Total: 0.8832 | Global: 0.7305 | Region: 1.5273 | HardNeg: 0.0000
+[LOSS] Total: 0.8793 | Global: 0.7681 | Region: 1.1126 | HardNeg: 0.0000
+[LOSS] Total: 0.7441 | Global: 0.6748 | Region: 0.6934 | HardNeg: 0.0000
+  6%|▋         | 9/140 [04:44<1:04:42, 29.63s/it][LOSS] Total: 0.8297 | Global: 0.7603 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7384 | Global: 0.6646 | Region: 0.7383 | HardNeg: 0.0000
+[LOSS] Total: 0.7626 | Global: 0.6934 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8177 | Global: 0.7397 | Region: 0.7798 | HardNeg: 0.0000
+[LOSS] Total: 0.8291 | Global: 0.7598 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8517 | Global: 0.6875 | Region: 1.6422 | HardNeg: 0.0000
+[LOSS] Total: 0.8797 | Global: 0.8105 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8993 | Global: 0.7217 | Region: 1.7758 | HardNeg: 0.0000
+  7%|▋         | 10/140 [05:09<1:00:57, 28.13s/it]                                                    7%|▋         | 10/140 [05:09<1:00:57, 28.13s/it]{'loss': 0.8363, 'grad_norm': 55.0, 'learning_rate': 3.5714285714285718e-06, 'epoch': 0.69}
+[LOSS] Total: 0.7646 | Global: 0.6953 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7656 | Global: 0.6943 | Region: 0.7124 | HardNeg: 0.0000
+[LOSS] Total: 0.8568 | Global: 0.6709 | Region: 1.8586 | HardNeg: 0.0000
+[LOSS] Total: 0.7246 | Global: 0.6553 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7336 | Global: 0.6621 | Region: 0.7153 | HardNeg: 0.0000
+[LOSS] Total: 0.8099 | Global: 0.6992 | Region: 1.1068 | HardNeg: 0.0000
+[LOSS] Total: 0.8359 | Global: 0.7075 | Region: 1.2842 | HardNeg: 0.0000
+[LOSS] Total: 0.8482 | Global: 0.7778 | Region: 0.7041 | HardNeg: 0.0000
+  8%|▊         | 11/140 [05:19<48:47, 22.70s/it]  [LOSS] Total: 0.8775 | Global: 0.7671 | Region: 1.1042 | HardNeg: 0.0000
+[LOSS] Total: 0.7470 | Global: 0.6777 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7668 | Global: 0.6973 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7616 | Global: 0.6924 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7903 | Global: 0.7207 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8437 | Global: 0.6865 | Region: 1.5719 | HardNeg: 0.0000
+[LOSS] Total: 0.7657 | Global: 0.6963 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8436 | Global: 0.7734 | Region: 0.7012 | HardNeg: 0.0000
+  9%|▊         | 12/140 [05:38<45:43, 21.43s/it][LOSS] Total: 0.8442 | Global: 0.7749 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8932 | Global: 0.7334 | Region: 1.5984 | HardNeg: 0.0000
+[LOSS] Total: 0.7678 | Global: 0.6943 | Region: 0.7349 | HardNeg: 0.0000
+[LOSS] Total: 1.0171 | Global: 0.8452 | Region: 1.7188 | HardNeg: 0.0000
+[LOSS] Total: 0.7861 | Global: 0.7168 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8657 | Global: 0.7964 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7724 | Global: 0.6963 | Region: 0.7607 | HardNeg: 0.0000
+[LOSS] Total: 0.7919 | Global: 0.6816 | Region: 1.1029 | HardNeg: 0.0000
+  9%|▉         | 13/140 [06:05<48:40, 23.00s/it][LOSS] Total: 0.8434 | Global: 0.7700 | Region: 0.7339 | HardNeg: 0.0000
+[LOSS] Total: 0.8477 | Global: 0.7773 | Region: 0.7036 | HardNeg: 0.0000
+[LOSS] Total: 0.7609 | Global: 0.6528 | Region: 1.0807 | HardNeg: 0.0000
+[LOSS] Total: 0.8280 | Global: 0.7131 | Region: 1.1491 | HardNeg: 0.0000
+[LOSS] Total: 0.7413 | Global: 0.6719 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7642 | Global: 0.6948 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8289 | Global: 0.6943 | Region: 1.3457 | HardNeg: 0.0000
+[LOSS] Total: 0.7531 | Global: 0.6836 | Region: 0.6953 | HardNeg: 0.0000
+ 10%|█         | 14/140 [06:39<55:38, 26.50s/it][LOSS] Total: 0.8505 | Global: 0.6953 | Region: 1.5516 | HardNeg: 0.0000
+[LOSS] Total: 0.7755 | Global: 0.7056 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7510 | Global: 0.6807 | Region: 0.7036 | HardNeg: 0.0000
+[LOSS] Total: 0.7599 | Global: 0.6904 | Region: 0.6943 | HardNeg: 0.0000
+ 11%|█         | 15/140 [06:43<41:12, 19.78s/it]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.8475 | Global: 0.7295 | Region: 1.1803 | HardNeg: 0.0000
+[LOSS] Total: 0.8281 | Global: 0.7588 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7643 | Global: 0.6934 | Region: 0.7090 | HardNeg: 0.0000
+[LOSS] Total: 0.8314 | Global: 0.7617 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8984 | Global: 0.8286 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.8275 | Global: 0.7207 | Region: 1.0684 | HardNeg: 0.0000
+[LOSS] Total: 0.7437 | Global: 0.6743 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8178 | Global: 0.7148 | Region: 1.0293 | HardNeg: 0.0000
+ 11%|█▏        | 16/140 [07:35<1:00:32, 29.30s/it][LOSS] Total: 0.6786 | Global: 0.6084 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.8742 | Global: 0.7314 | Region: 1.4277 | HardNeg: 0.0000
+[LOSS] Total: 0.9006 | Global: 0.8018 | Region: 0.9883 | HardNeg: 0.0000
+[LOSS] Total: 0.7892 | Global: 0.7173 | Region: 0.7192 | HardNeg: 0.0000
+[LOSS] Total: 0.8230 | Global: 0.7539 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7842 | Global: 0.7148 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8823 | Global: 0.8130 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8692 | Global: 0.7554 | Region: 1.1387 | HardNeg: 0.0000
+ 12%|█▏        | 17/140 [07:46<49:07, 23.96s/it]  [LOSS] Total: 0.8345 | Global: 0.6904 | Region: 1.4404 | HardNeg: 0.0000
+[LOSS] Total: 0.7451 | Global: 0.6748 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.8781 | Global: 0.7588 | Region: 1.1927 | HardNeg: 0.0000
+[LOSS] Total: 0.7911 | Global: 0.7217 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8065 | Global: 0.7349 | Region: 0.7163 | HardNeg: 0.0000
+[LOSS] Total: 1.0102 | Global: 0.9297 | Region: 0.8054 | HardNeg: 0.0000
+[LOSS] Total: 0.7266 | Global: 0.6572 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8005 | Global: 0.7305 | Region: 0.7002 | HardNeg: 0.0000
+ 13%|█▎        | 18/140 [08:09<48:04, 23.64s/it][LOSS] Total: 0.8662 | Global: 0.7959 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.7795 | Global: 0.7100 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8521 | Global: 0.7363 | Region: 1.1576 | HardNeg: 0.0000
+[LOSS] Total: 0.8507 | Global: 0.7070 | Region: 1.4365 | HardNeg: 0.0000
+[LOSS] Total: 0.8780 | Global: 0.7446 | Region: 1.3340 | HardNeg: 0.0000
+[LOSS] Total: 0.7795 | Global: 0.7100 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7824 | Global: 0.7129 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7658 | Global: 0.6958 | Region: 0.7002 | HardNeg: 0.0000
+ 14%|█▎        | 19/140 [08:30<45:42, 22.66s/it][LOSS] Total: 0.7324 | Global: 0.6631 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7083 | Global: 0.6377 | Region: 0.7061 | HardNeg: 0.0000
+[LOSS] Total: 0.8066 | Global: 0.7373 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.6708 | Global: 0.5977 | Region: 0.7314 | HardNeg: 0.0000
+[LOSS] Total: 0.6847 | Global: 0.6152 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8463 | Global: 0.7378 | Region: 1.0853 | HardNeg: 0.0000
+[LOSS] Total: 0.7818 | Global: 0.7119 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8029 | Global: 0.7251 | Region: 0.7778 | HardNeg: 0.0000
+ 14%|█▍        | 20/140 [08:47<42:26, 21.22s/it]                                                 14%|█▍        | 20/140 [08:47<42:26, 21.22s/it]{'loss': 0.7665, 'grad_norm': 42.25, 'learning_rate': 4.9720770655628216e-06, 'epoch': 1.34}
+[LOSS] Total: 0.8828 | Global: 0.7383 | Region: 1.4453 | HardNeg: 0.0000
+[LOSS] Total: 0.8235 | Global: 0.7529 | Region: 0.7056 | HardNeg: 0.0000
+[LOSS] Total: 0.7399 | Global: 0.6704 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7631 | Global: 0.6938 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8013 | Global: 0.7319 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8963 | Global: 0.7515 | Region: 1.4482 | HardNeg: 0.0000
+[LOSS] Total: 0.8252 | Global: 0.7554 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.6821 | Global: 0.6094 | Region: 0.7275 | HardNeg: 0.0000
+ 15%|█▌        | 21/140 [08:55<33:50, 17.06s/it][LOSS] Total: 0.8097 | Global: 0.7402 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7937 | Global: 0.7227 | Region: 0.7100 | HardNeg: 0.0000
+[LOSS] Total: 0.9131 | Global: 0.7549 | Region: 1.5824 | HardNeg: 0.0000
+[LOSS] Total: 0.8840 | Global: 0.8145 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7627 | Global: 0.6934 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7615 | Global: 0.6514 | Region: 1.1016 | HardNeg: 0.0000
+[LOSS] Total: 0.8196 | Global: 0.6729 | Region: 1.4673 | HardNeg: 0.0000
+[LOSS] Total: 0.8304 | Global: 0.6396 | Region: 1.9076 | HardNeg: 0.0000
+ 16%|█▌        | 22/140 [09:16<35:44, 18.18s/it][LOSS] Total: 0.7642 | Global: 0.6948 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7541 | Global: 0.6392 | Region: 1.1497 | HardNeg: 0.0000
+[LOSS] Total: 0.8618 | Global: 0.6816 | Region: 1.8014 | HardNeg: 0.0000
+[LOSS] Total: 0.7840 | Global: 0.7129 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.8378 | Global: 0.7178 | Region: 1.2005 | HardNeg: 0.0000
+[LOSS] Total: 0.7620 | Global: 0.6924 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8042 | Global: 0.6602 | Region: 1.4399 | HardNeg: 0.0000
+[LOSS] Total: 0.8327 | Global: 0.6738 | Region: 1.5891 | HardNeg: 0.0000
+ 16%|█▋        | 23/140 [09:34<35:48, 18.36s/it][LOSS] Total: 0.8030 | Global: 0.6514 | Region: 1.5166 | HardNeg: 0.0000
+[LOSS] Total: 0.7893 | Global: 0.7197 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7286 | Global: 0.6592 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8072 | Global: 0.6992 | Region: 1.0801 | HardNeg: 0.0000
+[LOSS] Total: 0.8126 | Global: 0.6680 | Region: 1.4463 | HardNeg: 0.0000
+[LOSS] Total: 1.1045 | Global: 1.0352 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7880 | Global: 0.7188 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8338 | Global: 0.6924 | Region: 1.4141 | HardNeg: 0.0000
+ 17%|█▋        | 24/140 [09:48<32:46, 16.95s/it][LOSS] Total: 0.7949 | Global: 0.7256 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7631 | Global: 0.6934 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7076 | Global: 0.6377 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8626 | Global: 0.7510 | Region: 1.1159 | HardNeg: 0.0000
+[LOSS] Total: 0.9308 | Global: 0.8613 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7608 | Global: 0.6914 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8863 | Global: 0.7207 | Region: 1.6555 | HardNeg: 0.0000
+[LOSS] Total: 0.8170 | Global: 0.7148 | Region: 1.0215 | HardNeg: 0.0000
+ 18%|█▊        | 25/140 [11:39<1:26:46, 45.27s/it][LOSS] Total: 0.8257 | Global: 0.7129 | Region: 1.1283 | HardNeg: 0.0000
+[LOSS] Total: 0.7462 | Global: 0.5762 | Region: 1.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7459 | Global: 0.6318 | Region: 1.1406 | HardNeg: 0.0000
+[LOSS] Total: 0.7887 | Global: 0.7178 | Region: 0.7090 | HardNeg: 0.0000
+[LOSS] Total: 0.8016 | Global: 0.6934 | Region: 1.0827 | HardNeg: 0.0000
+[LOSS] Total: 0.8045 | Global: 0.7002 | Region: 1.0430 | HardNeg: 0.0000
+[LOSS] Total: 0.7599 | Global: 0.6904 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.9474 | Global: 0.7612 | Region: 1.8613 | HardNeg: 0.0000
+ 19%|█▊        | 26/140 [12:13<1:19:25, 41.80s/it][LOSS] Total: 0.8248 | Global: 0.6641 | Region: 1.6070 | HardNeg: 0.0000
+[LOSS] Total: 0.8404 | Global: 0.7666 | Region: 0.7383 | HardNeg: 0.0000
+[LOSS] Total: 0.7890 | Global: 0.7188 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7615 | Global: 0.6045 | Region: 1.5703 | HardNeg: 0.0000
+[LOSS] Total: 0.7469 | Global: 0.6758 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.7521 | Global: 0.6758 | Region: 0.7627 | HardNeg: 0.0000
+[LOSS] Total: 0.8128 | Global: 0.7061 | Region: 1.0677 | HardNeg: 0.0000
+[LOSS] Total: 0.6728 | Global: 0.6030 | Region: 0.6973 | HardNeg: 0.0000
+ 19%|█▉        | 27/140 [12:26<1:02:37, 33.25s/it][LOSS] Total: 0.7606 | Global: 0.6909 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7378 | Global: 0.6680 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7398 | Global: 0.6704 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.9226 | Global: 0.7690 | Region: 1.5352 | HardNeg: 0.0000
+[LOSS] Total: 0.7979 | Global: 0.7285 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7402 | Global: 0.6689 | Region: 0.7129 | HardNeg: 0.0000
+[LOSS] Total: 0.7892 | Global: 0.7178 | Region: 0.7139 | HardNeg: 0.0000
+[LOSS] Total: 0.8121 | Global: 0.7041 | Region: 1.0801 | HardNeg: 0.0000
+ 20%|██        | 28/140 [12:53<58:16, 31.22s/it]  [LOSS] Total: 0.9050 | Global: 0.8354 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8762 | Global: 0.7002 | Region: 1.7604 | HardNeg: 0.0000
+[LOSS] Total: 1.0228 | Global: 0.8350 | Region: 1.8783 | HardNeg: 0.0000
+[LOSS] Total: 0.7697 | Global: 0.7002 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7639 | Global: 0.6943 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7004 | Global: 0.6309 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7017 | Global: 0.6313 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.8278 | Global: 0.7578 | Region: 0.7002 | HardNeg: 0.0000
+ 21%|██        | 29/140 [13:01<44:50, 24.24s/it][LOSS] Total: 0.8409 | Global: 0.7715 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7053 | Global: 0.6299 | Region: 0.7544 | HardNeg: 0.0000
+[LOSS] Total: 0.6923 | Global: 0.6230 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8028 | Global: 0.7334 | Region: 0.6943 | HardNeg: 0.0000
+ 21%|██▏       | 30/140 [13:05<33:24, 18.22s/it]                                                 21%|██▏       | 30/140 [13:05<33:24, 18.22s/it]{'loss': 0.7639, 'grad_norm': 41.25, 'learning_rate': 4.80369052967602e-06, 'epoch': 2.0}
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.7849 | Global: 0.6787 | Region: 1.0618 | HardNeg: 0.0000
+[LOSS] Total: 0.9007 | Global: 0.8306 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7394 | Global: 0.6689 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.7069 | Global: 0.6377 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7929 | Global: 0.6855 | Region: 1.0736 | HardNeg: 0.0000
+[LOSS] Total: 0.7899 | Global: 0.7202 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8373 | Global: 0.6924 | Region: 1.4492 | HardNeg: 0.0000
+[LOSS] Total: 0.7340 | Global: 0.6641 | Region: 0.6992 | HardNeg: 0.0000
+ 22%|██▏       | 31/140 [13:54<50:05, 27.57s/it][LOSS] Total: 0.7464 | Global: 0.6768 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.9117 | Global: 0.8418 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.9646 | Global: 0.8945 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.8004 | Global: 0.7295 | Region: 0.7090 | HardNeg: 0.0000
+[LOSS] Total: 0.7737 | Global: 0.7041 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7645 | Global: 0.6133 | Region: 1.5117 | HardNeg: 0.0000
+[LOSS] Total: 0.7183 | Global: 0.6143 | Region: 1.0404 | HardNeg: 0.0000
+[LOSS] Total: 0.8019 | Global: 0.7324 | Region: 0.6943 | HardNeg: 0.0000
+ 23%|██▎       | 32/140 [14:03<39:12, 21.79s/it][LOSS] Total: 0.8031 | Global: 0.6924 | Region: 1.1074 | HardNeg: 0.0000
+[LOSS] Total: 0.7989 | Global: 0.7295 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8253 | Global: 0.7119 | Region: 1.1341 | HardNeg: 0.0000
+[LOSS] Total: 0.7648 | Global: 0.6953 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7499 | Global: 0.6807 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8491 | Global: 0.6934 | Region: 1.5578 | HardNeg: 0.0000
+[LOSS] Total: 0.8696 | Global: 0.6914 | Region: 1.7819 | HardNeg: 0.0000
+[LOSS] Total: 0.7985 | Global: 0.7285 | Region: 0.7002 | HardNeg: 0.0000
+ 24%|██▎       | 33/140 [14:26<39:39, 22.24s/it][LOSS] Total: 0.7986 | Global: 0.7021 | Region: 0.9642 | HardNeg: 0.0000
+[LOSS] Total: 0.7736 | Global: 0.7041 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7687 | Global: 0.5869 | Region: 1.8180 | HardNeg: 0.0000
+[LOSS] Total: 0.8779 | Global: 0.7197 | Region: 1.5820 | HardNeg: 0.0000
+[LOSS] Total: 0.8336 | Global: 0.7168 | Region: 1.1680 | HardNeg: 0.0000
+[LOSS] Total: 0.8525 | Global: 0.7080 | Region: 1.4453 | HardNeg: 0.0000
+[LOSS] Total: 0.7335 | Global: 0.6592 | Region: 0.7432 | HardNeg: 0.0000
+[LOSS] Total: 0.7606 | Global: 0.6914 | Region: 0.6924 | HardNeg: 0.0000
+ 24%|██▍       | 34/140 [14:38<33:58, 19.23s/it][LOSS] Total: 0.7770 | Global: 0.7061 | Region: 0.7090 | HardNeg: 0.0000
+[LOSS] Total: 0.7659 | Global: 0.6880 | Region: 0.7793 | HardNeg: 0.0000
+[LOSS] Total: 0.8244 | Global: 0.7119 | Region: 1.1250 | HardNeg: 0.0000
+[LOSS] Total: 0.7337 | Global: 0.6626 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.8611 | Global: 0.7900 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.7239 | Global: 0.6543 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7926 | Global: 0.6797 | Region: 1.1289 | HardNeg: 0.0000
+[LOSS] Total: 0.7626 | Global: 0.6934 | Region: 0.6924 | HardNeg: 0.0000
+ 25%|██▌       | 35/140 [16:40<1:27:39, 50.09s/it][LOSS] Total: 0.8011 | Global: 0.7314 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8273 | Global: 0.7563 | Region: 0.7095 | HardNeg: 0.0000
+[LOSS] Total: 0.6976 | Global: 0.6279 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8097 | Global: 0.7402 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8298 | Global: 0.6943 | Region: 1.3550 | HardNeg: 0.0000
+[LOSS] Total: 0.7829 | Global: 0.7129 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.9299 | Global: 0.7266 | Region: 2.0329 | HardNeg: 0.0000
+[LOSS] Total: 0.8555 | Global: 0.7861 | Region: 0.6934 | HardNeg: 0.0000
+ 26%|██▌       | 36/140 [16:55<1:08:28, 39.51s/it][LOSS] Total: 0.7528 | Global: 0.6831 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8435 | Global: 0.7305 | Region: 1.1302 | HardNeg: 0.0000
+[LOSS] Total: 0.7645 | Global: 0.6934 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.7498 | Global: 0.6802 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7335 | Global: 0.6641 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8342 | Global: 0.6777 | Region: 1.5648 | HardNeg: 0.0000
+[LOSS] Total: 0.7299 | Global: 0.6582 | Region: 0.7168 | HardNeg: 0.0000
+[LOSS] Total: 0.7611 | Global: 0.6919 | Region: 0.6924 | HardNeg: 0.0000
+ 26%|██▋       | 37/140 [17:20<1:00:15, 35.11s/it][LOSS] Total: 0.7522 | Global: 0.6816 | Region: 0.7056 | HardNeg: 0.0000
+[LOSS] Total: 0.7934 | Global: 0.6855 | Region: 1.0788 | HardNeg: 0.0000
+[LOSS] Total: 0.8525 | Global: 0.7090 | Region: 1.4355 | HardNeg: 0.0000
+[LOSS] Total: 0.8146 | Global: 0.6953 | Region: 1.1927 | HardNeg: 0.0000
+[LOSS] Total: 0.7464 | Global: 0.6768 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8098 | Global: 0.6475 | Region: 1.6234 | HardNeg: 0.0000
+[LOSS] Total: 0.8844 | Global: 0.7334 | Region: 1.5098 | HardNeg: 0.0000
+[LOSS] Total: 0.7744 | Global: 0.7051 | Region: 0.6934 | HardNeg: 0.0000
+ 27%|██▋       | 38/140 [17:36<50:11, 29.53s/it]  [LOSS] Total: 0.7531 | Global: 0.6836 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7114 | Global: 0.6416 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.8387 | Global: 0.7285 | Region: 1.1016 | HardNeg: 0.0000
+[LOSS] Total: 0.8383 | Global: 0.7168 | Region: 1.2148 | HardNeg: 0.0000
+[LOSS] Total: 0.8584 | Global: 0.6934 | Region: 1.6500 | HardNeg: 0.0000
+[LOSS] Total: 0.7729 | Global: 0.6982 | Region: 0.7461 | HardNeg: 0.0000
+[LOSS] Total: 0.6186 | Global: 0.5493 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.6892 | Global: 0.6167 | Region: 0.7251 | HardNeg: 0.0000
+ 28%|██▊       | 39/140 [17:55<44:11, 26.26s/it][LOSS] Total: 0.7353 | Global: 0.6660 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.9558 | Global: 0.7900 | Region: 1.6578 | HardNeg: 0.0000
+[LOSS] Total: 0.7794 | Global: 0.6006 | Region: 1.7884 | HardNeg: 0.0000
+[LOSS] Total: 0.7690 | Global: 0.6992 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7021 | Global: 0.6323 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.6853 | Global: 0.6157 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8116 | Global: 0.6680 | Region: 1.4365 | HardNeg: 0.0000
+[LOSS] Total: 0.8538 | Global: 0.6919 | Region: 1.6191 | HardNeg: 0.0000
+ 29%|██▊       | 40/140 [18:04<35:05, 21.05s/it]                                                 29%|██▊       | 40/140 [18:04<35:05, 21.05s/it]{'loss': 0.7921, 'grad_norm': 36.0, 'learning_rate': 4.492831268057307e-06, 'epoch': 2.69}
+[LOSS] Total: 0.7979 | Global: 0.7285 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7632 | Global: 0.6934 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.8148 | Global: 0.7021 | Region: 1.1263 | HardNeg: 0.0000
+[LOSS] Total: 0.7454 | Global: 0.6738 | Region: 0.7158 | HardNeg: 0.0000
+[LOSS] Total: 0.7806 | Global: 0.6611 | Region: 1.1947 | HardNeg: 0.0000
+[LOSS] Total: 0.7288 | Global: 0.6572 | Region: 0.7153 | HardNeg: 0.0000
+[LOSS] Total: 0.5811 | Global: 0.4731 | Region: 1.0794 | HardNeg: 0.0000
+[LOSS] Total: 0.8490 | Global: 0.6895 | Region: 1.5953 | HardNeg: 0.0000
+ 29%|██▉       | 41/140 [18:16<30:21, 18.40s/it][LOSS] Total: 0.7404 | Global: 0.6709 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6903 | Global: 0.5825 | Region: 1.0781 | HardNeg: 0.0000
+[LOSS] Total: 0.6966 | Global: 0.6270 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7265 | Global: 0.6562 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.8787 | Global: 0.8086 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7970 | Global: 0.7275 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8028 | Global: 0.6904 | Region: 1.1237 | HardNeg: 0.0000
+[LOSS] Total: 0.8383 | Global: 0.7139 | Region: 1.2448 | HardNeg: 0.0000
+ 30%|███       | 42/140 [19:10<47:38, 29.16s/it][LOSS] Total: 0.8888 | Global: 0.7773 | Region: 1.1146 | HardNeg: 0.0000
+[LOSS] Total: 0.8355 | Global: 0.7188 | Region: 1.1680 | HardNeg: 0.0000
+[LOSS] Total: 0.7886 | Global: 0.7192 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.6613 | Global: 0.5781 | Region: 0.8318 | HardNeg: 0.0000
+[LOSS] Total: 0.7021 | Global: 0.6328 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7719 | Global: 0.7021 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7742 | Global: 0.7051 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7590 | Global: 0.6885 | Region: 0.7051 | HardNeg: 0.0000
+ 31%|███       | 43/140 [19:47<50:38, 31.32s/it][LOSS] Total: 0.7530 | Global: 0.6836 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8125 | Global: 0.7012 | Region: 1.1133 | HardNeg: 0.0000
+[LOSS] Total: 0.7479 | Global: 0.6777 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7717 | Global: 0.6611 | Region: 1.1055 | HardNeg: 0.0000
+[LOSS] Total: 0.7532 | Global: 0.6836 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7661 | Global: 0.6943 | Region: 0.7178 | HardNeg: 0.0000
+[LOSS] Total: 0.8282 | Global: 0.6470 | Region: 1.8118 | HardNeg: 0.0000
+[LOSS] Total: 0.7843 | Global: 0.7148 | Region: 0.6943 | HardNeg: 0.0000
+ 31%|███▏      | 44/140 [19:58<40:20, 25.21s/it][LOSS] Total: 0.7825 | Global: 0.7129 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7882 | Global: 0.7188 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8049 | Global: 0.7354 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8057 | Global: 0.6631 | Region: 1.4258 | HardNeg: 0.0000
+ 32%|███▏      | 45/140 [20:02<29:56, 18.91s/it]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.8097 | Global: 0.7402 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8392 | Global: 0.7246 | Region: 1.1458 | HardNeg: 0.0000
+[LOSS] Total: 0.8171 | Global: 0.6836 | Region: 1.3354 | HardNeg: 0.0000
+[LOSS] Total: 0.7662 | Global: 0.6963 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8747 | Global: 0.8037 | Region: 0.7100 | HardNeg: 0.0000
+[LOSS] Total: 0.6461 | Global: 0.5762 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8809 | Global: 0.8115 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7701 | Global: 0.7002 | Region: 0.6992 | HardNeg: 0.0000
+ 33%|███▎      | 46/140 [20:22<30:22, 19.39s/it][LOSS] Total: 0.7988 | Global: 0.7295 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7215 | Global: 0.6519 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7626 | Global: 0.6934 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.6314 | Global: 0.5620 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7277 | Global: 0.6582 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8502 | Global: 0.7090 | Region: 1.4121 | HardNeg: 0.0000
+[LOSS] Total: 0.7640 | Global: 0.6904 | Region: 0.7354 | HardNeg: 0.0000
+[LOSS] Total: 0.7418 | Global: 0.6689 | Region: 0.7285 | HardNeg: 0.0000
+ 34%|███▎      | 47/140 [20:34<26:24, 17.04s/it][LOSS] Total: 0.7176 | Global: 0.6475 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.8889 | Global: 0.6909 | Region: 1.9794 | HardNeg: 0.0000
+[LOSS] Total: 0.7343 | Global: 0.6650 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8668 | Global: 0.7139 | Region: 1.5293 | HardNeg: 0.0000
+[LOSS] Total: 0.7316 | Global: 0.6260 | Region: 1.0566 | HardNeg: 0.0000
+[LOSS] Total: 0.7861 | Global: 0.6738 | Region: 1.1230 | HardNeg: 0.0000
+[LOSS] Total: 0.9512 | Global: 0.8818 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7520 | Global: 0.6826 | Region: 0.6934 | HardNeg: 0.0000
+ 34%|███▍      | 48/140 [21:15<37:21, 24.37s/it][LOSS] Total: 0.8025 | Global: 0.6543 | Region: 1.4824 | HardNeg: 0.0000
+[LOSS] Total: 0.8126 | Global: 0.7119 | Region: 1.0065 | HardNeg: 0.0000
+[LOSS] Total: 0.8387 | Global: 0.6934 | Region: 1.4531 | HardNeg: 0.0000
+[LOSS] Total: 0.6246 | Global: 0.5552 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8690 | Global: 0.7256 | Region: 1.4346 | HardNeg: 0.0000
+[LOSS] Total: 0.8021 | Global: 0.7324 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7880 | Global: 0.7188 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7617 | Global: 0.6924 | Region: 0.6934 | HardNeg: 0.0000
+ 35%|███▌      | 49/140 [21:37<35:44, 23.56s/it][LOSS] Total: 0.8223 | Global: 0.6973 | Region: 1.2500 | HardNeg: 0.0000
+[LOSS] Total: 0.7576 | Global: 0.6855 | Region: 0.7202 | HardNeg: 0.0000
+[LOSS] Total: 0.7660 | Global: 0.6963 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7237 | Global: 0.6543 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8524 | Global: 0.6914 | Region: 1.6102 | HardNeg: 0.0000
+[LOSS] Total: 0.7428 | Global: 0.6729 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8266 | Global: 0.7568 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7835 | Global: 0.6709 | Region: 1.1263 | HardNeg: 0.0000
+ 36%|███▌      | 50/140 [22:02<35:41, 23.79s/it]                                                 36%|███▌      | 50/140 [22:02<35:41, 23.79s/it]{'loss': 0.7402, 'grad_norm': 42.0, 'learning_rate': 4.058724504646834e-06, 'epoch': 3.34}
+[LOSS] Total: 0.8959 | Global: 0.8262 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7655 | Global: 0.6953 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7614 | Global: 0.6865 | Region: 0.7485 | HardNeg: 0.0000
+[LOSS] Total: 0.8407 | Global: 0.7002 | Region: 1.4053 | HardNeg: 0.0000
+[LOSS] Total: 0.7189 | Global: 0.6494 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6005 | Global: 0.5312 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.9061 | Global: 0.7861 | Region: 1.1992 | HardNeg: 0.0000
+[LOSS] Total: 0.7637 | Global: 0.6943 | Region: 0.6934 | HardNeg: 0.0000
+ 36%|███▋      | 51/140 [22:48<45:26, 30.64s/it][LOSS] Total: 0.7690 | Global: 0.6631 | Region: 1.0592 | HardNeg: 0.0000
+[LOSS] Total: 0.7158 | Global: 0.6084 | Region: 1.0742 | HardNeg: 0.0000
+[LOSS] Total: 0.8453 | Global: 0.7246 | Region: 1.2070 | HardNeg: 0.0000
+[LOSS] Total: 0.8801 | Global: 0.7051 | Region: 1.7500 | HardNeg: 0.0000
+[LOSS] Total: 0.7705 | Global: 0.7012 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7322 | Global: 0.5498 | Region: 1.8242 | HardNeg: 0.0000
+[LOSS] Total: 0.8099 | Global: 0.7041 | Region: 1.0579 | HardNeg: 0.0000
+[LOSS] Total: 0.8341 | Global: 0.7646 | Region: 0.6943 | HardNeg: 0.0000
+ 37%|███▋      | 52/140 [23:07<39:38, 27.03s/it][LOSS] Total: 0.7769 | Global: 0.7075 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8094 | Global: 0.6924 | Region: 1.1706 | HardNeg: 0.0000
+[LOSS] Total: 0.7914 | Global: 0.7188 | Region: 0.7261 | HardNeg: 0.0000
+[LOSS] Total: 0.8245 | Global: 0.7529 | Region: 0.7158 | HardNeg: 0.0000
+[LOSS] Total: 0.6693 | Global: 0.6001 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.9261 | Global: 0.7686 | Region: 1.5758 | HardNeg: 0.0000
+[LOSS] Total: 0.8315 | Global: 0.6680 | Region: 1.6352 | HardNeg: 0.0000
+[LOSS] Total: 0.7899 | Global: 0.7197 | Region: 0.7021 | HardNeg: 0.0000
+ 38%|███▊      | 53/140 [23:16<31:37, 21.81s/it][LOSS] Total: 0.7660 | Global: 0.6748 | Region: 0.9121 | HardNeg: 0.0000
+[LOSS] Total: 0.7612 | Global: 0.6543 | Region: 1.0690 | HardNeg: 0.0000
+[LOSS] Total: 0.7184 | Global: 0.6475 | Region: 0.7095 | HardNeg: 0.0000
+[LOSS] Total: 0.7676 | Global: 0.6982 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.9190 | Global: 0.7520 | Region: 1.6703 | HardNeg: 0.0000
+[LOSS] Total: 0.7468 | Global: 0.6748 | Region: 0.7202 | HardNeg: 0.0000
+[LOSS] Total: 0.9083 | Global: 0.8389 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7941 | Global: 0.7246 | Region: 0.6953 | HardNeg: 0.0000
+ 39%|███▊      | 54/140 [23:34<29:35, 20.65s/it][LOSS] Total: 0.7403 | Global: 0.6709 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7940 | Global: 0.7236 | Region: 0.7036 | HardNeg: 0.0000
+[LOSS] Total: 0.7132 | Global: 0.6436 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7887 | Global: 0.7188 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7611 | Global: 0.6484 | Region: 1.1263 | HardNeg: 0.0000
+[LOSS] Total: 0.6924 | Global: 0.6221 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.7635 | Global: 0.6943 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7635 | Global: 0.6934 | Region: 0.7012 | HardNeg: 0.0000
+ 39%|███▉      | 55/140 [23:49<26:48, 18.92s/it][LOSS] Total: 0.7124 | Global: 0.6426 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.8143 | Global: 0.7451 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.9203 | Global: 0.8506 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8297 | Global: 0.6982 | Region: 1.3145 | HardNeg: 0.0000
+[LOSS] Total: 0.7736 | Global: 0.7012 | Region: 0.7246 | HardNeg: 0.0000
+[LOSS] Total: 0.7875 | Global: 0.7168 | Region: 0.7065 | HardNeg: 0.0000
+[LOSS] Total: 0.8310 | Global: 0.7617 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7501 | Global: 0.6797 | Region: 0.7041 | HardNeg: 0.0000
+ 40%|████      | 56/140 [25:40<1:05:07, 46.51s/it][LOSS] Total: 0.7821 | Global: 0.6719 | Region: 1.1022 | HardNeg: 0.0000
+[LOSS] Total: 0.8337 | Global: 0.7236 | Region: 1.1003 | HardNeg: 0.0000
+[LOSS] Total: 0.7743 | Global: 0.7051 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7219 | Global: 0.6519 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.8417 | Global: 0.7324 | Region: 1.0931 | HardNeg: 0.0000
+[LOSS] Total: 0.8420 | Global: 0.7275 | Region: 1.1445 | HardNeg: 0.0000
+[LOSS] Total: 0.7793 | Global: 0.7100 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7671 | Global: 0.6631 | Region: 1.0397 | HardNeg: 0.0000
+ 41%|████      | 57/140 [25:55<51:05, 36.93s/it]  [LOSS] Total: 0.8331 | Global: 0.6885 | Region: 1.4463 | HardNeg: 0.0000
+[LOSS] Total: 0.8784 | Global: 0.7446 | Region: 1.3379 | HardNeg: 0.0000
+[LOSS] Total: 0.8891 | Global: 0.7715 | Region: 1.1764 | HardNeg: 0.0000
+[LOSS] Total: 0.9097 | Global: 0.7197 | Region: 1.8997 | HardNeg: 0.0000
+[LOSS] Total: 0.7619 | Global: 0.6924 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7955 | Global: 0.7256 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.6354 | Global: 0.5640 | Region: 0.7144 | HardNeg: 0.0000
+[LOSS] Total: 0.7638 | Global: 0.6943 | Region: 0.6943 | HardNeg: 0.0000
+ 41%|████▏     | 58/140 [26:05<39:41, 29.05s/it][LOSS] Total: 0.7590 | Global: 0.6523 | Region: 1.0671 | HardNeg: 0.0000
+[LOSS] Total: 0.7852 | Global: 0.6758 | Region: 1.0938 | HardNeg: 0.0000
+[LOSS] Total: 0.8157 | Global: 0.6787 | Region: 1.3701 | HardNeg: 0.0000
+[LOSS] Total: 0.8522 | Global: 0.6826 | Region: 1.6961 | HardNeg: 0.0000
+[LOSS] Total: 0.8005 | Global: 0.6973 | Region: 1.0319 | HardNeg: 0.0000
+[LOSS] Total: 0.8577 | Global: 0.7100 | Region: 1.4775 | HardNeg: 0.0000
+[LOSS] Total: 0.7355 | Global: 0.6660 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7736 | Global: 0.6670 | Region: 1.0664 | HardNeg: 0.0000
+ 42%|████▏     | 59/140 [26:44<43:18, 32.08s/it][LOSS] Total: 0.8056 | Global: 0.6943 | Region: 1.1126 | HardNeg: 0.0000
+[LOSS] Total: 0.7104 | Global: 0.6406 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7744 | Global: 0.7051 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 1.1505 | Global: 1.0801 | Region: 0.7041 | HardNeg: 0.0000
+ 43%|████▎     | 60/140 [26:49<31:36, 23.71s/it]                                                 43%|████▎     | 60/140 [26:49<31:36, 23.71s/it]{'loss': 0.7559, 'grad_norm': 38.5, 'learning_rate': 3.5282177578265295e-06, 'epoch': 4.0}
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.8075 | Global: 0.6602 | Region: 1.4734 | HardNeg: 0.0000
+[LOSS] Total: 0.9001 | Global: 0.7305 | Region: 1.6961 | HardNeg: 0.0000
+[LOSS] Total: 0.7413 | Global: 0.6318 | Region: 1.0951 | HardNeg: 0.0000
+[LOSS] Total: 0.6725 | Global: 0.6025 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8050 | Global: 0.6914 | Region: 1.1361 | HardNeg: 0.0000
+[LOSS] Total: 0.8637 | Global: 0.7939 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8075 | Global: 0.6938 | Region: 1.1367 | HardNeg: 0.0000
+[LOSS] Total: 0.8137 | Global: 0.7070 | Region: 1.0671 | HardNeg: 0.0000
+ 44%|████▎     | 61/140 [27:19<33:49, 25.69s/it][LOSS] Total: 0.7336 | Global: 0.6641 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7599 | Global: 0.6895 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.8422 | Global: 0.6973 | Region: 1.4492 | HardNeg: 0.0000
+[LOSS] Total: 0.7591 | Global: 0.6875 | Region: 0.7163 | HardNeg: 0.0000
+[LOSS] Total: 0.7499 | Global: 0.6787 | Region: 0.7114 | HardNeg: 0.0000
+[LOSS] Total: 0.7660 | Global: 0.6953 | Region: 0.7070 | HardNeg: 0.0000
+[LOSS] Total: 0.7089 | Global: 0.6318 | Region: 0.7710 | HardNeg: 0.0000
+[LOSS] Total: 0.7712 | Global: 0.6611 | Region: 1.1009 | HardNeg: 0.0000
+ 44%|████▍     | 62/140 [29:19<1:10:19, 54.09s/it][LOSS] Total: 0.6412 | Global: 0.5708 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.7756 | Global: 0.7061 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7148 | Global: 0.6455 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8416 | Global: 0.6797 | Region: 1.6195 | HardNeg: 0.0000
+[LOSS] Total: 0.7511 | Global: 0.6816 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7520 | Global: 0.6826 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7797 | Global: 0.7100 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7146 | Global: 0.6436 | Region: 0.7104 | HardNeg: 0.0000
+ 45%|████▌     | 63/140 [29:58<1:03:24, 49.41s/it][LOSS] Total: 0.7449 | Global: 0.6406 | Region: 1.0423 | HardNeg: 0.0000
+[LOSS] Total: 0.7513 | Global: 0.6816 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7327 | Global: 0.6631 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8175 | Global: 0.7480 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.6985 | Global: 0.6289 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7686 | Global: 0.6992 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7608 | Global: 0.6914 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7597 | Global: 0.6895 | Region: 0.7021 | HardNeg: 0.0000
+ 46%|████▌     | 64/140 [30:04<46:07, 36.41s/it]  [LOSS] Total: 0.7746 | Global: 0.6670 | Region: 1.0762 | HardNeg: 0.0000
+[LOSS] Total: 0.8068 | Global: 0.7368 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7451 | Global: 0.6758 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7723 | Global: 0.7021 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7630 | Global: 0.6934 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7973 | Global: 0.7041 | Region: 0.9323 | HardNeg: 0.0000
+[LOSS] Total: 0.7852 | Global: 0.7158 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8201 | Global: 0.6895 | Region: 1.3066 | HardNeg: 0.0000
+ 46%|████▋     | 65/140 [30:23<38:51, 31.09s/it][LOSS] Total: 0.7945 | Global: 0.6699 | Region: 1.2461 | HardNeg: 0.0000
+[LOSS] Total: 0.8645 | Global: 0.7012 | Region: 1.6336 | HardNeg: 0.0000
+[LOSS] Total: 0.7518 | Global: 0.6826 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8778 | Global: 0.7695 | Region: 1.0827 | HardNeg: 0.0000
+[LOSS] Total: 0.7334 | Global: 0.6621 | Region: 0.7129 | HardNeg: 0.0000
+[LOSS] Total: 0.8743 | Global: 0.8047 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 1.0023 | Global: 0.8594 | Region: 1.4297 | HardNeg: 0.0000
+[LOSS] Total: 0.9171 | Global: 0.8125 | Region: 1.0462 | HardNeg: 0.0000
+ 47%|████▋     | 66/140 [30:42<33:52, 27.46s/it][LOSS] Total: 0.7104 | Global: 0.6406 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7094 | Global: 0.6396 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8674 | Global: 0.6963 | Region: 1.7113 | HardNeg: 0.0000
+[LOSS] Total: 0.7865 | Global: 0.6670 | Region: 1.1953 | HardNeg: 0.0000
+[LOSS] Total: 0.8963 | Global: 0.7266 | Region: 1.6977 | HardNeg: 0.0000
+[LOSS] Total: 0.9033 | Global: 0.8340 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8076 | Global: 0.7383 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7424 | Global: 0.6729 | Region: 0.6953 | HardNeg: 0.0000
+ 48%|████▊     | 67/140 [31:01<30:38, 25.19s/it][LOSS] Total: 0.7552 | Global: 0.6855 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8478 | Global: 0.6973 | Region: 1.5049 | HardNeg: 0.0000
+[LOSS] Total: 0.6475 | Global: 0.5781 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8523 | Global: 0.6704 | Region: 1.8190 | HardNeg: 0.0000
+[LOSS] Total: 0.7735 | Global: 0.7031 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.7584 | Global: 0.6890 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7667 | Global: 0.6973 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7666 | Global: 0.6035 | Region: 1.6305 | HardNeg: 0.0000
+ 49%|████▊     | 68/140 [31:24<29:21, 24.46s/it][LOSS] Total: 0.7763 | Global: 0.7041 | Region: 0.7217 | HardNeg: 0.0000
+[LOSS] Total: 0.8303 | Global: 0.7080 | Region: 1.2227 | HardNeg: 0.0000
+[LOSS] Total: 0.7639 | Global: 0.6943 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7681 | Global: 0.6963 | Region: 0.7178 | HardNeg: 0.0000
+[LOSS] Total: 0.6387 | Global: 0.5684 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.8057 | Global: 0.7363 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7610 | Global: 0.6885 | Region: 0.7256 | HardNeg: 0.0000
+[LOSS] Total: 0.7765 | Global: 0.7070 | Region: 0.6943 | HardNeg: 0.0000
+ 49%|████▉     | 69/140 [31:50<29:24, 24.85s/it][LOSS] Total: 0.8281 | Global: 0.7207 | Region: 1.0742 | HardNeg: 0.0000
+[LOSS] Total: 0.7188 | Global: 0.6484 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.8071 | Global: 0.6919 | Region: 1.1517 | HardNeg: 0.0000
+[LOSS] Total: 0.6846 | Global: 0.6147 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7523 | Global: 0.6826 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7709 | Global: 0.7002 | Region: 0.7070 | HardNeg: 0.0000
+[LOSS] Total: 0.7281 | Global: 0.6582 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8196 | Global: 0.6494 | Region: 1.7023 | HardNeg: 0.0000
+ 50%|█████     | 70/140 [32:01<24:06, 20.66s/it]                                                 50%|█████     | 70/140 [32:01<24:06, 20.66s/it]{'loss': 0.7801, 'grad_norm': 31.5, 'learning_rate': 2.9341204441673267e-06, 'epoch': 4.69}
+[LOSS] Total: 0.8596 | Global: 0.7900 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6760 | Global: 0.6060 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.6874 | Global: 0.6172 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7604 | Global: 0.6899 | Region: 0.7051 | HardNeg: 0.0000
+[LOSS] Total: 0.7360 | Global: 0.6270 | Region: 1.0905 | HardNeg: 0.0000
+[LOSS] Total: 0.8087 | Global: 0.7393 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8048 | Global: 0.6670 | Region: 1.3779 | HardNeg: 0.0000
+[LOSS] Total: 0.7575 | Global: 0.6201 | Region: 1.3740 | HardNeg: 0.0000
+ 51%|█████     | 71/140 [32:15<21:24, 18.62s/it][LOSS] Total: 0.8362 | Global: 0.6885 | Region: 1.4771 | HardNeg: 0.0000
+[LOSS] Total: 0.8792 | Global: 0.7520 | Region: 1.2721 | HardNeg: 0.0000
+[LOSS] Total: 0.8983 | Global: 0.8281 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.8057 | Global: 0.6992 | Region: 1.0645 | HardNeg: 0.0000
+[LOSS] Total: 0.7872 | Global: 0.7178 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8976 | Global: 0.7402 | Region: 1.5734 | HardNeg: 0.0000
+[LOSS] Total: 0.8351 | Global: 0.7217 | Region: 1.1341 | HardNeg: 0.0000
+[LOSS] Total: 0.8108 | Global: 0.6953 | Region: 1.1549 | HardNeg: 0.0000
+ 51%|█████▏    | 72/140 [32:58<29:26, 25.98s/it][LOSS] Total: 0.7674 | Global: 0.6270 | Region: 1.4043 | HardNeg: 0.0000
+[LOSS] Total: 0.6181 | Global: 0.5049 | Region: 1.1322 | HardNeg: 0.0000
+[LOSS] Total: 0.9022 | Global: 0.7227 | Region: 1.7953 | HardNeg: 0.0000
+[LOSS] Total: 0.6572 | Global: 0.5854 | Region: 0.7173 | HardNeg: 0.0000
+[LOSS] Total: 0.8099 | Global: 0.6680 | Region: 1.4189 | HardNeg: 0.0000
+[LOSS] Total: 0.7788 | Global: 0.7080 | Region: 0.7080 | HardNeg: 0.0000
+[LOSS] Total: 0.8673 | Global: 0.7109 | Region: 1.5641 | HardNeg: 0.0000
+[LOSS] Total: 0.7869 | Global: 0.7178 | Region: 0.6914 | HardNeg: 0.0000
+ 52%|█████▏    | 73/140 [33:15<26:06, 23.38s/it][LOSS] Total: 0.8206 | Global: 0.7510 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7577 | Global: 0.6885 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7782 | Global: 0.7080 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.8411 | Global: 0.7402 | Region: 1.0091 | HardNeg: 0.0000
+[LOSS] Total: 0.8539 | Global: 0.7441 | Region: 1.0977 | HardNeg: 0.0000
+[LOSS] Total: 0.7092 | Global: 0.6396 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8236 | Global: 0.6992 | Region: 1.2441 | HardNeg: 0.0000
+[LOSS] Total: 0.7428 | Global: 0.6719 | Region: 0.7095 | HardNeg: 0.0000
+ 53%|█████▎    | 74/140 [33:33<23:55, 21.76s/it][LOSS] Total: 0.7953 | Global: 0.6533 | Region: 1.4199 | HardNeg: 0.0000
+[LOSS] Total: 0.7530 | Global: 0.6836 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8230 | Global: 0.7109 | Region: 1.1211 | HardNeg: 0.0000
+[LOSS] Total: 0.7626 | Global: 0.6934 | Region: 0.6924 | HardNeg: 0.0000
+ 54%|█████▎    | 75/140 [33:37<17:54, 16.53s/it]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.7634 | Global: 0.6582 | Region: 1.0521 | HardNeg: 0.0000
+[LOSS] Total: 0.8263 | Global: 0.7168 | Region: 1.0951 | HardNeg: 0.0000
+[LOSS] Total: 0.6905 | Global: 0.6191 | Region: 0.7139 | HardNeg: 0.0000
+[LOSS] Total: 0.7635 | Global: 0.6934 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7811 | Global: 0.6670 | Region: 1.1406 | HardNeg: 0.0000
+[LOSS] Total: 0.8307 | Global: 0.6953 | Region: 1.3535 | HardNeg: 0.0000
+[LOSS] Total: 0.8989 | Global: 0.8291 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.6992 | Global: 0.6289 | Region: 0.7031 | HardNeg: 0.0000
+ 54%|█████▍    | 76/140 [33:58<19:04, 17.88s/it][LOSS] Total: 0.7658 | Global: 0.6934 | Region: 0.7241 | HardNeg: 0.0000
+[LOSS] Total: 0.8942 | Global: 0.7373 | Region: 1.5688 | HardNeg: 0.0000
+[LOSS] Total: 0.7496 | Global: 0.6123 | Region: 1.3730 | HardNeg: 0.0000
+[LOSS] Total: 0.7218 | Global: 0.6084 | Region: 1.1341 | HardNeg: 0.0000
+[LOSS] Total: 0.7674 | Global: 0.6982 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7651 | Global: 0.6592 | Region: 1.0592 | HardNeg: 0.0000
+[LOSS] Total: 0.7958 | Global: 0.7266 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7571 | Global: 0.6875 | Region: 0.6963 | HardNeg: 0.0000
+ 55%|█████▌    | 77/140 [34:19<19:37, 18.70s/it][LOSS] Total: 0.8416 | Global: 0.7021 | Region: 1.3945 | HardNeg: 0.0000
+[LOSS] Total: 0.7223 | Global: 0.6523 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7689 | Global: 0.6992 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7862 | Global: 0.7168 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8527 | Global: 0.7832 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.9137 | Global: 0.8057 | Region: 1.0801 | HardNeg: 0.0000
+[LOSS] Total: 0.8102 | Global: 0.6699 | Region: 1.4023 | HardNeg: 0.0000
+[LOSS] Total: 0.7627 | Global: 0.6934 | Region: 0.6934 | HardNeg: 0.0000
+ 56%|█████▌    | 78/140 [34:28<16:16, 15.75s/it][LOSS] Total: 0.8208 | Global: 0.6621 | Region: 1.5867 | HardNeg: 0.0000
+[LOSS] Total: 0.7943 | Global: 0.7168 | Region: 0.7749 | HardNeg: 0.0000
+[LOSS] Total: 0.7581 | Global: 0.6504 | Region: 1.0775 | HardNeg: 0.0000
+[LOSS] Total: 0.7373 | Global: 0.6680 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8197 | Global: 0.7490 | Region: 0.7070 | HardNeg: 0.0000
+[LOSS] Total: 0.7745 | Global: 0.7051 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7579 | Global: 0.6875 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.8480 | Global: 0.7422 | Region: 1.0579 | HardNeg: 0.0000
+ 56%|█████▋    | 79/140 [34:49<17:32, 17.26s/it][LOSS] Total: 0.7821 | Global: 0.7129 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8118 | Global: 0.7422 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7373 | Global: 0.6299 | Region: 1.0742 | HardNeg: 0.0000
+[LOSS] Total: 0.8131 | Global: 0.7432 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7191 | Global: 0.6094 | Region: 1.0977 | HardNeg: 0.0000
+[LOSS] Total: 0.7907 | Global: 0.7197 | Region: 0.7100 | HardNeg: 0.0000
+[LOSS] Total: 0.7156 | Global: 0.6465 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8035 | Global: 0.6934 | Region: 1.1016 | HardNeg: 0.0000
+ 57%|█████▋    | 80/140 [35:14<19:32, 19.55s/it]                                                 57%|█████▋    | 80/140 [35:14<19:32, 19.55s/it]{'loss': 0.7488, 'grad_norm': 26.375, 'learning_rate': 2.3131747660339396e-06, 'epoch': 5.34}
+[LOSS] Total: 0.7571 | Global: 0.6875 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7639 | Global: 0.6943 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8761 | Global: 0.7676 | Region: 1.0853 | HardNeg: 0.0000
+[LOSS] Total: 0.8583 | Global: 0.7520 | Region: 1.0632 | HardNeg: 0.0000
+[LOSS] Total: 0.7785 | Global: 0.7090 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7801 | Global: 0.7100 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7365 | Global: 0.6641 | Region: 0.7241 | HardNeg: 0.0000
+[LOSS] Total: 0.7941 | Global: 0.6924 | Region: 1.0176 | HardNeg: 0.0000
+ 58%|█████▊    | 81/140 [35:20<15:12, 15.46s/it][LOSS] Total: 0.8140 | Global: 0.6445 | Region: 1.6945 | HardNeg: 0.0000
+[LOSS] Total: 0.7944 | Global: 0.6768 | Region: 1.1764 | HardNeg: 0.0000
+[LOSS] Total: 0.7881 | Global: 0.7188 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7046 | Global: 0.6353 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7487 | Global: 0.6777 | Region: 0.7095 | HardNeg: 0.0000
+[LOSS] Total: 0.8326 | Global: 0.7217 | Region: 1.1094 | HardNeg: 0.0000
+[LOSS] Total: 0.9919 | Global: 0.8350 | Region: 1.5695 | HardNeg: 0.0000
+[LOSS] Total: 0.8227 | Global: 0.6631 | Region: 1.5961 | HardNeg: 0.0000
+ 59%|█████▊    | 82/140 [37:21<45:37, 47.19s/it][LOSS] Total: 0.8597 | Global: 0.7891 | Region: 0.7061 | HardNeg: 0.0000
+[LOSS] Total: 0.8335 | Global: 0.7637 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7675 | Global: 0.6973 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7042 | Global: 0.6348 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8870 | Global: 0.7441 | Region: 1.4282 | HardNeg: 0.0000
+[LOSS] Total: 0.7962 | Global: 0.6895 | Region: 1.0677 | HardNeg: 0.0000
+[LOSS] Total: 0.8006 | Global: 0.6592 | Region: 1.4141 | HardNeg: 0.0000
+[LOSS] Total: 0.8180 | Global: 0.6484 | Region: 1.6953 | HardNeg: 0.0000
+ 59%|█████▉    | 83/140 [37:39<36:34, 38.49s/it][LOSS] Total: 0.7443 | Global: 0.6748 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7012 | Global: 0.6318 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8032 | Global: 0.6982 | Region: 1.0495 | HardNeg: 0.0000
+[LOSS] Total: 0.4859 | Global: 0.4165 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7603 | Global: 0.6895 | Region: 0.7085 | HardNeg: 0.0000
+[LOSS] Total: 0.8114 | Global: 0.7422 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7781 | Global: 0.7085 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.9337 | Global: 0.8643 | Region: 0.6943 | HardNeg: 0.0000
+ 60%|██████    | 84/140 [37:58<30:28, 32.65s/it][LOSS] Total: 0.9960 | Global: 0.8311 | Region: 1.6491 | HardNeg: 0.0000
+[LOSS] Total: 0.7799 | Global: 0.6533 | Region: 1.2656 | HardNeg: 0.0000
+[LOSS] Total: 0.8010 | Global: 0.7314 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8364 | Global: 0.7334 | Region: 1.0299 | HardNeg: 0.0000
+[LOSS] Total: 0.7893 | Global: 0.7197 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7749 | Global: 0.6353 | Region: 1.3965 | HardNeg: 0.0000
+[LOSS] Total: 0.7913 | Global: 0.6826 | Region: 1.0872 | HardNeg: 0.0000
+[LOSS] Total: 0.7188 | Global: 0.6494 | Region: 0.6934 | HardNeg: 0.0000
+ 61%|██████    | 85/140 [38:24<28:09, 30.72s/it][LOSS] Total: 0.7808 | Global: 0.7114 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7009 | Global: 0.6309 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7529 | Global: 0.6836 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7861 | Global: 0.7168 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.9185 | Global: 0.8481 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.8613 | Global: 0.6963 | Region: 1.6500 | HardNeg: 0.0000
+[LOSS] Total: 0.7628 | Global: 0.6934 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7458 | Global: 0.6426 | Region: 1.0326 | HardNeg: 0.0000
+ 61%|██████▏   | 86/140 [38:31<21:08, 23.49s/it][LOSS] Total: 0.5820 | Global: 0.5112 | Region: 0.7080 | HardNeg: 0.0000
+[LOSS] Total: 0.7974 | Global: 0.7275 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7157 | Global: 0.6450 | Region: 0.7065 | HardNeg: 0.0000
+[LOSS] Total: 0.8546 | Global: 0.7051 | Region: 1.4951 | HardNeg: 0.0000
+[LOSS] Total: 0.7792 | Global: 0.6777 | Region: 1.0143 | HardNeg: 0.0000
+[LOSS] Total: 0.8688 | Global: 0.7588 | Region: 1.1003 | HardNeg: 0.0000
+[LOSS] Total: 0.7900 | Global: 0.7109 | Region: 0.7903 | HardNeg: 0.0000
+[LOSS] Total: 0.8029 | Global: 0.6748 | Region: 1.2812 | HardNeg: 0.0000
+ 62%|██████▏   | 87/140 [39:05<23:35, 26.70s/it][LOSS] Total: 0.8618 | Global: 0.7129 | Region: 1.4893 | HardNeg: 0.0000
+[LOSS] Total: 0.8992 | Global: 0.7837 | Region: 1.1549 | HardNeg: 0.0000
+[LOSS] Total: 0.7360 | Global: 0.6650 | Region: 0.7100 | HardNeg: 0.0000
+[LOSS] Total: 0.8427 | Global: 0.7354 | Region: 1.0736 | HardNeg: 0.0000
+[LOSS] Total: 0.5839 | Global: 0.5137 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7628 | Global: 0.6934 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8248 | Global: 0.6719 | Region: 1.5297 | HardNeg: 0.0000
+[LOSS] Total: 0.7957 | Global: 0.7266 | Region: 0.6914 | HardNeg: 0.0000
+ 63%|██████▎   | 88/140 [39:19<19:47, 22.83s/it][LOSS] Total: 0.7848 | Global: 0.7148 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7336 | Global: 0.6641 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7241 | Global: 0.6309 | Region: 0.9323 | HardNeg: 0.0000
+[LOSS] Total: 0.9361 | Global: 0.8667 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.9268 | Global: 0.7686 | Region: 1.5820 | HardNeg: 0.0000
+[LOSS] Total: 0.6902 | Global: 0.6172 | Region: 0.7300 | HardNeg: 0.0000
+[LOSS] Total: 0.8391 | Global: 0.7246 | Region: 1.1445 | HardNeg: 0.0000
+[LOSS] Total: 0.6979 | Global: 0.5337 | Region: 1.6422 | HardNeg: 0.0000
+ 64%|██████▎   | 89/140 [39:30<16:24, 19.30s/it][LOSS] Total: 0.7765 | Global: 0.7051 | Region: 0.7139 | HardNeg: 0.0000
+[LOSS] Total: 0.7750 | Global: 0.7051 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.6030 | Global: 0.5337 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7458 | Global: 0.6758 | Region: 0.7002 | HardNeg: 0.0000
+ 64%|██████▍   | 90/140 [40:06<20:10, 24.21s/it]                                                 64%|██████▍   | 90/140 [40:06<20:10, 24.21s/it]{'loss': 0.7482, 'grad_norm': 39.5, 'learning_rate': 1.7037833743707892e-06, 'epoch': 6.0}
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.7236 | Global: 0.6523 | Region: 0.7124 | HardNeg: 0.0000
+[LOSS] Total: 0.7647 | Global: 0.6953 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7617 | Global: 0.6924 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7294 | Global: 0.6602 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7854 | Global: 0.6631 | Region: 1.2227 | HardNeg: 0.0000
+[LOSS] Total: 0.6904 | Global: 0.6211 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7566 | Global: 0.6855 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.8122 | Global: 0.7031 | Region: 1.0905 | HardNeg: 0.0000
+ 65%|██████▌   | 91/140 [40:36<21:19, 26.12s/it][LOSS] Total: 0.9208 | Global: 0.8125 | Region: 1.0833 | HardNeg: 0.0000
+[LOSS] Total: 0.7605 | Global: 0.6895 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.8217 | Global: 0.7031 | Region: 1.1862 | HardNeg: 0.0000
+[LOSS] Total: 0.7753 | Global: 0.7051 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7769 | Global: 0.6934 | Region: 0.8352 | HardNeg: 0.0000
+[LOSS] Total: 0.8178 | Global: 0.6553 | Region: 1.6250 | HardNeg: 0.0000
+[LOSS] Total: 0.7229 | Global: 0.6533 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.5592 | Global: 0.4897 | Region: 0.6943 | HardNeg: 0.0000
+ 66%|██████▌   | 92/140 [42:25<40:50, 51.04s/it][LOSS] Total: 0.7965 | Global: 0.6240 | Region: 1.7250 | HardNeg: 0.0000
+[LOSS] Total: 0.8008 | Global: 0.7314 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.6680 | Global: 0.5986 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8229 | Global: 0.7080 | Region: 1.1484 | HardNeg: 0.0000
+[LOSS] Total: 0.7383 | Global: 0.6689 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7181 | Global: 0.6465 | Region: 0.7158 | HardNeg: 0.0000
+[LOSS] Total: 0.7286 | Global: 0.6582 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.7977 | Global: 0.6875 | Region: 1.1016 | HardNeg: 0.0000
+ 66%|██████▋   | 93/140 [42:59<35:58, 45.93s/it][LOSS] Total: 0.7633 | Global: 0.6934 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7645 | Global: 0.6680 | Region: 0.9655 | HardNeg: 0.0000
+[LOSS] Total: 0.8117 | Global: 0.7422 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6906 | Global: 0.5801 | Region: 1.1048 | HardNeg: 0.0000
+[LOSS] Total: 0.7906 | Global: 0.6709 | Region: 1.1966 | HardNeg: 0.0000
+[LOSS] Total: 0.7259 | Global: 0.6533 | Region: 0.7261 | HardNeg: 0.0000
+[LOSS] Total: 0.7170 | Global: 0.6475 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6056 | Global: 0.5361 | Region: 0.6943 | HardNeg: 0.0000
+ 67%|██████▋   | 94/140 [43:05<26:00, 33.93s/it][LOSS] Total: 0.7337 | Global: 0.6641 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8781 | Global: 0.7744 | Region: 1.0371 | HardNeg: 0.0000
+[LOSS] Total: 0.8158 | Global: 0.7432 | Region: 0.7261 | HardNeg: 0.0000
+[LOSS] Total: 0.8037 | Global: 0.7344 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8160 | Global: 0.6680 | Region: 1.4805 | HardNeg: 0.0000
+[LOSS] Total: 0.8212 | Global: 0.7070 | Region: 1.1413 | HardNeg: 0.0000
+[LOSS] Total: 0.7669 | Global: 0.6973 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 1.0374 | Global: 0.9678 | Region: 0.6963 | HardNeg: 0.0000
+ 68%|██████▊   | 95/140 [43:56<29:08, 38.86s/it][LOSS] Total: 0.8188 | Global: 0.7061 | Region: 1.1276 | HardNeg: 0.0000
+[LOSS] Total: 0.6633 | Global: 0.5928 | Region: 0.7056 | HardNeg: 0.0000
+[LOSS] Total: 0.8315 | Global: 0.7168 | Region: 1.1471 | HardNeg: 0.0000
+[LOSS] Total: 0.7913 | Global: 0.7207 | Region: 0.7061 | HardNeg: 0.0000
+[LOSS] Total: 0.8943 | Global: 0.7334 | Region: 1.6094 | HardNeg: 0.0000
+[LOSS] Total: 0.7628 | Global: 0.6934 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.6585 | Global: 0.5845 | Region: 0.7402 | HardNeg: 0.0000
+[LOSS] Total: 0.7990 | Global: 0.6855 | Region: 1.1341 | HardNeg: 0.0000
+ 69%|██████▊   | 96/140 [44:23<26:04, 35.55s/it][LOSS] Total: 0.7108 | Global: 0.6416 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8254 | Global: 0.7559 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7946 | Global: 0.6602 | Region: 1.3447 | HardNeg: 0.0000
+[LOSS] Total: 0.8337 | Global: 0.7129 | Region: 1.2077 | HardNeg: 0.0000
+[LOSS] Total: 0.8592 | Global: 0.7900 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8227 | Global: 0.7070 | Region: 1.1562 | HardNeg: 0.0000
+[LOSS] Total: 0.9021 | Global: 0.7900 | Region: 1.1204 | HardNeg: 0.0000
+[LOSS] Total: 0.8243 | Global: 0.7100 | Region: 1.1432 | HardNeg: 0.0000
+ 69%|██████▉   | 97/140 [44:49<23:13, 32.40s/it][LOSS] Total: 0.9290 | Global: 0.7568 | Region: 1.7219 | HardNeg: 0.0000
+[LOSS] Total: 0.7355 | Global: 0.6660 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7681 | Global: 0.6982 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.8359 | Global: 0.7656 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.7220 | Global: 0.6523 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.9221 | Global: 0.7158 | Region: 2.0625 | HardNeg: 0.0000
+[LOSS] Total: 0.7415 | Global: 0.6719 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.9119 | Global: 0.7930 | Region: 1.1895 | HardNeg: 0.0000
+ 70%|███████   | 98/140 [45:04<19:05, 27.27s/it][LOSS] Total: 0.7566 | Global: 0.6855 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.7708 | Global: 0.7012 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8010 | Global: 0.7314 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7295 | Global: 0.6602 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7115 | Global: 0.6418 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7874 | Global: 0.7178 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 1.0437 | Global: 0.9736 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.8621 | Global: 0.7637 | Region: 0.9844 | HardNeg: 0.0000
+ 71%|███████   | 99/140 [45:12<14:46, 21.63s/it][LOSS] Total: 0.8263 | Global: 0.6963 | Region: 1.2998 | HardNeg: 0.0000
+[LOSS] Total: 0.8158 | Global: 0.6592 | Region: 1.5664 | HardNeg: 0.0000
+[LOSS] Total: 0.6319 | Global: 0.5625 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7822 | Global: 0.7129 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.6149 | Global: 0.4990 | Region: 1.1589 | HardNeg: 0.0000
+[LOSS] Total: 0.6915 | Global: 0.6201 | Region: 0.7139 | HardNeg: 0.0000
+[LOSS] Total: 0.7940 | Global: 0.7246 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7763 | Global: 0.7061 | Region: 0.7021 | HardNeg: 0.0000
+ 71%|███████▏  | 100/140 [45:28<13:19, 19.99s/it]                                                  71%|███████▏  | 100/140 [45:28<13:19, 19.99s/it]{'loss': 0.7818, 'grad_norm': 34.75, 'learning_rate': 1.1436343403356019e-06, 'epoch': 6.69}
+[LOSS] Total: 0.7413 | Global: 0.6719 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7958 | Global: 0.6826 | Region: 1.1322 | HardNeg: 0.0000
+[LOSS] Total: 0.7501 | Global: 0.6807 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8259 | Global: 0.6885 | Region: 1.3745 | HardNeg: 0.0000
+[LOSS] Total: 0.7812 | Global: 0.7119 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7107 | Global: 0.6411 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7935 | Global: 0.6875 | Region: 1.0599 | HardNeg: 0.0000
+[LOSS] Total: 0.7912 | Global: 0.6836 | Region: 1.0762 | HardNeg: 0.0000
+ 72%|███████▏  | 101/140 [45:45<12:14, 18.83s/it][LOSS] Total: 0.7950 | Global: 0.6504 | Region: 1.4463 | HardNeg: 0.0000
+[LOSS] Total: 0.8080 | Global: 0.6943 | Region: 1.1367 | HardNeg: 0.0000
+[LOSS] Total: 0.7471 | Global: 0.6777 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7167 | Global: 0.6475 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7735 | Global: 0.7041 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7121 | Global: 0.6162 | Region: 0.9590 | HardNeg: 0.0000
+[LOSS] Total: 0.7973 | Global: 0.7275 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.5643 | Global: 0.4546 | Region: 1.0970 | HardNeg: 0.0000
+ 73%|███████▎  | 102/140 [46:07<12:38, 19.97s/it][LOSS] Total: 0.7611 | Global: 0.6885 | Region: 0.7266 | HardNeg: 0.0000
+[LOSS] Total: 0.8818 | Global: 0.7139 | Region: 1.6789 | HardNeg: 0.0000
+[LOSS] Total: 0.7276 | Global: 0.6582 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7686 | Global: 0.6992 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7100 | Global: 0.6406 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8955 | Global: 0.8115 | Region: 0.8401 | HardNeg: 0.0000
+[LOSS] Total: 0.7814 | Global: 0.6348 | Region: 1.4668 | HardNeg: 0.0000
+[LOSS] Total: 0.8031 | Global: 0.7031 | Region: 1.0000 | HardNeg: 0.0000
+ 74%|███████▎  | 103/140 [46:17<10:26, 16.93s/it][LOSS] Total: 0.8947 | Global: 0.7168 | Region: 1.7793 | HardNeg: 0.0000
+[LOSS] Total: 0.7135 | Global: 0.5732 | Region: 1.4023 | HardNeg: 0.0000
+[LOSS] Total: 0.7428 | Global: 0.6729 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8068 | Global: 0.7373 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7745 | Global: 0.7051 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.9443 | Global: 0.7407 | Region: 2.0363 | HardNeg: 0.0000
+[LOSS] Total: 0.7840 | Global: 0.6777 | Region: 1.0625 | HardNeg: 0.0000
+[LOSS] Total: 0.7478 | Global: 0.6431 | Region: 1.0475 | HardNeg: 0.0000
+ 74%|███████▍  | 104/140 [46:40<11:09, 18.61s/it][LOSS] Total: 0.7645 | Global: 0.6953 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8693 | Global: 0.7314 | Region: 1.3789 | HardNeg: 0.0000
+[LOSS] Total: 0.7504 | Global: 0.6797 | Region: 0.7070 | HardNeg: 0.0000
+[LOSS] Total: 0.9611 | Global: 0.8042 | Region: 1.5687 | HardNeg: 0.0000
+ 75%|███████▌  | 105/140 [46:44<08:21, 14.33s/it]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.8271 | Global: 0.7578 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7221 | Global: 0.6523 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.6544 | Global: 0.5850 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8031 | Global: 0.7056 | Region: 0.9753 | HardNeg: 0.0000
+[LOSS] Total: 0.6681 | Global: 0.5986 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8226 | Global: 0.6836 | Region: 1.3896 | HardNeg: 0.0000
+[LOSS] Total: 0.8121 | Global: 0.6699 | Region: 1.4219 | HardNeg: 0.0000
+[LOSS] Total: 0.7598 | Global: 0.6904 | Region: 0.6934 | HardNeg: 0.0000
+ 76%|███████▌  | 106/140 [48:54<27:49, 49.11s/it][LOSS] Total: 0.7798 | Global: 0.7090 | Region: 0.7080 | HardNeg: 0.0000
+[LOSS] Total: 0.8167 | Global: 0.7109 | Region: 1.0579 | HardNeg: 0.0000
+[LOSS] Total: 0.8329 | Global: 0.7637 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7521 | Global: 0.6494 | Region: 1.0273 | HardNeg: 0.0000
+[LOSS] Total: 0.9796 | Global: 0.9014 | Region: 0.7822 | HardNeg: 0.0000
+[LOSS] Total: 0.6889 | Global: 0.6191 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8121 | Global: 0.6519 | Region: 1.6023 | HardNeg: 0.0000
+[LOSS] Total: 0.7976 | Global: 0.7246 | Region: 0.7300 | HardNeg: 0.0000
+ 76%|███████▋  | 107/140 [49:07<21:05, 38.35s/it][LOSS] Total: 0.7553 | Global: 0.6846 | Region: 0.7075 | HardNeg: 0.0000
+[LOSS] Total: 0.7235 | Global: 0.6504 | Region: 0.7314 | HardNeg: 0.0000
+[LOSS] Total: 0.7726 | Global: 0.7031 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8053 | Global: 0.7021 | Region: 1.0312 | HardNeg: 0.0000
+[LOSS] Total: 0.8294 | Global: 0.6958 | Region: 1.3359 | HardNeg: 0.0000
+[LOSS] Total: 0.7960 | Global: 0.6826 | Region: 1.1341 | HardNeg: 0.0000
+[LOSS] Total: 0.9096 | Global: 0.7676 | Region: 1.4199 | HardNeg: 0.0000
+[LOSS] Total: 0.8611 | Global: 0.7236 | Region: 1.3750 | HardNeg: 0.0000
+ 77%|███████▋  | 108/140 [49:18<15:57, 29.91s/it][LOSS] Total: 0.7315 | Global: 0.6621 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7386 | Global: 0.6338 | Region: 1.0482 | HardNeg: 0.0000
+[LOSS] Total: 0.6456 | Global: 0.5737 | Region: 0.7183 | HardNeg: 0.0000
+[LOSS] Total: 0.8287 | Global: 0.7588 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7667 | Global: 0.6953 | Region: 0.7139 | HardNeg: 0.0000
+[LOSS] Total: 0.7544 | Global: 0.6851 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7890 | Global: 0.6914 | Region: 0.9759 | HardNeg: 0.0000
+[LOSS] Total: 0.7039 | Global: 0.6328 | Region: 0.7109 | HardNeg: 0.0000
+ 78%|███████▊  | 109/140 [50:12<19:13, 37.22s/it][LOSS] Total: 0.8085 | Global: 0.7383 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7991 | Global: 0.7295 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7863 | Global: 0.7139 | Region: 0.7241 | HardNeg: 0.0000
+[LOSS] Total: 0.7391 | Global: 0.6680 | Region: 0.7114 | HardNeg: 0.0000
+[LOSS] Total: 0.7800 | Global: 0.7100 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7924 | Global: 0.7227 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.6414 | Global: 0.5723 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8362 | Global: 0.6982 | Region: 1.3799 | HardNeg: 0.0000
+ 79%|███████▊  | 110/140 [50:24<14:47, 29.58s/it]                                                  79%|███████▊  | 110/140 [50:24<14:47, 29.58s/it]{'loss': 0.7414, 'grad_norm': 33.0, 'learning_rate': 6.673703204254348e-07, 'epoch': 7.34}
+[LOSS] Total: 0.7628 | Global: 0.6934 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7020 | Global: 0.6328 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8089 | Global: 0.7383 | Region: 0.7061 | HardNeg: 0.0000
+[LOSS] Total: 0.7677 | Global: 0.6924 | Region: 0.7529 | HardNeg: 0.0000
+[LOSS] Total: 0.7313 | Global: 0.6621 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7334 | Global: 0.5781 | Region: 1.5531 | HardNeg: 0.0000
+[LOSS] Total: 0.7609 | Global: 0.6914 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7807 | Global: 0.6816 | Region: 0.9909 | HardNeg: 0.0000
+ 79%|███████▉  | 111/140 [50:42<12:37, 26.11s/it][LOSS] Total: 0.7439 | Global: 0.6748 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7982 | Global: 0.7285 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.8482 | Global: 0.7373 | Region: 1.1094 | HardNeg: 0.0000
+[LOSS] Total: 0.7083 | Global: 0.6367 | Region: 0.7163 | HardNeg: 0.0000
+[LOSS] Total: 0.8401 | Global: 0.6982 | Region: 1.4189 | HardNeg: 0.0000
+[LOSS] Total: 0.9544 | Global: 0.8467 | Region: 1.0775 | HardNeg: 0.0000
+[LOSS] Total: 0.6547 | Global: 0.5493 | Region: 1.0540 | HardNeg: 0.0000
+[LOSS] Total: 0.6441 | Global: 0.5747 | Region: 0.6943 | HardNeg: 0.0000
+ 80%|████████  | 112/140 [50:53<10:07, 21.70s/it][LOSS] Total: 0.7158 | Global: 0.6094 | Region: 1.0645 | HardNeg: 0.0000
+[LOSS] Total: 0.7633 | Global: 0.6934 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7827 | Global: 0.7129 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7454 | Global: 0.6758 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8274 | Global: 0.6934 | Region: 1.3408 | HardNeg: 0.0000
+[LOSS] Total: 0.7384 | Global: 0.6689 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8386 | Global: 0.6807 | Region: 1.5791 | HardNeg: 0.0000
+[LOSS] Total: 0.7725 | Global: 0.7031 | Region: 0.6934 | HardNeg: 0.0000
+ 81%|████████  | 113/140 [51:06<08:32, 18.98s/it][LOSS] Total: 0.7374 | Global: 0.6680 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7278 | Global: 0.6064 | Region: 1.2135 | HardNeg: 0.0000
+[LOSS] Total: 0.8086 | Global: 0.7383 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.7312 | Global: 0.6177 | Region: 1.1354 | HardNeg: 0.0000
+[LOSS] Total: 0.8882 | Global: 0.8154 | Region: 0.7275 | HardNeg: 0.0000
+[LOSS] Total: 0.8719 | Global: 0.6992 | Region: 1.7266 | HardNeg: 0.0000
+[LOSS] Total: 0.7277 | Global: 0.6182 | Region: 1.0951 | HardNeg: 0.0000
+[LOSS] Total: 0.7297 | Global: 0.6602 | Region: 0.6953 | HardNeg: 0.0000
+ 81%|████████▏ | 114/140 [51:17<07:14, 16.70s/it][LOSS] Total: 0.7274 | Global: 0.6572 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.8382 | Global: 0.7686 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8890 | Global: 0.7109 | Region: 1.7806 | HardNeg: 0.0000
+[LOSS] Total: 0.7172 | Global: 0.6475 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7422 | Global: 0.6729 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.9327 | Global: 0.7539 | Region: 1.7884 | HardNeg: 0.0000
+[LOSS] Total: 0.7043 | Global: 0.6328 | Region: 0.7148 | HardNeg: 0.0000
+[LOSS] Total: 0.8462 | Global: 0.6758 | Region: 1.7047 | HardNeg: 0.0000
+ 82%|████████▏ | 115/140 [52:08<11:17, 27.08s/it][LOSS] Total: 0.7788 | Global: 0.6758 | Region: 1.0299 | HardNeg: 0.0000
+[LOSS] Total: 0.8644 | Global: 0.7949 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7765 | Global: 0.7070 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7557 | Global: 0.6553 | Region: 1.0046 | HardNeg: 0.0000
+[LOSS] Total: 0.8314 | Global: 0.7275 | Region: 1.0391 | HardNeg: 0.0000
+[LOSS] Total: 0.7041 | Global: 0.6318 | Region: 0.7222 | HardNeg: 0.0000
+[LOSS] Total: 0.7205 | Global: 0.6475 | Region: 0.7300 | HardNeg: 0.0000
+[LOSS] Total: 0.7217 | Global: 0.6484 | Region: 0.7324 | HardNeg: 0.0000
+ 83%|████████▎ | 116/140 [52:18<08:45, 21.89s/it][LOSS] Total: 0.8884 | Global: 0.7266 | Region: 1.6187 | HardNeg: 0.0000
+[LOSS] Total: 0.7458 | Global: 0.6758 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7227 | Global: 0.6533 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7410 | Global: 0.6719 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7382 | Global: 0.6680 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.8094 | Global: 0.7402 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.8179 | Global: 0.7051 | Region: 1.1283 | HardNeg: 0.0000
+[LOSS] Total: 0.8385 | Global: 0.7080 | Region: 1.3047 | HardNeg: 0.0000
+ 84%|████████▎ | 117/140 [52:28<07:03, 18.40s/it][LOSS] Total: 0.9916 | Global: 0.8779 | Region: 1.1367 | HardNeg: 0.0000
+[LOSS] Total: 0.9027 | Global: 0.7168 | Region: 1.8594 | HardNeg: 0.0000
+[LOSS] Total: 0.7824 | Global: 0.7129 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8229 | Global: 0.7529 | Region: 0.7002 | HardNeg: 0.0000
+[LOSS] Total: 0.7771 | Global: 0.7061 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.7812 | Global: 0.7119 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.8223 | Global: 0.7158 | Region: 1.0645 | HardNeg: 0.0000
+[LOSS] Total: 0.6602 | Global: 0.5898 | Region: 0.7031 | HardNeg: 0.0000
+ 84%|████████▍ | 118/140 [52:43<06:17, 17.15s/it][LOSS] Total: 0.7866 | Global: 0.7168 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.9984 | Global: 0.8271 | Region: 1.7129 | HardNeg: 0.0000
+[LOSS] Total: 0.7520 | Global: 0.6826 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7628 | Global: 0.6934 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8309 | Global: 0.6699 | Region: 1.6102 | HardNeg: 0.0000
+[LOSS] Total: 0.7361 | Global: 0.6240 | Region: 1.1204 | HardNeg: 0.0000
+[LOSS] Total: 0.8633 | Global: 0.7188 | Region: 1.4458 | HardNeg: 0.0000
+[LOSS] Total: 0.7939 | Global: 0.7246 | Region: 0.6934 | HardNeg: 0.0000
+ 85%|████████▌ | 119/140 [52:53<05:17, 15.13s/it][LOSS] Total: 0.6377 | Global: 0.5640 | Region: 0.7373 | HardNeg: 0.0000
+[LOSS] Total: 0.7846 | Global: 0.7148 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7793 | Global: 0.5850 | Region: 1.9436 | HardNeg: 0.0000
+[LOSS] Total: 0.7529 | Global: 0.6836 | Region: 0.6934 | HardNeg: 0.0000
+ 86%|████████▌ | 120/140 [53:03<04:31, 13.58s/it]                                                  86%|████████▌ | 120/140 [53:03<04:31, 13.58s/it]{'loss': 0.744, 'grad_norm': 30.0, 'learning_rate': 3.044460665744284e-07, 'epoch': 8.0}
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.8283 | Global: 0.7168 | Region: 1.1146 | HardNeg: 0.0000
+[LOSS] Total: 0.7090 | Global: 0.6396 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8554 | Global: 0.6963 | Region: 1.5906 | HardNeg: 0.0000
+[LOSS] Total: 0.7584 | Global: 0.6885 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.8478 | Global: 0.7002 | Region: 1.4756 | HardNeg: 0.0000
+[LOSS] Total: 0.7329 | Global: 0.6060 | Region: 1.2695 | HardNeg: 0.0000
+[LOSS] Total: 0.8524 | Global: 0.7334 | Region: 1.1901 | HardNeg: 0.0000
+[LOSS] Total: 0.8254 | Global: 0.7090 | Region: 1.1641 | HardNeg: 0.0000
+ 86%|████████▋ | 121/140 [53:35<06:01, 19.03s/it][LOSS] Total: 0.7461 | Global: 0.6768 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7449 | Global: 0.6748 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7438 | Global: 0.6650 | Region: 0.7881 | HardNeg: 0.0000
+[LOSS] Total: 0.8082 | Global: 0.6943 | Region: 1.1387 | HardNeg: 0.0000
+[LOSS] Total: 0.7935 | Global: 0.7236 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7509 | Global: 0.6797 | Region: 0.7124 | HardNeg: 0.0000
+[LOSS] Total: 0.8438 | Global: 0.7744 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8288 | Global: 0.7197 | Region: 1.0905 | HardNeg: 0.0000
+ 87%|████████▋ | 122/140 [53:58<06:07, 20.42s/it][LOSS] Total: 0.7895 | Global: 0.6289 | Region: 1.6055 | HardNeg: 0.0000
+[LOSS] Total: 0.7531 | Global: 0.6836 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7841 | Global: 0.6777 | Region: 1.0638 | HardNeg: 0.0000
+[LOSS] Total: 0.8641 | Global: 0.7012 | Region: 1.6289 | HardNeg: 0.0000
+[LOSS] Total: 0.7496 | Global: 0.6797 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7812 | Global: 0.7119 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.6289 | Global: 0.5571 | Region: 0.7178 | HardNeg: 0.0000
+[LOSS] Total: 0.7638 | Global: 0.6943 | Region: 0.6943 | HardNeg: 0.0000
+ 88%|████████▊ | 123/140 [54:22<06:01, 21.24s/it][LOSS] Total: 0.6827 | Global: 0.6133 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7196 | Global: 0.6475 | Region: 0.7212 | HardNeg: 0.0000
+[LOSS] Total: 0.8353 | Global: 0.7656 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8098 | Global: 0.6738 | Region: 1.3594 | HardNeg: 0.0000
+[LOSS] Total: 0.7130 | Global: 0.6436 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7910 | Global: 0.7207 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.7918 | Global: 0.7227 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7700 | Global: 0.7002 | Region: 0.6982 | HardNeg: 0.0000
+ 89%|████████▊ | 124/140 [54:43<05:38, 21.17s/it][LOSS] Total: 0.7444 | Global: 0.6260 | Region: 1.1842 | HardNeg: 0.0000
+[LOSS] Total: 0.7354 | Global: 0.6660 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7619 | Global: 0.6924 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8472 | Global: 0.6465 | Region: 2.0073 | HardNeg: 0.0000
+[LOSS] Total: 0.7711 | Global: 0.7012 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7950 | Global: 0.7256 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8196 | Global: 0.6504 | Region: 1.6922 | HardNeg: 0.0000
+[LOSS] Total: 0.8330 | Global: 0.6689 | Region: 1.6406 | HardNeg: 0.0000
+ 89%|████████▉ | 125/140 [54:59<04:54, 19.65s/it][LOSS] Total: 0.7310 | Global: 0.6611 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7756 | Global: 0.7051 | Region: 0.7051 | HardNeg: 0.0000
+[LOSS] Total: 0.7924 | Global: 0.6465 | Region: 1.4590 | HardNeg: 0.0000
+[LOSS] Total: 0.8088 | Global: 0.6963 | Region: 1.1250 | HardNeg: 0.0000
+[LOSS] Total: 0.7800 | Global: 0.6699 | Region: 1.1009 | HardNeg: 0.0000
+[LOSS] Total: 0.7746 | Global: 0.7051 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8165 | Global: 0.7051 | Region: 1.1143 | HardNeg: 0.0000
+[LOSS] Total: 0.8210 | Global: 0.7012 | Region: 1.1979 | HardNeg: 0.0000
+ 90%|█████████ | 126/140 [55:39<06:02, 25.86s/it][LOSS] Total: 0.8882 | Global: 0.7363 | Region: 1.5186 | HardNeg: 0.0000
+[LOSS] Total: 0.7808 | Global: 0.7114 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7643 | Global: 0.6943 | Region: 0.6992 | HardNeg: 0.0000
+[LOSS] Total: 0.7843 | Global: 0.7148 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7515 | Global: 0.6768 | Region: 0.7476 | HardNeg: 0.0000
+[LOSS] Total: 0.7848 | Global: 0.6855 | Region: 0.9928 | HardNeg: 0.0000
+[LOSS] Total: 0.7940 | Global: 0.7246 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7861 | Global: 0.6914 | Region: 0.9473 | HardNeg: 0.0000
+ 91%|█████████ | 127/140 [55:52<04:44, 21.85s/it][LOSS] Total: 0.8984 | Global: 0.7402 | Region: 1.5812 | HardNeg: 0.0000
+[LOSS] Total: 0.8130 | Global: 0.7432 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7637 | Global: 0.6943 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8081 | Global: 0.6973 | Region: 1.1081 | HardNeg: 0.0000
+[LOSS] Total: 0.8110 | Global: 0.6680 | Region: 1.4302 | HardNeg: 0.0000
+[LOSS] Total: 0.7697 | Global: 0.6992 | Region: 0.7051 | HardNeg: 0.0000
+[LOSS] Total: 0.6967 | Global: 0.6172 | Region: 0.7947 | HardNeg: 0.0000
+[LOSS] Total: 0.7027 | Global: 0.6328 | Region: 0.6992 | HardNeg: 0.0000
+ 91%|█████████▏| 128/140 [56:07<03:58, 19.85s/it][LOSS] Total: 0.8384 | Global: 0.7686 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7243 | Global: 0.6523 | Region: 0.7197 | HardNeg: 0.0000
+[LOSS] Total: 0.9024 | Global: 0.7344 | Region: 1.6805 | HardNeg: 0.0000
+[LOSS] Total: 0.7363 | Global: 0.6660 | Region: 0.7031 | HardNeg: 0.0000
+[LOSS] Total: 0.7565 | Global: 0.6196 | Region: 1.3691 | HardNeg: 0.0000
+[LOSS] Total: 0.8267 | Global: 0.6924 | Region: 1.3428 | HardNeg: 0.0000
+[LOSS] Total: 0.8136 | Global: 0.7012 | Region: 1.1243 | HardNeg: 0.0000
+[LOSS] Total: 0.8491 | Global: 0.6875 | Region: 1.6164 | HardNeg: 0.0000
+ 92%|█████████▏| 129/140 [56:19<03:14, 17.73s/it][LOSS] Total: 0.7710 | Global: 0.7012 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.7773 | Global: 0.7080 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7667 | Global: 0.6963 | Region: 0.7046 | HardNeg: 0.0000
+[LOSS] Total: 0.8410 | Global: 0.6836 | Region: 1.5742 | HardNeg: 0.0000
+[LOSS] Total: 0.7430 | Global: 0.6328 | Region: 1.1016 | HardNeg: 0.0000
+[LOSS] Total: 0.8155 | Global: 0.7461 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.5943 | Global: 0.5249 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8543 | Global: 0.6934 | Region: 1.6094 | HardNeg: 0.0000
+ 93%|█████████▎| 130/140 [56:28<02:29, 14.93s/it]                                                  93%|█████████▎| 130/140 [56:28<02:29, 14.93s/it]{'loss': 0.7839, 'grad_norm': 31.0, 'learning_rate': 7.730678442730539e-08, 'epoch': 8.69}
+[LOSS] Total: 0.7666 | Global: 0.6973 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7218 | Global: 0.6514 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.7627 | Global: 0.6934 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7244 | Global: 0.6543 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.8636 | Global: 0.7891 | Region: 0.7451 | HardNeg: 0.0000
+[LOSS] Total: 0.8415 | Global: 0.7207 | Region: 1.2083 | HardNeg: 0.0000
+[LOSS] Total: 0.6389 | Global: 0.5693 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6455 | Global: 0.5762 | Region: 0.6934 | HardNeg: 0.0000
+ 94%|█████████▎| 131/140 [58:30<07:04, 47.17s/it][LOSS] Total: 0.7899 | Global: 0.6758 | Region: 1.1413 | HardNeg: 0.0000
+[LOSS] Total: 0.6587 | Global: 0.5889 | Region: 0.6982 | HardNeg: 0.0000
+[LOSS] Total: 0.8449 | Global: 0.7754 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8203 | Global: 0.6650 | Region: 1.5523 | HardNeg: 0.0000
+[LOSS] Total: 0.8827 | Global: 0.8125 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.7387 | Global: 0.6689 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.7951 | Global: 0.7256 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.6511 | Global: 0.5781 | Region: 0.7300 | HardNeg: 0.0000
+ 94%|█████████▍| 132/140 [58:43<04:53, 36.71s/it][LOSS] Total: 0.7575 | Global: 0.6816 | Region: 0.7583 | HardNeg: 0.0000
+[LOSS] Total: 0.8288 | Global: 0.7163 | Region: 1.1250 | HardNeg: 0.0000
+[LOSS] Total: 0.8288 | Global: 0.6587 | Region: 1.7016 | HardNeg: 0.0000
+[LOSS] Total: 0.7551 | Global: 0.6855 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.9100 | Global: 0.8408 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7742 | Global: 0.7031 | Region: 0.7109 | HardNeg: 0.0000
+[LOSS] Total: 0.8408 | Global: 0.7158 | Region: 1.2500 | HardNeg: 0.0000
+[LOSS] Total: 0.8304 | Global: 0.7236 | Region: 1.0677 | HardNeg: 0.0000
+ 95%|█████████▌| 133/140 [58:55<03:25, 29.34s/it][LOSS] Total: 0.7829 | Global: 0.7100 | Region: 0.7295 | HardNeg: 0.0000
+[LOSS] Total: 0.7629 | Global: 0.6934 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.9540 | Global: 0.8359 | Region: 1.1810 | HardNeg: 0.0000
+[LOSS] Total: 0.7908 | Global: 0.6885 | Region: 1.0234 | HardNeg: 0.0000
+[LOSS] Total: 0.7560 | Global: 0.6865 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7999 | Global: 0.7305 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.7646 | Global: 0.6953 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8986 | Global: 0.7852 | Region: 1.1341 | HardNeg: 0.0000
+ 96%|█████████▌| 134/140 [59:07<02:25, 24.26s/it][LOSS] Total: 0.7634 | Global: 0.6543 | Region: 1.0911 | HardNeg: 0.0000
+[LOSS] Total: 0.7746 | Global: 0.7051 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8021 | Global: 0.6680 | Region: 1.3413 | HardNeg: 0.0000
+[LOSS] Total: 0.8545 | Global: 0.7578 | Region: 0.9668 | HardNeg: 0.0000
+ 96%|█████████▋| 135/140 [59:11<01:31, 18.22s/it]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.7412 | Global: 0.6719 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8926 | Global: 0.7207 | Region: 1.7188 | HardNeg: 0.0000
+[LOSS] Total: 0.7997 | Global: 0.6924 | Region: 1.0729 | HardNeg: 0.0000
+[LOSS] Total: 0.8221 | Global: 0.7520 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7422 | Global: 0.6729 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8813 | Global: 0.7705 | Region: 1.1081 | HardNeg: 0.0000
+[LOSS] Total: 0.7997 | Global: 0.7275 | Region: 0.7217 | HardNeg: 0.0000
+[LOSS] Total: 0.7171 | Global: 0.6475 | Region: 0.6963 | HardNeg: 0.0000
+ 97%|█████████▋| 136/140 [1:00:00<01:49, 27.31s/it][LOSS] Total: 0.8105 | Global: 0.6611 | Region: 1.4941 | HardNeg: 0.0000
+[LOSS] Total: 0.7600 | Global: 0.6904 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.8164 | Global: 0.6924 | Region: 1.2397 | HardNeg: 0.0000
+[LOSS] Total: 0.9359 | Global: 0.7637 | Region: 1.7219 | HardNeg: 0.0000
+[LOSS] Total: 0.7560 | Global: 0.6855 | Region: 0.7041 | HardNeg: 0.0000
+[LOSS] Total: 0.7870 | Global: 0.7168 | Region: 0.7021 | HardNeg: 0.0000
+[LOSS] Total: 0.6721 | Global: 0.6016 | Region: 0.7056 | HardNeg: 0.0000
+[LOSS] Total: 0.7435 | Global: 0.6738 | Region: 0.6963 | HardNeg: 0.0000
+ 98%|█████████▊| 137/140 [1:00:44<01:37, 32.50s/it][LOSS] Total: 0.7081 | Global: 0.6348 | Region: 0.7334 | HardNeg: 0.0000
+[LOSS] Total: 0.7082 | Global: 0.5986 | Region: 1.0957 | HardNeg: 0.0000
+[LOSS] Total: 0.9305 | Global: 0.7627 | Region: 1.6781 | HardNeg: 0.0000
+[LOSS] Total: 0.7296 | Global: 0.6602 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.9298 | Global: 0.8604 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: 0.8078 | Global: 0.7383 | Region: 0.6953 | HardNeg: 0.0000
+[LOSS] Total: 0.7635 | Global: 0.6943 | Region: 0.6914 | HardNeg: 0.0000
+[LOSS] Total: 0.7874 | Global: 0.7158 | Region: 0.7158 | HardNeg: 0.0000
+ 99%|█████████▊| 138/140 [1:00:57<00:52, 26.44s/it][LOSS] Total: 0.7950 | Global: 0.6865 | Region: 1.0846 | HardNeg: 0.0000
+[LOSS] Total: 0.7029 | Global: 0.6328 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.8507 | Global: 0.7158 | Region: 1.3486 | HardNeg: 0.0000
+[LOSS] Total: 0.8513 | Global: 0.6562 | Region: 1.9503 | HardNeg: 0.0000
+[LOSS] Total: 0.7730 | Global: 0.6562 | Region: 1.1680 | HardNeg: 0.0000
+[LOSS] Total: 0.8305 | Global: 0.6963 | Region: 1.3418 | HardNeg: 0.0000
+[LOSS] Total: 0.8000 | Global: 0.6855 | Region: 1.1445 | HardNeg: 0.0000
+[LOSS] Total: 0.7287 | Global: 0.6582 | Region: 0.7051 | HardNeg: 0.0000
+ 99%|█████████▉| 139/140 [1:01:12<00:23, 23.14s/it][LOSS] Total: 0.6731 | Global: 0.6035 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.7332 | Global: 0.6631 | Region: 0.7012 | HardNeg: 0.0000
+[LOSS] Total: 0.7588 | Global: 0.6895 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.8107 | Global: 0.7402 | Region: 0.7051 | HardNeg: 0.0000
+[LOSS] Total: 0.8266 | Global: 0.7568 | Region: 0.6973 | HardNeg: 0.0000
+[LOSS] Total: 0.9758 | Global: 0.8115 | Region: 1.6430 | HardNeg: 0.0000
+[LOSS] Total: 0.7798 | Global: 0.7104 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7652 | Global: 0.6553 | Region: 1.0990 | HardNeg: 0.0000
+100%|██████████| 140/140 [1:01:49<00:00, 27.19s/it]                                                   100%|██████████| 140/140 [1:01:49<00:00, 27.19s/it]                                                   100%|██████████| 140/140 [1:01:50<00:00, 27.19s/it]100%|██████████| 140/140 [1:01:50<00:00, 26.50s/it]
+{'loss': 0.7509, 'grad_norm': 37.25, 'learning_rate': 0.0, 'epoch': 9.34}
+{'train_runtime': 3710.4395, 'train_samples_per_second': 0.625, 'train_steps_per_second': 0.038, 'train_loss': 0.7667093481336321, 'epoch': 9.34}
+
+========================================
+✅ 训练成功完成！
+========================================
+⏰ 开始时间: 2025-10-12 23:06:22
+⏰ 结束时间: 2025-10-13 00:08:27
+
+📂 输出目录: ./checkpoints/fgclip_ucf_full
+📊 TensorBoard: tensorboard --logdir ./checkpoints/fgclip_ucf_full --port 6006
+📝 训练日志: tail -f ./checkpoints/fgclip_ucf_full/trainer_log.txt
+========================================

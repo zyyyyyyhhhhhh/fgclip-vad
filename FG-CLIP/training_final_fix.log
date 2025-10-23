@@ -1,0 +1,100 @@
+========================================
+🚀 FG-CLIP UCF 正式训练启动
+========================================
+📊 数据统计:
+  - 训练视频: 232个
+  - 数据文件: ucf_fgclip_train_final.json
+  - 数据大小: 1.6M
+
+🎯 训练配置:
+  - 帧数: 256
+  - 批次大小: 2
+  - 梯度累积: 8
+  - 有效批次: 16
+  - 训练轮数: 10
+
+� 模型配置:
+  - CLIP模型: ViT-B/32 (本地加载)
+  - 本地路径: ./fgclip/model/clip
+  - 网络需求: ❌ 无需联网
+
+�💾 输出目录: ./checkpoints/fgclip_ucf_full
+🖥️  GPU设备: 0
+========================================
+
+⏰ 训练开始时间: 2025-10-12 22:44:11
+/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+============================================================
+Loading CLIP components (LOCAL MODE - No Internet Required)
+============================================================
+Loading tokenizer for: ViT-B/32
+  ✓ Tokenizer loaded (local CLIP)
+Loading image processor for: ViT-B/32
+  ✓ Image processor loaded (local CLIP)
+Initializing FG-CLIP model: ViT-B/32
+  ✓ Model initialized (random weights)
+============================================================
+Loading data from: /data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_train_final.json
+  → Detected list format (new)
+Total videos loaded: 232
+  - Normal videos: 0
+  - Abnormal videos: 232
+  0%|          | 0/140 [00:00<?, ?it/s]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:562: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:567: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:650: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[LOSS] Total: 0.6913 | Global: 0.6221 | Region: 0.6924 | HardNeg: 0.0000
+[LOSS] Total: 0.7954 | Global: 0.7261 | Region: 0.6934 | HardNeg: 0.0000
+[LOSS] Total: 0.7024 | Global: 0.6328 | Region: 0.6963 | HardNeg: 0.0000
+[LOSS] Total: 0.8375 | Global: 0.7681 | Region: 0.6943 | HardNeg: 0.0000
+[LOSS] Total: nan | Global: 0.9031 | Region: nan | HardNeg: 0.0000
+[LOSS] Total: 0.6798 | Global: 0.6035 | Region: 0.7627 | HardNeg: 0.0000
+[LOSS] Total: 0.8115 | Global: 0.7407 | Region: 0.7080 | HardNeg: 0.0000
+[LOSS] Total: 0.8151 | Global: 0.7451 | Region: 0.7002 | HardNeg: 0.0000
+  1%|          | 1/140 [00:23<54:10, 23.39s/it][LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+  1%|▏         | 2/140 [00:58<1:09:23, 30.17s/it][LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+  2%|▏         | 3/140 [01:15<55:21, 24.25s/it]  [LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+[LOSS] Total: nan | Global: nan | Region: nan | HardNeg: 0.0000
+  3%|▎         | 4/140 [01:32<48:35, 21.44s/it]

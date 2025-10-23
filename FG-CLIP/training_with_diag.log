@@ -1,0 +1,1512 @@
+nohup: 忽略输入
+========================================
+🚀 FG-CLIP UCF 正式训练启动
+========================================
+📊 数据统计:
+  - 训练样本: 约1812个regions（253异常视频 + 1306正常片段）
+  - 数据文件: ucf_fgclip_train_with_timestamps_en.json
+  - 数据大小: 2.0M
+
+🎯 训练配置:
+  - 帧数: 256
+  - 批次大小: 4
+  - 梯度累积: 8
+  - 有效批次: 32
+  - 训练轮数: 5
+  - ✅ 每个region独立对比学习
+
+� 模型配置:
+  - CLIP模型: ViT-B/32 (本地加载)
+  - 本地路径: ./fgclip/model/clip
+  - 网络需求: ❌ 无需联网
+
+�💾 输出目录: ./checkpoints/fgclip_ucf_full
+🖥️  GPU设备: 0
+========================================
+
+⏰ 训练开始时间: 2025-10-19 14:42:36
+/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+============================================================
+Loading CLIP components (LOCAL MODE - No Internet Required)
+============================================================
+Loading tokenizer for: ViT-B/32
+  ✓ Tokenizer loaded (local CLIP)
+Loading image processor for: ViT-B/32
+  ✓ Image processor loaded (local CLIP)
+Initializing FG-CLIP model: ViT-B/32
+[INFO] Initialized roi_projection: 768 -> 512 (ViT-B/32)
+  ✓ Model initialized (random weights)
+============================================================
+============================================================
+Loading OpenAI CLIP pretrained weights...
+============================================================
+[FG-CLIP] 🔄 Loading OpenAI CLIP weights: ViT-B/32
+[FG-CLIP] Cache: ~/.cache/clip/
+[FG-CLIP] Copying Vision Transformer weights...
+[FG-CLIP]   Copied 127 vision weights
+[FG-CLIP] Copying Text Transformer weights...
+[FG-CLIP]   Copied 122 text weights
+[FG-CLIP] Copying projection layers...
+[FG-CLIP]   ✅ Loaded logit_scale = 4.6052 (exp=100.0)
+[FG-CLIP] ✅ Successfully loaded 252 weight tensors
+[FG-CLIP] ⚠️  Missing 0 weight tensors (expected for new modules)
+Resizing position embeddings for long text...
+[FG-CLIP] ✅ Copied visual_projection weights to roi_projection
+============================================================
+✓ OpenAI CLIP weights loaded successfully
+============================================================
+Loading data from: /data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_train_with_timestamps_en.json
+  → Detected list format (new)
+Total videos loaded: 1559
+  - Normal videos: 1327
+  - Abnormal videos: 232
+
+✅ 正常模式：使用原始的detailed region captions
+
+
+================================================================================
+📊 Projection层训练状态检查
+================================================================================
+  logit_scale                                       : requires_grad=True, shape=()
+  logit_scale_finegraind                            : requires_grad=True, shape=()
+  logit_scale_hardneg                               : requires_grad=True, shape=()
+  visual_projection.weight                          : requires_grad=True, shape=(512, 768)
+  text_projection.weight                            : requires_grad=True, shape=(512, 512)
+  text_filip_projection.weight                      : requires_grad=True, shape=(512, 512)
+  roi_projection.weight                             : requires_grad=True, shape=(512, 768)
+================================================================================
+
+[RUNTIME DIAG] Enabled. Interval=1
+[TensorBoard] 日志目录: ./checkpoints/fgclip_ucf_full/tensorboard
+[TensorBoard] 启动命令: tensorboard --logdir ./checkpoints/fgclip_ucf_full/tensorboard --port 6006
+  0%|          | 0/240 [00:00<?, ?it/s]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:672: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:677: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:767: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:672: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:677: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:767: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[DIAG] Region batch diagnostics:
+  - valid_count=7 | bbox_batch_size=7
+  - img_norms: min=0.0000, max=1.0000, mean=0.5714, std=0.5345, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4805, max=0.6641, mean=-0.0703, std=0.2188, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.6975 | Global: 2.7349 | Region: 1.9626 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 1] Loss: 4.697475 | Global: 2.734863 | Region: 1.962612 | Hard: 0.000000 | LR: 0.00e+00 | Time: 2.14s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5078, max=0.1016, mean=-0.1582, std=0.2080, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.2095 | Global: 2.7319 | Region: 1.4775 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 2] Loss: 4.209473 | Global: 2.731934 | Region: 1.477539 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.89s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3730, max=0.7109, mean=0.0967, std=0.2812, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4858 | Global: 1.8491 | Region: 1.6367 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 3] Loss: 3.485840 | Global: 1.849121 | Region: 1.636719 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1226, max=0.3184, mean=0.1572, std=0.1216, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7344 | Global: 2.3184 | Region: 1.4160 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 4] Loss: 3.734375 | Global: 2.318359 | Region: 1.416016 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6211, max=0.2930, mean=-0.1104, std=0.2500, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.6618 | Global: 3.2155 | Region: 1.4463 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 5] Loss: 4.661774 | Global: 3.215485 | Region: 1.446289 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4062, max=0.2910, mean=-0.0442, std=0.1777, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1553 | Global: 1.6846 | Region: 1.4707 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 6] Loss: 3.155273 | Global: 1.684570 | Region: 1.470703 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3691, max=0.1367, mean=-0.0894, std=0.1426, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1508 | Global: 1.7777 | Region: 1.3730 | HardNeg: 0.0000
+[Epoch 0][Step 0][Batch 7] Loss: 3.150757 | Global: 1.777710 | Region: 1.373047 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3242, max=0.4492, mean=0.0052, std=0.2559, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7652 | Global: 2.3316 | Region: 1.4336 | HardNeg: 0.0000
+  0%|          | 1/240 [00:26<1:46:55, 26.84s/it][Epoch 0][Step 0][Batch 8] Loss: 3.765228 | Global: 2.331635 | Region: 1.433594 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4941, max=0.5820, mean=-0.0903, std=0.3262, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.0918 | Global: 2.6992 | Region: 1.3926 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 9] Loss: 4.091797 | Global: 2.699219 | Region: 1.392578 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.67s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2295, max=0.4180, mean=0.0981, std=0.1865, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.7827 | Global: 1.4077 | Region: 1.3750 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 10] Loss: 2.782715 | Global: 1.407715 | Region: 1.375000 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.76s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.773471
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3145, max=0.4863, mean=0.0361, std=0.2344, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0208 | Global: 1.6379 | Region: 1.3828 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 11] Loss: 3.020752 | Global: 1.637939 | Region: 1.382812 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5703, max=0.7344, mean=-0.0762, std=0.3652, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.9736 | Global: 2.5605 | Region: 1.4131 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 12] Loss: 3.973633 | Global: 2.560547 | Region: 1.413086 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5898, max=0.2949, mean=-0.0330, std=0.2461, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.8998 | Global: 2.5180 | Region: 1.3818 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 13] Loss: 3.899811 | Global: 2.517975 | Region: 1.381836 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2559, max=0.3047, mean=0.0195, std=0.1455, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.3457 | Global: 2.7246 | Region: 1.6211 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 14] Loss: 4.345703 | Global: 2.724609 | Region: 1.621094 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.73s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4844, max=0.6289, mean=-0.0962, std=0.3145, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.9693 | Global: 3.4058 | Region: 1.5635 | HardNeg: 0.0000
+[Epoch 0][Step 1][Batch 15] Loss: 4.969299 | Global: 3.405823 | Region: 1.563477 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5820, max=0.4668, mean=-0.0242, std=0.3359, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6683 | Global: 2.2562 | Region: 1.4121 | HardNeg: 0.0000
+  1%|          | 2/240 [00:43<1:22:42, 20.85s/it][Epoch 0][Step 1][Batch 16] Loss: 3.668274 | Global: 2.256165 | Region: 1.412109 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4023, max=0.5938, mean=0.0535, std=0.3105, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 5.0292 | Global: 3.6044 | Region: 1.4248 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 17] Loss: 5.029173 | Global: 3.604368 | Region: 1.424805 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.68s
+[DIAG] Region batch diagnostics:
+  - valid_count=6 | bbox_batch_size=6
+  - img_norms: min=0.0000, max=1.0000, mean=0.6667, std=0.5164, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2402, max=0.5195, mean=0.1436, std=0.2275, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.3579 | Global: 2.4796 | Region: 1.8783 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 18] Loss: 4.357869 | Global: 2.479614 | Region: 1.878255 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3789, max=0.8594, mean=0.1309, std=0.3477, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7217 | Global: 2.2686 | Region: 1.4531 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 19] Loss: 3.721680 | Global: 2.268555 | Region: 1.453125 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6055, max=0.2910, mean=-0.1064, std=0.2676, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.2714 | Global: 2.8983 | Region: 1.3730 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 20] Loss: 4.271362 | Global: 2.898315 | Region: 1.373047 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.77s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 4.125756
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3945, max=0.3574, mean=-0.0025, std=0.2129, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2949 | Global: 1.8955 | Region: 1.3994 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 21] Loss: 3.294922 | Global: 1.895508 | Region: 1.399414 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=6 | bbox_batch_size=6
+  - img_norms: min=0.0000, max=1.0000, mean=0.6667, std=0.5164, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4668, max=0.4004, mean=0.1006, std=0.2402, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.5140 | Global: 2.7295 | Region: 1.7845 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 22] Loss: 4.513997 | Global: 2.729492 | Region: 1.784505 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1982, max=0.3906, mean=0.1367, std=0.1621, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4906 | Global: 2.1127 | Region: 1.3779 | HardNeg: 0.0000
+[Epoch 0][Step 2][Batch 23] Loss: 3.490601 | Global: 2.112671 | Region: 1.377930 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5195, max=0.4219, mean=-0.0908, std=0.2793, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4854 | Global: 2.0674 | Region: 1.4180 | HardNeg: 0.0000
+  1%|▏         | 3/240 [01:00<1:14:39, 18.90s/it][Epoch 0][Step 2][Batch 24] Loss: 3.485352 | Global: 2.067383 | Region: 1.417969 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.96s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6680, max=0.8203, mean=-0.0869, std=0.3984, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6772 | Global: 2.2852 | Region: 1.3921 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 25] Loss: 3.677246 | Global: 2.285156 | Region: 1.392090 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.68s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5820, max=0.3750, mean=-0.0474, std=0.2637, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.0730 | Global: 2.6902 | Region: 1.3828 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 26] Loss: 4.072998 | Global: 2.690186 | Region: 1.382812 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1738, max=0.5156, mean=0.2139, std=0.1943, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.8608 | Global: 2.4673 | Region: 1.3936 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 27] Loss: 3.860840 | Global: 2.467285 | Region: 1.393555 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5977, max=0.3242, mean=-0.1279, std=0.2383, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2346 | Global: 1.8567 | Region: 1.3779 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 28] Loss: 3.234619 | Global: 1.856689 | Region: 1.377930 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.78s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6016, max=0.6094, mean=0.0952, std=0.3438, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.1908 | Global: 2.7347 | Region: 1.4561 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 29] Loss: 4.190796 | Global: 2.734741 | Region: 1.456055 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5273, max=0.7578, mean=0.1396, std=0.3965, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6667 | Global: 2.2380 | Region: 1.4287 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 30] Loss: 3.666748 | Global: 2.238037 | Region: 1.428711 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.76s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.748812
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0591, max=0.7227, mean=0.3613, std=0.2275, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.8241 | Global: 2.4218 | Region: 1.4023 | HardNeg: 0.0000
+[Epoch 0][Step 3][Batch 31] Loss: 3.824097 | Global: 2.421753 | Region: 1.402344 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2930, max=0.7852, mean=0.3574, std=0.3320, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.0999 | Global: 2.4944 | Region: 1.6055 | HardNeg: 0.0000
+  2%|▏         | 4/240 [01:16<1:10:55, 18.03s/it][Epoch 0][Step 3][Batch 32] Loss: 4.099854 | Global: 2.494385 | Region: 1.605469 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6602, max=0.5078, mean=-0.0306, std=0.3301, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1792 | Global: 1.7573 | Region: 1.4219 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 33] Loss: 3.179199 | Global: 1.757324 | Region: 1.421875 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.69s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.9609, max=0.3555, mean=-0.1572, std=0.3730, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0298 | Global: 1.6108 | Region: 1.4189 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 34] Loss: 3.029785 | Global: 1.610840 | Region: 1.418945 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1953, max=0.3066, mean=0.0991, std=0.1357, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2946 | Global: 1.9323 | Region: 1.3623 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 35] Loss: 3.294556 | Global: 1.932251 | Region: 1.362305 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4727, max=0.4688, mean=-0.0256, std=0.2080, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7016 | Global: 2.0977 | Region: 1.6039 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 36] Loss: 3.701562 | Global: 2.097656 | Region: 1.603906 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4238, max=0.4453, mean=0.0381, std=0.2383, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4205 | Global: 2.0436 | Region: 1.3770 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 37] Loss: 3.420532 | Global: 2.043579 | Region: 1.376953 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4102, max=0.5938, mean=0.0022, std=0.2734, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.8708 | Global: 2.4617 | Region: 1.4092 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 38] Loss: 3.870850 | Global: 2.461670 | Region: 1.409180 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=7 | bbox_batch_size=7
+  - img_norms: min=0.0000, max=1.0000, mean=0.5714, std=0.5345, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5156, max=0.3457, mean=-0.0093, std=0.1855, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 5.8238 | Global: 3.8333 | Region: 1.9905 | HardNeg: 0.0000
+[Epoch 0][Step 4][Batch 39] Loss: 5.823842 | Global: 3.833328 | Region: 1.990513 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4688, max=0.4629, mean=-0.0610, std=0.2695, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.6727 | Global: 3.3563 | Region: 1.3164 | HardNeg: 0.0000
+  2%|▏         | 5/240 [01:33<1:08:40, 17.53s/it][Epoch 0][Step 4][Batch 40] Loss: 4.672729 | Global: 3.356323 | Region: 1.316406 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.74s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.891701
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.6000, std=0.5477, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3301, max=0.5977, mean=0.1216, std=0.2080, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.2545 | Global: 2.6038 | Region: 1.6508 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 41] Loss: 4.254541 | Global: 2.603760 | Region: 1.650781 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.67s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3379, max=0.3770, mean=0.0219, std=0.2109, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6052 | Global: 2.2155 | Region: 1.3896 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 42] Loss: 3.605164 | Global: 2.215515 | Region: 1.389648 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1855, max=0.3164, mean=0.0737, std=0.1406, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4310 | Global: 2.0394 | Region: 1.3916 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 43] Loss: 3.431030 | Global: 2.039429 | Region: 1.391602 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1011, max=0.4395, mean=0.1631, std=0.1611, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6183 | Global: 2.2599 | Region: 1.3584 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 44] Loss: 3.618347 | Global: 2.259949 | Region: 1.358398 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.8750, max=0.5547, mean=-0.1582, std=0.3691, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2047 | Global: 1.4844 | Region: 1.7203 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 45] Loss: 3.204688 | Global: 1.484375 | Region: 1.720312 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.78s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2178, max=0.4980, mean=0.1318, std=0.2051, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5735 | Global: 2.1409 | Region: 1.4326 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 46] Loss: 3.573486 | Global: 2.140869 | Region: 1.432617 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.73s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0918, max=0.2734, mean=0.0732, std=0.1055, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.1360 | Global: 2.7385 | Region: 1.3975 | HardNeg: 0.0000
+[Epoch 0][Step 5][Batch 47] Loss: 4.135986 | Global: 2.738525 | Region: 1.397461 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6602, max=0.8164, mean=0.0884, std=0.4863, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5794 | Global: 2.1131 | Region: 1.4663 | HardNeg: 0.0000
+  2%|▎         | 6/240 [01:50<1:07:35, 17.33s/it][Epoch 0][Step 5][Batch 48] Loss: 3.579407 | Global: 2.113098 | Region: 1.466309 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.96s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3223, max=0.4043, mean=0.1260, std=0.2051, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8734 | Global: 1.4603 | Region: 1.4131 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 49] Loss: 2.873352 | Global: 1.460266 | Region: 1.413086 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.67s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2363, max=0.9531, mean=0.1543, std=0.3457, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 5.0627 | Global: 3.6296 | Region: 1.4331 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 50] Loss: 5.062665 | Global: 3.629560 | Region: 1.433105 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.75s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.733867
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5391, max=0.0791, mean=-0.1484, std=0.1963, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0808 | Global: 1.6951 | Region: 1.3857 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 51] Loss: 3.080811 | Global: 1.695068 | Region: 1.385742 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.8125, max=0.5117, mean=-0.0835, std=0.3516, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.8345 | Global: 2.3999 | Region: 1.4346 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 52] Loss: 3.834473 | Global: 2.399902 | Region: 1.434570 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5234, max=0.3418, mean=-0.0439, std=0.2354, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1040 | Global: 1.7407 | Region: 1.3633 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 53] Loss: 3.104004 | Global: 1.740723 | Region: 1.363281 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1113, max=0.3906, mean=0.1177, std=0.1377, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3550 | Global: 1.9800 | Region: 1.3750 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 54] Loss: 3.354980 | Global: 1.979980 | Region: 1.375000 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6758, max=0.5508, mean=-0.0337, std=0.3086, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.9114 | Global: 2.5325 | Region: 1.3789 | HardNeg: 0.0000
+[Epoch 0][Step 6][Batch 55] Loss: 3.911377 | Global: 2.532471 | Region: 1.378906 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.73s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3125, max=0.4688, mean=0.0664, std=0.2617, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0649 | Global: 1.6147 | Region: 1.4502 | HardNeg: 0.0000
+  3%|▎         | 7/240 [02:06<1:06:12, 17.05s/it][Epoch 0][Step 6][Batch 56] Loss: 3.064941 | Global: 1.614746 | Region: 1.450195 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5859, max=0.5898, mean=-0.0466, std=0.2754, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 5.0533 | Global: 3.6744 | Region: 1.3789 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 57] Loss: 5.053261 | Global: 3.674355 | Region: 1.378906 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.67s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.6000, std=0.5477, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3418, max=0.1235, mean=-0.0913, std=0.1309, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.1143 | Global: 2.4948 | Region: 1.6195 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 58] Loss: 4.114282 | Global: 2.494751 | Region: 1.619531 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1729, max=0.6602, mean=0.1934, std=0.2500, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0918 | Global: 1.7188 | Region: 1.3730 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 59] Loss: 3.091797 | Global: 1.718750 | Region: 1.373047 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.4000, std=0.5477, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3770, max=0.6797, mean=0.0244, std=0.2178, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.9377 | Global: 2.2815 | Region: 1.6562 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 60] Loss: 3.937744 | Global: 2.281494 | Region: 1.656250 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.77s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.654767
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3320, max=0.8438, mean=0.1670, std=0.3516, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.6141 | Global: 3.1790 | Region: 1.4351 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 61] Loss: 4.614071 | Global: 3.179012 | Region: 1.435059 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2031, max=0.2500, mean=0.0327, std=0.1201, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3137 | Global: 1.8821 | Region: 1.4316 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 62] Loss: 3.313721 | Global: 1.882080 | Region: 1.431641 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5703, max=0.2295, mean=-0.0439, std=0.2471, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6439 | Global: 2.2592 | Region: 1.3848 | HardNeg: 0.0000
+[Epoch 0][Step 7][Batch 63] Loss: 3.643921 | Global: 2.259155 | Region: 1.384766 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2090, max=0.1895, mean=0.0327, std=0.1177, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.1362 | Global: 2.7368 | Region: 1.3994 | HardNeg: 0.0000
+  3%|▎         | 8/240 [02:23<1:05:17, 16.88s/it][Epoch 0][Step 7][Batch 64] Loss: 4.136169 | Global: 2.736755 | Region: 1.399414 | Hard: 0.000000 | LR: 1.46e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3340, max=0.3594, mean=0.0610, std=0.2041, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0107 | Global: 1.5869 | Region: 1.4238 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 65] Loss: 3.010742 | Global: 1.586914 | Region: 1.423828 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.68s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3926, max=0.2734, mean=-0.1167, std=0.2217, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0100 | Global: 1.5540 | Region: 1.4561 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 66] Loss: 3.010010 | Global: 1.553955 | Region: 1.456055 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2559, max=0.6680, mean=0.1279, std=0.2598, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3223 | Global: 1.9189 | Region: 1.4033 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 67] Loss: 3.322266 | Global: 1.918945 | Region: 1.403320 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.79s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2969, max=0.5469, mean=0.0471, std=0.2500, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3378 | Global: 1.9335 | Region: 1.4043 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 68] Loss: 3.337769 | Global: 1.933472 | Region: 1.404297 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3594, max=0.3926, mean=0.0444, std=0.2178, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0354 | Global: 1.6438 | Region: 1.3916 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 69] Loss: 3.035400 | Global: 1.643799 | Region: 1.391602 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3418, max=0.8477, mean=0.2715, std=0.2949, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3086 | Global: 1.9209 | Region: 1.3877 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 70] Loss: 3.308594 | Global: 1.920898 | Region: 1.387695 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.97s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.473266
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3652, max=0.4727, mean=0.0728, std=0.2520, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4863 | Global: 2.0859 | Region: 1.4004 | HardNeg: 0.0000
+[Epoch 0][Step 8][Batch 71] Loss: 3.486328 | Global: 2.085938 | Region: 1.400391 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.6000, std=0.5477, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0605, max=0.5000, mean=0.1016, std=0.1475, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6707 | Global: 2.0926 | Region: 1.5781 | HardNeg: 0.0000
+  4%|▍         | 9/240 [02:40<1:05:11, 16.93s/it][Epoch 0][Step 8][Batch 72] Loss: 3.670685 | Global: 2.092560 | Region: 1.578125 | Hard: 0.000000 | LR: 1.67e-06 | Time: 0.73s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.9688, max=0.3320, mean=-0.2197, std=0.3457, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3358 | Global: 1.9471 | Region: 1.3887 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 73] Loss: 3.335754 | Global: 1.947083 | Region: 1.388672 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.68s
+[DIAG] Region batch diagnostics:
+  - valid_count=7 | bbox_batch_size=7
+  - img_norms: min=0.0000, max=1.0000, mean=0.4286, std=0.5345, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3906, max=0.8203, mean=0.0757, std=0.2246, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.4043 | Global: 2.4104 | Region: 1.9939 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 74] Loss: 4.404262 | Global: 2.410400 | Region: 1.993862 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2383, max=0.6406, mean=0.1553, std=0.2295, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0103 | Global: 1.6187 | Region: 1.3916 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 75] Loss: 3.010254 | Global: 1.618652 | Region: 1.391602 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.79s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1836, max=0.4492, mean=0.0898, std=0.1650, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6372 | Global: 2.2349 | Region: 1.4023 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 76] Loss: 3.637207 | Global: 2.234863 | Region: 1.402344 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4492, max=0.1807, mean=-0.0938, std=0.1846, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.1311 | Global: 2.7112 | Region: 1.4199 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 77] Loss: 4.131104 | Global: 2.711182 | Region: 1.419922 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5117, max=0.3027, mean=-0.1445, std=0.2324, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1956 | Global: 1.8088 | Region: 1.3867 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 78] Loss: 3.195557 | Global: 1.808838 | Region: 1.386719 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.73s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4590, max=0.1963, mean=-0.1016, std=0.1963, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.8465 | Global: 3.4324 | Region: 1.4141 | HardNeg: 0.0000
+[Epoch 0][Step 9][Batch 79] Loss: 4.846451 | Global: 3.432388 | Region: 1.414062 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3164, max=0.7812, mean=0.1318, std=0.2910, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.6167 | Global: 2.1938 | Region: 1.4229 | HardNeg: 0.0000
+  4%|▍         | 10/240 [02:56<1:04:27, 16.82s/it]                                                    4%|▍         | 10/240 [02:56<1:04:27, 16.82s/it][Epoch 0][Step 9][Batch 80] Loss: 3.616699 | Global: 2.193848 | Region: 1.422852 | Hard: 0.000000 | LR: 1.88e-06 | Time: 0.75s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.733430
+====================================================================================================
+
+{'loss': 3.7669, 'grad_norm': 2040.0, 'learning_rate': 2.0833333333333334e-06, 'epoch': 0.21}
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3984, max=0.5234, mean=-0.0464, std=0.2305, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5448 | Global: 1.9409 | Region: 1.6039 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 81] Loss: 3.544824 | Global: 1.940918 | Region: 1.603906 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.69s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0391, max=0.5000, mean=0.3320, std=0.1797, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8564 | Global: 1.4756 | Region: 1.3809 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 82] Loss: 2.856445 | Global: 1.475586 | Region: 1.380859 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.78s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4980, max=0.5469, mean=-0.0684, std=0.2949, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7251 | Global: 2.3081 | Region: 1.4170 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 83] Loss: 3.725098 | Global: 2.308105 | Region: 1.416992 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2754, max=0.5156, mean=0.0564, std=0.2305, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0447 | Global: 1.6414 | Region: 1.4033 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 84] Loss: 3.044678 | Global: 1.641357 | Region: 1.403320 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2578, max=0.2559, mean=-0.0447, std=0.1641, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3115 | Global: 1.9238 | Region: 1.3877 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 85] Loss: 3.311523 | Global: 1.923828 | Region: 1.387695 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.78s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5703, max=0.1328, mean=-0.1660, std=0.2285, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3317 | Global: 1.9294 | Region: 1.4023 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 86] Loss: 3.331726 | Global: 1.929382 | Region: 1.402344 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3906, max=0.5469, mean=0.0786, std=0.2676, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0220 | Global: 1.6255 | Region: 1.3965 | HardNeg: 0.0000
+[Epoch 0][Step 10][Batch 87] Loss: 3.021973 | Global: 1.625488 | Region: 1.396484 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=6 | bbox_batch_size=6
+  - img_norms: min=0.0000, max=1.0000, mean=0.5000, std=0.5477, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2617, max=0.6602, mean=0.0884, std=0.2080, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.9629 | Global: 2.1230 | Region: 1.8398 | HardNeg: 0.0000
+  5%|▍         | 11/240 [03:13<1:03:55, 16.75s/it][Epoch 0][Step 10][Batch 88] Loss: 3.962891 | Global: 2.123047 | Region: 1.839844 | Hard: 0.000000 | LR: 2.08e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=6 | bbox_batch_size=6
+  - img_norms: min=0.0000, max=1.0000, mean=0.3333, std=0.5164, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=0.0000, max=0.7109, mean=0.1128, std=0.2139, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.2700 | Global: 2.4366 | Region: 1.8333 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 89] Loss: 4.269979 | Global: 2.436646 | Region: 1.833333 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.69s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.7070, max=0.0557, mean=-0.1855, std=0.2578, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1431 | Global: 1.7729 | Region: 1.3701 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 90] Loss: 3.143066 | Global: 1.772949 | Region: 1.370117 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.76s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.421220
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4590, max=0.4355, mean=-0.0061, std=0.2539, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8911 | Global: 1.4790 | Region: 1.4121 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 91] Loss: 2.891113 | Global: 1.479004 | Region: 1.412109 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1670, max=0.7070, mean=0.2188, std=0.2422, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1274 | Global: 1.6938 | Region: 1.4336 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 92] Loss: 3.127441 | Global: 1.693848 | Region: 1.433594 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5625, max=1.1406, mean=0.1523, std=0.4863, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 5.3242 | Global: 3.7460 | Region: 1.5781 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 93] Loss: 5.324158 | Global: 3.746033 | Region: 1.578125 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4551, max=0.6797, mean=-0.0276, std=0.3262, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8770 | Global: 1.4741 | Region: 1.4028 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 94] Loss: 2.876953 | Global: 1.474121 | Region: 1.402832 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0737, max=0.3965, mean=0.0903, std=0.1357, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5813 | Global: 2.1770 | Region: 1.4043 | HardNeg: 0.0000
+[Epoch 0][Step 11][Batch 95] Loss: 3.581299 | Global: 2.177002 | Region: 1.404297 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5352, max=0.8359, mean=0.1348, std=0.3691, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0767 | Global: 1.6577 | Region: 1.4189 | HardNeg: 0.0000
+  5%|▌         | 12/240 [03:30<1:03:43, 16.77s/it][Epoch 0][Step 11][Batch 96] Loss: 3.076660 | Global: 1.657715 | Region: 1.418945 | Hard: 0.000000 | LR: 2.29e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1670, max=0.5703, mean=0.1240, std=0.2461, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2717 | Global: 1.9084 | Region: 1.3633 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 97] Loss: 3.271729 | Global: 1.908447 | Region: 1.363281 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.70s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0293, max=0.5859, mean=0.2158, std=0.1885, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.9285 | Global: 1.5671 | Region: 1.3613 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 98] Loss: 2.928467 | Global: 1.567139 | Region: 1.361328 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3066, max=0.7578, mean=0.2080, std=0.3281, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0327 | Global: 1.6177 | Region: 1.4150 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 99] Loss: 3.032715 | Global: 1.617676 | Region: 1.415039 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.78s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3945, max=0.4980, mean=0.0776, std=0.3340, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1995 | Global: 1.8010 | Region: 1.3984 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 100] Loss: 3.199463 | Global: 1.801025 | Region: 1.398438 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.76s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.331000
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3848, max=0.3965, mean=-0.0066, std=0.2285, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5740 | Global: 2.1755 | Region: 1.3984 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 101] Loss: 3.573975 | Global: 2.175537 | Region: 1.398438 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3691, max=0.9375, mean=0.1621, std=0.3691, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4141 | Global: 1.9492 | Region: 1.4648 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 102] Loss: 3.414062 | Global: 1.949219 | Region: 1.464844 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4551, max=0.5195, mean=0.1167, std=0.2676, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4900 | Global: 2.0378 | Region: 1.4521 | HardNeg: 0.0000
+[Epoch 0][Step 12][Batch 103] Loss: 3.489990 | Global: 2.037842 | Region: 1.452148 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4023, max=0.2402, mean=-0.1064, std=0.2227, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1282 | Global: 1.7336 | Region: 1.3945 | HardNeg: 0.0000
+  5%|▌         | 13/240 [03:46<1:03:14, 16.72s/it][Epoch 0][Step 12][Batch 104] Loss: 3.128174 | Global: 1.733643 | Region: 1.394531 | Hard: 0.000000 | LR: 2.50e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3613, max=1.0625, mean=0.2412, std=0.4219, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4209 | Global: 2.0000 | Region: 1.4209 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 105] Loss: 3.420898 | Global: 2.000000 | Region: 1.420898 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.70s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3223, max=0.3984, mean=0.0317, std=0.2061, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3505 | Global: 1.9725 | Region: 1.3779 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 106] Loss: 3.350464 | Global: 1.972534 | Region: 1.377930 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4805, max=0.2051, mean=-0.1089, std=0.2246, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5724 | Global: 2.1388 | Region: 1.4336 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 107] Loss: 3.572388 | Global: 2.138794 | Region: 1.433594 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=5 | bbox_batch_size=5
+  - img_norms: min=0.0000, max=1.0000, mean=0.8000, std=0.4472, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=0.0000, max=0.9453, mean=0.3281, std=0.2988, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.8418 | Global: 2.2137 | Region: 1.6281 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 108] Loss: 3.841809 | Global: 2.213684 | Region: 1.628125 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2695, max=0.6875, mean=0.1465, std=0.2490, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 5.1891 | Global: 3.7565 | Region: 1.4326 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 109] Loss: 5.189117 | Global: 3.756500 | Region: 1.432617 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3906, max=0.1807, mean=-0.0060, std=0.1680, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8154 | Global: 1.3818 | Region: 1.4336 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 110] Loss: 2.815430 | Global: 1.381836 | Region: 1.433594 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.76s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.579631
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4590, max=0.3828, mean=-0.0972, std=0.2246, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8662 | Global: 1.4404 | Region: 1.4258 | HardNeg: 0.0000
+[Epoch 0][Step 13][Batch 111] Loss: 2.866211 | Global: 1.440430 | Region: 1.425781 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4180, max=0.2168, mean=-0.0320, std=0.1797, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4441 | Global: 2.0574 | Region: 1.3867 | HardNeg: 0.0000
+  6%|▌         | 14/240 [04:03<1:02:34, 16.61s/it][Epoch 0][Step 13][Batch 112] Loss: 3.444092 | Global: 2.057373 | Region: 1.386719 | Hard: 0.000000 | LR: 2.71e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=6 | bbox_batch_size=6
+  - img_norms: min=0.0000, max=1.0000, mean=0.6667, std=0.5164, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5039, max=0.4082, mean=-0.0371, std=0.2344, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 4.0630 | Global: 2.2036 | Region: 1.8594 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 113] Loss: 4.062988 | Global: 2.203613 | Region: 1.859375 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.69s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.1582, max=0.5898, mean=0.1875, std=0.2285, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4047 | Global: 1.9886 | Region: 1.4160 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 114] Loss: 3.404663 | Global: 1.988647 | Region: 1.416016 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3477, max=0.4238, mean=0.0820, std=0.2324, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1621 | Global: 1.7520 | Region: 1.4102 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 115] Loss: 3.162109 | Global: 1.751953 | Region: 1.410156 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3945, max=0.4336, mean=-0.0605, std=0.2422, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4008 | Global: 1.9906 | Region: 1.4102 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 116] Loss: 3.400757 | Global: 1.990601 | Region: 1.410156 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.99s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2637, max=0.3184, mean=0.0118, std=0.1689, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7644 | Global: 2.4050 | Region: 1.3594 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 117] Loss: 3.764404 | Global: 2.405029 | Region: 1.359375 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3262, max=0.6641, mean=0.1963, std=0.3164, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5013 | Global: 2.1107 | Region: 1.3906 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 118] Loss: 3.501343 | Global: 2.110718 | Region: 1.390625 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4434, max=0.5898, mean=0.1348, std=0.2852, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.1927 | Global: 1.7758 | Region: 1.4170 | HardNeg: 0.0000
+[Epoch 0][Step 14][Batch 119] Loss: 3.192749 | Global: 1.775757 | Region: 1.416992 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3730, max=0.5781, mean=0.1621, std=0.2773, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.8608 | Global: 1.4565 | Region: 1.4043 | HardNeg: 0.0000
+  6%|▋         | 15/240 [04:20<1:02:23, 16.64s/it][Epoch 0][Step 14][Batch 120] Loss: 2.860840 | Global: 1.456543 | Region: 1.404297 | Hard: 0.000000 | LR: 2.92e-06 | Time: 0.76s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.366016
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5234, max=0.3945, mean=0.0491, std=0.2617, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.5822 | Global: 2.2169 | Region: 1.3652 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 121] Loss: 3.582153 | Global: 2.216919 | Region: 1.365234 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.68s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3457, max=0.9336, mean=0.3789, std=0.3613, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0869 | Global: 1.6904 | Region: 1.3965 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 122] Loss: 3.086914 | Global: 1.690430 | Region: 1.396484 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.5234, max=0.7383, mean=0.0952, std=0.3027, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.3459 | Global: 1.9280 | Region: 1.4180 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 123] Loss: 3.345947 | Global: 1.927979 | Region: 1.417969 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2168, max=0.5469, mean=0.1436, std=0.2178, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2231 | Global: 1.8315 | Region: 1.3916 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 124] Loss: 3.223145 | Global: 1.831543 | Region: 1.391602 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2334, max=0.5391, mean=0.1133, std=0.1846, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.9543 | Global: 1.5754 | Region: 1.3789 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 125] Loss: 2.954346 | Global: 1.575439 | Region: 1.378906 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.73s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4297, max=0.4941, mean=0.0266, std=0.2500, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.7056 | Global: 2.2212 | Region: 1.4844 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 126] Loss: 3.705566 | Global: 2.221191 | Region: 1.484375 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.74s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.3418, max=0.4668, mean=0.0258, std=0.2393, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.7583 | Global: 1.3501 | Region: 1.4082 | HardNeg: 0.0000
+[Epoch 0][Step 15][Batch 127] Loss: 2.758301 | Global: 1.350098 | Region: 1.408203 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4219, max=0.2949, mean=-0.0010, std=0.2061, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0903 | Global: 1.6772 | Region: 1.4131 | HardNeg: 0.0000
+  7%|▋         | 16/240 [04:36<1:02:00, 16.61s/it][Epoch 0][Step 15][Batch 128] Loss: 3.090332 | Global: 1.677246 | Region: 1.413086 | Hard: 0.000000 | LR: 3.13e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0703, max=0.4004, mean=0.1846, std=0.1357, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.7070 | Global: 1.3252 | Region: 1.3818 | HardNeg: 0.0000
+[Epoch 0][Step 16][Batch 129] Loss: 2.707031 | Global: 1.325195 | Region: 1.381836 | Hard: 0.000000 | LR: 3.33e-06 | Time: 0.69s
+[DIAG] Region batch diagnostics:
+  - valid_count=6 | bbox_batch_size=6
+  - img_norms: min=0.0000, max=1.0000, mean=0.8333, std=0.4082, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.4023, max=0.3418, mean=-0.0991, std=0.1670, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.4367 | Global: 1.6802 | Region: 1.7565 | HardNeg: 0.0000
+[Epoch 0][Step 16][Batch 130] Loss: 3.436686 | Global: 1.680176 | Region: 1.756510 | Hard: 0.000000 | LR: 3.33e-06 | Time: 0.75s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 3.189042
+====================================================================================================
+
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0693, max=0.4688, mean=0.2021, std=0.1670, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0874 | Global: 1.7026 | Region: 1.3848 | HardNeg: 0.0000
+[Epoch 0][Step 16][Batch 131] Loss: 3.087402 | Global: 1.702637 | Region: 1.384766 | Hard: 0.000000 | LR: 3.33e-06 | Time: 0.75s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.2314, max=0.5312, mean=0.1094, std=0.2031, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.2246 | Global: 1.8193 | Region: 1.4053 | HardNeg: 0.0000
+[Epoch 0][Step 16][Batch 132] Loss: 3.224609 | Global: 1.819336 | Region: 1.405273 | Hard: 0.000000 | LR: 3.33e-06 | Time: 0.77s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=0.0000, max=1.0000, mean=0.7500, std=0.5000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.0737, max=0.5508, mean=0.1602, std=0.1865, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 3.0776 | Global: 1.6538 | Region: 1.4238 | HardNeg: 0.0000
+[Epoch 0][Step 16][Batch 133] Loss: 3.077637 | Global: 1.653809 | Region: 1.423828 | Hard: 0.000000 | LR: 3.33e-06 | Time: 0.76s
+[DIAG] Region batch diagnostics:
+  - valid_count=4 | bbox_batch_size=4
+  - img_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - txt_norms: min=1.0000, max=1.0000, mean=1.0000, std=0.0000, has_nan=False
+  - logits_i2t: min=-0.6328, max=0.4238, mean=-0.1030, std=0.3184, has_nan=False
+  - logit_scale (finegrained): 2.656250 (exp=14.2428)
+  - memory_bank: ptr=0, full=False, size=128
+  - any_nan=False, any_inf=False
+[LOSS] Total: 2.7759 | Global: 1.3726 | Region: 1.4033 | HardNeg: 0.0000
+已终止
+
+========================================
+❌ 训练异常退出 (Exit Code: 143)
+========================================
+⏰ 开始时间: 2025-10-19 14:42:36
+⏰ 结束时间: 2025-10-19 14:47:37
+
+📂 输出目录: ./checkpoints/fgclip_ucf_full
+📊 TensorBoard: tensorboard --logdir ./checkpoints/fgclip_ucf_full --port 6006
+📝 训练日志: tail -f ./checkpoints/fgclip_ucf_full/trainer_log.txt
+========================================

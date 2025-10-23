@@ -1,0 +1,44 @@
+========================================
+🚀 FG-CLIP UCF 内存优化训练
+========================================
+💾 内存优化策略:
+  - Batch Size: 2 ✅ 提升到 2（对比学习需要 >1）
+  - Gradient Accumulation: 16
+  - Global 帧数: 256 (完整时序)
+  - Region 帧数: 96 (3/8 Global，平衡语义+显存)
+  - 有效 Batch: 32
+  - Workers: 1
+  - PyTorch 内存碎片优化: ✅
+
+📊 预期显存占用:
+  - Global Video: ~2.4 GB (2×256×3×224×224)
+  - Region Videos: ~6.5 GB (2×15×96×3×224×224) ✅ 提升到 96 帧
+  - 模型参数 + 梯度: ~8 GB
+  - 总计: ~17 GB (24 GB 显存充足，安全边际 7 GB)
+========================================
+
+✅ GPU 缓存已清理
+⏰ 训练开始时间: 2025-10-20 15:51:39
+Traceback (most recent call last):
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py", line 16, in <module>
+    from fgclip.train.clean_clip_trainer import CLIPTrainer
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/__init__.py", line 1, in <module>
+    from .model import *
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/__init__.py", line 1, in <module>
+    from .clip_strc.fgclip import *
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/clip_strc/__init__.py", line 1, in <module>
+    from .fgclip import *
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/clip_strc/fgclip.py", line 602
+    if not hasattr(self, 'accum_buffer'):
+    ^^
+SyntaxError: invalid syntax
+
+========================================
+❌ 训练异常退出 (Exit Code: 1)
+========================================
+⏰ 开始时间: 2025-10-20 15:51:39
+⏰ 结束时间: 2025-10-20 15:51:41
+
+📂 输出目录: ./checkpoints/fgclip_ucf_memory_opt
+📊 TensorBoard: tensorboard --logdir ./checkpoints/fgclip_ucf_memory_opt --port 6006
+========================================

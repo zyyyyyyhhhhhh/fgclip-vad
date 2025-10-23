@@ -1,0 +1,132 @@
+========================================
+🚀 FG-CLIP UCF 内存优化训练
+========================================
+💾 内存优化策略:
+  - Batch Size: 2 ✅ 提升到 2（对比学习需要 >1）
+  - Gradient Accumulation: 16
+  - Global 帧数: 256 (完整时序)
+  - Region 帧数: 96 (3/8 Global，平衡语义+显存)
+  - 有效 Batch: 32
+  - Workers: 1
+  - PyTorch 内存碎片优化: ✅
+
+📊 预期显存占用:
+  - Global Video: ~2.4 GB (2×256×3×224×224)
+  - Region Videos: ~6.5 GB (2×15×96×3×224×224) ✅ 提升到 96 帧
+  - 模型参数 + 梯度: ~8 GB
+  - 总计: ~17 GB (24 GB 显存充足，安全边际 7 GB)
+========================================
+
+✅ GPU 缓存已清理
+⏰ 训练开始时间: 2025-10-20 15:48:25
+/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+============================================================
+Loading CLIP components (LOCAL MODE - No Internet Required)
+============================================================
+Loading tokenizer for: ViT-B/32
+  ✓ Tokenizer loaded (local CLIP)
+Loading image processor for: ViT-B/32
+  ✓ Image processor loaded (local CLIP)
+Initializing FG-CLIP model: ViT-B/32
+[INFO] Initialized roi_projection: 768 -> 512 (ViT-B/32)
+  ✓ Model initialized (random weights)
+============================================================
+============================================================
+Loading OpenAI CLIP pretrained weights...
+============================================================
+[FG-CLIP] 🔄 Loading OpenAI CLIP weights: ViT-B/32
+[FG-CLIP] Cache: ~/.cache/clip/
+[FG-CLIP] Copying Vision Transformer weights...
+[FG-CLIP]   Copied 127 vision weights
+[FG-CLIP] Copying Text Transformer weights...
+[FG-CLIP]   Copied 122 text weights
+[FG-CLIP] Copying projection layers...
+[FG-CLIP]   ✅ Loaded logit_scale = 4.6052 (exp=100.0)
+[FG-CLIP] ✅ Successfully loaded 252 weight tensors
+[FG-CLIP] ⚠️  Missing 0 weight tensors (expected for new modules)
+Resizing position embeddings for long text...
+[FG-CLIP] ✅ Copied visual_projection weights to roi_projection
+============================================================
+✓ OpenAI CLIP weights loaded successfully
+============================================================
+Loading data from: /data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_train_with_timestamps_en.json
+  → Detected list format (new)
+Total videos loaded: 1559
+  - Normal videos: 1327
+  - Abnormal videos: 232
+
+✅ 正常模式：使用原始的detailed region captions
+
+
+================================================================================
+📊 Projection层训练状态检查
+================================================================================
+  logit_scale                                       : requires_grad=True, shape=()
+  logit_scale_finegraind                            : requires_grad=True, shape=()
+  logit_scale_hardneg                               : requires_grad=True, shape=()
+  visual_projection.weight                          : requires_grad=True, shape=(512, 768)
+  text_projection.weight                            : requires_grad=True, shape=(512, 512)
+  text_filip_projection.weight                      : requires_grad=True, shape=(512, 512)
+  roi_projection.weight                             : requires_grad=True, shape=(512, 768)
+================================================================================
+
+[TensorBoard] 日志目录: ./checkpoints/fgclip_ucf_memory_opt/tensorboard
+[TensorBoard] 启动命令: tensorboard --logdir ./checkpoints/fgclip_ucf_memory_opt/tensorboard --port 6006
+  0%|          | 0/240 [00:00<?, ?it/s]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:678: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:683: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:830: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[MICRO-BATCH] Total: 1.2532 | Global: 0.7979 | Region: 0.9106 | HardNeg: 0.0000
+Traceback (most recent call last):
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py", line 1172, in <module>
+    train()
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py", line 1163, in train
+    trainer.train()
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/trainer.py", line 2164, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/trainer.py", line 2524, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/clean_clip_trainer.py", line 159, in training_step
+    loss_dict = self.compute_loss(model, inputs, return_outputs=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/clean_clip_trainer.py", line 299, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/accelerate/utils/operations.py", line 818, in forward
+    return model_forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/accelerate/utils/operations.py", line 806, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/model/clip_strc/fgclip.py", line 1187, in forward
+    self.accum_buffer['total'] += loss.item()
+    ^^^^^^^^^^^^^^^^^
+  File "/data/zyy/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+    raise AttributeError(
+AttributeError: 'FGCLIPModel' object has no attribute 'accum_buffer'
+  0%|          | 0/240 [00:36<?, ?it/s]
+
+========================================
+❌ 训练异常退出 (Exit Code: 1)
+========================================
+⏰ 开始时间: 2025-10-20 15:48:25
+⏰ 结束时间: 2025-10-20 15:49:12
+
+📂 输出目录: ./checkpoints/fgclip_ucf_memory_opt
+📊 TensorBoard: tensorboard --logdir ./checkpoints/fgclip_ucf_memory_opt --port 6006
+========================================

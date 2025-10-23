@@ -1,0 +1,347 @@
+========================================
+🚀 FG-CLIP UCF 内存优化训练
+========================================
+💾 内存优化策略:
+  - Batch Size: 2 ✅ 提升到 2（对比学习需要 >1）
+  - Gradient Accumulation: 16
+  - Global 帧数: 256 (完整时序)
+  - Region 帧数: 96 (3/8 Global，平衡语义+显存)
+  - 有效 Batch: 32
+  - Workers: 1
+  - PyTorch 内存碎片优化: ✅
+
+📊 预期显存占用:
+  - Global Video: ~2.4 GB (2×256×3×224×224)
+  - Region Videos: ~6.5 GB (2×15×96×3×224×224) ✅ 提升到 96 帧
+  - 模型参数 + 梯度: ~8 GB
+  - 总计: ~17 GB (24 GB 显存充足，安全边际 7 GB)
+========================================
+
+✅ GPU 缓存已清理
+⏰ 训练开始时间: 2025-10-20 14:07:59
+/data/zyy/anaconda3/lib/python3.11/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+============================================================
+Loading CLIP components (LOCAL MODE - No Internet Required)
+============================================================
+Loading tokenizer for: ViT-B/32
+  ✓ Tokenizer loaded (local CLIP)
+Loading image processor for: ViT-B/32
+  ✓ Image processor loaded (local CLIP)
+Initializing FG-CLIP model: ViT-B/32
+[INFO] Initialized roi_projection: 768 -> 512 (ViT-B/32)
+  ✓ Model initialized (random weights)
+============================================================
+============================================================
+Loading OpenAI CLIP pretrained weights...
+============================================================
+[FG-CLIP] 🔄 Loading OpenAI CLIP weights: ViT-B/32
+[FG-CLIP] Cache: ~/.cache/clip/
+[FG-CLIP] Copying Vision Transformer weights...
+[FG-CLIP]   Copied 127 vision weights
+[FG-CLIP] Copying Text Transformer weights...
+[FG-CLIP]   Copied 122 text weights
+[FG-CLIP] Copying projection layers...
+[FG-CLIP]   ✅ Loaded logit_scale = 4.6052 (exp=100.0)
+[FG-CLIP] ✅ Successfully loaded 252 weight tensors
+[FG-CLIP] ⚠️  Missing 0 weight tensors (expected for new modules)
+Resizing position embeddings for long text...
+[FG-CLIP] ✅ Copied visual_projection weights to roi_projection
+============================================================
+✓ OpenAI CLIP weights loaded successfully
+============================================================
+Loading data from: /data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_train_with_timestamps_en.json
+  → Detected list format (new)
+Total videos loaded: 1559
+  - Normal videos: 1327
+  - Abnormal videos: 232
+
+✅ 正常模式：使用原始的detailed region captions
+
+
+================================================================================
+📊 Projection层训练状态检查
+================================================================================
+  logit_scale                                       : requires_grad=True, shape=()
+  logit_scale_finegraind                            : requires_grad=True, shape=()
+  logit_scale_hardneg                               : requires_grad=True, shape=()
+  visual_projection.weight                          : requires_grad=True, shape=(512, 768)
+  text_projection.weight                            : requires_grad=True, shape=(512, 512)
+  text_filip_projection.weight                      : requires_grad=True, shape=(512, 512)
+  roi_projection.weight                             : requires_grad=True, shape=(512, 768)
+================================================================================
+
+[TensorBoard] 日志目录: ./checkpoints/fgclip_ucf_memory_opt/tensorboard
+[TensorBoard] 启动命令: tensorboard --logdir ./checkpoints/fgclip_ucf_memory_opt/tensorboard --port 6006
+  0%|          | 0/240 [00:00<?, ?it/s]/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:678: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:683: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  short_text = torch.tensor(
+/data/zyy/wsvad/2026CVPR/FG-CLIP/fgclip/train/train_fgclip.py:830: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  box_text = torch.tensor(
+[MICRO-BATCH] Total: 1.5757 | Global: 1.1013 | Region: 0.9489 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 1] AvgLoss: 1.575684 | Global: 1.101257 | Region: 0.948853 | Hard: 0.000000 | LR: 0.00e+00 | Time: 1.65s
+[MICRO-BATCH] Total: 2.1109 | Global: 1.1058 | Region: 2.0103 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 2] AvgLoss: 2.110901 | Global: 1.105774 | Region: 2.010254 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.78s
+[MICRO-BATCH] Total: 1.0439 | Global: 1.0439 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 3] AvgLoss: 1.043945 | Global: 1.043945 | Region: 0.000000 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.92s
+[MICRO-BATCH] Total: 1.2437 | Global: 0.8350 | Region: 0.8174 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 4] AvgLoss: 1.243652 | Global: 0.834961 | Region: 0.817383 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.8300 | Global: 1.2139 | Region: 1.2322 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 5] AvgLoss: 1.829956 | Global: 1.213867 | Region: 1.232178 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4034 | Global: 0.5850 | Region: 1.6370 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 6] AvgLoss: 1.403442 | Global: 0.584961 | Region: 1.636963 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4304 | Global: 1.0827 | Region: 0.6953 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 7] AvgLoss: 1.430359 | Global: 1.082703 | Region: 0.695312 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.9066 | Global: 1.3750 | Region: 1.0631 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 8] AvgLoss: 1.906555 | Global: 1.375000 | Region: 1.063110 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.3268 | Global: 1.3268 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 9] AvgLoss: 1.326803 | Global: 1.326803 | Region: 0.000000 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.1089 | Global: 0.7734 | Region: 0.6709 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 10] AvgLoss: 1.108887 | Global: 0.773438 | Region: 0.670898 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.498018
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.0731 | Global: 1.0731 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 11] AvgLoss: 1.073120 | Global: 1.073120 | Region: 0.000000 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 2.1507 | Global: 1.7460 | Region: 0.8096 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 12] AvgLoss: 2.150745 | Global: 1.745960 | Region: 0.809570 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.78s
+[MICRO-BATCH] Total: 1.2122 | Global: 0.7754 | Region: 0.8735 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 13] AvgLoss: 1.212158 | Global: 0.775391 | Region: 0.873535 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 2.3696 | Global: 2.3696 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 14] AvgLoss: 2.369629 | Global: 2.369629 | Region: 0.000000 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.3124 | Global: 0.8391 | Region: 0.9467 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 0][Batch 15] AvgLoss: 1.312439 | Global: 0.839111 | Region: 0.946655 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 1.1309 | Global: 0.5581 | Region: 1.1455 | HardNeg: 0.0000
+  0%|          | 1/240 [00:52<3:27:22, 52.06s/it][ACCUMULATED][Epoch 0][Step 0][Batch 16] AvgLoss: 1.130859 | Global: 0.558105 | Region: 1.145508 | Hard: 0.000000 | LR: 0.00e+00 | Time: 0.79s
+[MICRO-BATCH] Total: 2.6084 | Global: 1.7446 | Region: 1.7275 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 17] AvgLoss: 2.608398 | Global: 1.744629 | Region: 1.727539 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.77s
+[MICRO-BATCH] Total: 1.5065 | Global: 1.1620 | Region: 0.6890 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 18] AvgLoss: 1.506470 | Global: 1.161987 | Region: 0.688965 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.1426 | Global: 0.7847 | Region: 0.7158 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 19] AvgLoss: 1.142578 | Global: 0.784668 | Region: 0.715820 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 1.4907 | Global: 0.9473 | Region: 1.0868 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 20] AvgLoss: 1.490662 | Global: 0.947266 | Region: 1.086792 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.78s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.599706
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.4325 | Global: 1.0785 | Region: 0.7080 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 21] AvgLoss: 1.432495 | Global: 1.078491 | Region: 0.708008 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.96s
+[MICRO-BATCH] Total: 1.2788 | Global: 0.7969 | Region: 0.9639 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 22] AvgLoss: 1.278809 | Global: 0.796875 | Region: 0.963867 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.77s
+[MICRO-BATCH] Total: 1.1622 | Global: 0.7344 | Region: 0.8557 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 23] AvgLoss: 1.162231 | Global: 0.734375 | Region: 0.855713 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 1.6059 | Global: 0.9594 | Region: 1.2932 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 24] AvgLoss: 1.605942 | Global: 0.959351 | Region: 1.293182 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 1.6993 | Global: 0.9968 | Region: 1.4050 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 25] AvgLoss: 1.699348 | Global: 0.996826 | Region: 1.405045 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 1.2175 | Global: 0.8307 | Region: 0.7737 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 26] AvgLoss: 1.217529 | Global: 0.830688 | Region: 0.773682 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 2.2088 | Global: 1.5154 | Region: 1.3867 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 27] AvgLoss: 2.208801 | Global: 1.515442 | Region: 1.386719 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.81s
+[MICRO-BATCH] Total: 1.4225 | Global: 1.0712 | Region: 0.7026 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 28] AvgLoss: 1.422546 | Global: 1.071228 | Region: 0.702637 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.1262 | Global: 1.1262 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 29] AvgLoss: 1.126221 | Global: 1.126221 | Region: 0.000000 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4061 | Global: 0.8674 | Region: 1.0773 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 30] AvgLoss: 1.406097 | Global: 0.867432 | Region: 1.077332 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.79s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.456002
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.3417 | Global: 0.9272 | Region: 0.8289 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 1][Batch 31] AvgLoss: 1.341675 | Global: 0.927246 | Region: 0.828857 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 1.0999 | Global: 0.6797 | Region: 0.8403 | HardNeg: 0.0000
+  1%|          | 2/240 [01:35<3:06:05, 46.91s/it][ACCUMULATED][Epoch 0][Step 1][Batch 32] AvgLoss: 1.099854 | Global: 0.679688 | Region: 0.840332 | Hard: 0.000000 | LR: 2.08e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.6899 | Global: 1.1616 | Region: 1.0566 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 33] AvgLoss: 1.689880 | Global: 1.161560 | Region: 1.056641 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.76s
+[MICRO-BATCH] Total: 1.7093 | Global: 0.7891 | Region: 1.8405 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 34] AvgLoss: 1.709297 | Global: 0.789062 | Region: 1.840469 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 0.4250 | Global: 0.4250 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 35] AvgLoss: 0.425020 | Global: 0.425020 | Region: 0.000000 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 3.1511 | Global: 2.5212 | Region: 1.2598 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 36] AvgLoss: 3.151123 | Global: 2.521240 | Region: 1.259766 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.81s
+[MICRO-BATCH] Total: 2.8337 | Global: 2.1126 | Region: 1.4423 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 37] AvgLoss: 2.833702 | Global: 2.112572 | Region: 1.442261 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 0.9591 | Global: 0.5769 | Region: 0.7644 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 38] AvgLoss: 0.959106 | Global: 0.576904 | Region: 0.764404 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.8218 | Global: 1.1797 | Region: 1.2840 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 39] AvgLoss: 1.821762 | Global: 1.179749 | Region: 1.284027 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 1.2218 | Global: 0.8776 | Region: 0.6885 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 40] AvgLoss: 1.221802 | Global: 0.877563 | Region: 0.688477 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.625322
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.2736 | Global: 0.8297 | Region: 0.8877 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 41] AvgLoss: 1.273560 | Global: 0.829712 | Region: 0.887695 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4505 | Global: 0.9814 | Region: 0.9382 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 42] AvgLoss: 1.450500 | Global: 0.981384 | Region: 0.938232 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 2.2082 | Global: 1.7603 | Region: 0.8959 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 43] AvgLoss: 2.208221 | Global: 1.760254 | Region: 0.895935 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 0.9043 | Global: 0.5557 | Region: 0.6973 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 44] AvgLoss: 0.904297 | Global: 0.555664 | Region: 0.697266 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.89s
+[MICRO-BATCH] Total: 1.7785 | Global: 1.4267 | Region: 0.7036 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 45] AvgLoss: 1.778534 | Global: 1.426727 | Region: 0.703613 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.0601 | Global: 0.7148 | Region: 0.6904 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 46] AvgLoss: 1.060059 | Global: 0.714844 | Region: 0.690430 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 2.6199 | Global: 1.5479 | Region: 2.1442 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 2][Batch 47] AvgLoss: 2.619934 | Global: 1.547852 | Region: 2.144165 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.1113 | Global: 0.7627 | Region: 0.6973 | HardNeg: 0.0000
+  1%|▏         | 3/240 [02:20<3:01:40, 45.99s/it][ACCUMULATED][Epoch 0][Step 2][Batch 48] AvgLoss: 1.111328 | Global: 0.762695 | Region: 0.697266 | Hard: 0.000000 | LR: 4.17e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 2.0743 | Global: 1.5289 | Region: 1.0909 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 49] AvgLoss: 2.074341 | Global: 1.528870 | Region: 1.090942 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4524 | Global: 0.7828 | Region: 1.3392 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 50] AvgLoss: 1.452438 | Global: 0.782837 | Region: 1.339203 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.81s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.593321
+====================================================================================================
+
+[MICRO-BATCH] Total: 2.2648 | Global: 1.4476 | Region: 1.6344 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 51] AvgLoss: 2.264824 | Global: 1.447632 | Region: 1.634384 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 1.1489 | Global: 0.7910 | Region: 0.7158 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 52] AvgLoss: 1.148926 | Global: 0.791016 | Region: 0.715820 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.7118 | Global: 0.9756 | Region: 1.4725 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 53] AvgLoss: 1.711830 | Global: 0.975586 | Region: 1.472488 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 2.3727 | Global: 1.7050 | Region: 1.3353 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 54] AvgLoss: 2.372673 | Global: 1.705025 | Region: 1.335297 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.7527 | Global: 1.0188 | Region: 1.4677 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 55] AvgLoss: 1.752655 | Global: 1.018799 | Region: 1.467712 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.8854 | Global: 1.3957 | Region: 0.9795 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 56] AvgLoss: 1.885406 | Global: 1.395660 | Region: 0.979492 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4527 | Global: 0.9092 | Region: 1.0870 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 57] AvgLoss: 1.452698 | Global: 0.909180 | Region: 1.087036 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 2.8895 | Global: 2.2672 | Region: 1.2446 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 58] AvgLoss: 2.889496 | Global: 2.267181 | Region: 1.244629 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.3962 | Global: 0.7870 | Region: 1.2185 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 59] AvgLoss: 1.396240 | Global: 0.786987 | Region: 1.218506 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.0913 | Global: 0.6802 | Region: 0.8223 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 60] AvgLoss: 1.091309 | Global: 0.680176 | Region: 0.822266 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.80s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.796606
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.4109 | Global: 0.8389 | Region: 1.1441 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 61] AvgLoss: 1.410919 | Global: 0.838867 | Region: 1.144104 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.81s
+[MICRO-BATCH] Total: 1.9489 | Global: 1.5993 | Region: 0.6992 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 62] AvgLoss: 1.948929 | Global: 1.599319 | Region: 0.699219 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.81s
+[MICRO-BATCH] Total: 1.1944 | Global: 0.7212 | Region: 0.9464 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 3][Batch 63] AvgLoss: 1.194397 | Global: 0.721191 | Region: 0.946411 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 1.9105 | Global: 1.2626 | Region: 1.2959 | HardNeg: 0.0000
+  2%|▏         | 4/240 [03:02<2:54:37, 44.40s/it][ACCUMULATED][Epoch 0][Step 3][Batch 64] AvgLoss: 1.910515 | Global: 1.262566 | Region: 1.295898 | Hard: 0.000000 | LR: 6.25e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.2086 | Global: 0.8137 | Region: 0.7898 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 65] AvgLoss: 1.208618 | Global: 0.813721 | Region: 0.789795 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.75s
+[MICRO-BATCH] Total: 2.5349 | Global: 1.3164 | Region: 2.4370 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 66] AvgLoss: 2.534904 | Global: 1.316406 | Region: 2.436996 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.78s
+[MICRO-BATCH] Total: 2.0940 | Global: 1.0453 | Region: 2.0974 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 67] AvgLoss: 2.093964 | Global: 1.045258 | Region: 2.097412 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.80s
+[MICRO-BATCH] Total: 1.2133 | Global: 0.7944 | Region: 0.8376 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 68] AvgLoss: 1.213257 | Global: 0.794434 | Region: 0.837646 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.99s
+[MICRO-BATCH] Total: 1.0188 | Global: 0.6509 | Region: 0.7358 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 69] AvgLoss: 1.018799 | Global: 0.650879 | Region: 0.735840 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.0336 | Global: 0.4741 | Region: 1.1189 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 70] AvgLoss: 1.033569 | Global: 0.474121 | Region: 1.118896 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.556787
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.3246 | Global: 0.3063 | Region: 2.0367 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 71] AvgLoss: 1.324615 | Global: 0.306274 | Region: 2.036682 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.2625 | Global: 0.9075 | Region: 0.7100 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 72] AvgLoss: 1.262451 | Global: 0.907471 | Region: 0.709961 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.5086 | Global: 1.1641 | Region: 0.6890 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 73] AvgLoss: 1.508606 | Global: 1.164124 | Region: 0.688965 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.4471 | Global: 1.0680 | Region: 0.7583 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 74] AvgLoss: 1.447144 | Global: 1.067993 | Region: 0.758301 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.0603 | Global: 0.6963 | Region: 0.7280 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 75] AvgLoss: 1.060303 | Global: 0.696289 | Region: 0.728027 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.9362 | Global: 1.1879 | Region: 1.4967 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 76] AvgLoss: 1.936195 | Global: 1.187866 | Region: 1.496658 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 2.1669 | Global: 1.2014 | Region: 1.9310 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 77] AvgLoss: 2.166937 | Global: 1.201416 | Region: 1.931042 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 4.0721 | Global: 2.7728 | Region: 2.5986 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 78] AvgLoss: 4.072113 | Global: 2.772797 | Region: 2.598633 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 2.4523 | Global: 1.5436 | Region: 1.8174 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 4][Batch 79] AvgLoss: 2.452285 | Global: 1.543579 | Region: 1.817411 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.79s
+[MICRO-BATCH] Total: 1.1240 | Global: 0.7754 | Region: 0.6973 | HardNeg: 0.0000
+  2%|▏         | 5/240 [03:47<2:55:04, 44.70s/it][ACCUMULATED][Epoch 0][Step 4][Batch 80] AvgLoss: 1.124023 | Global: 0.775391 | Region: 0.697266 | Hard: 0.000000 | LR: 8.33e-07 | Time: 0.80s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.835467
+====================================================================================================
+
+[MICRO-BATCH] Total: 2.8203 | Global: 2.8203 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 81] AvgLoss: 2.820297 | Global: 2.820297 | Region: 0.000000 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.75s
+[MICRO-BATCH] Total: 1.4492 | Global: 1.0952 | Region: 0.7080 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 82] AvgLoss: 1.449219 | Global: 1.095215 | Region: 0.708008 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.2721 | Global: 0.8506 | Region: 0.8430 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 83] AvgLoss: 1.272095 | Global: 0.850586 | Region: 0.843018 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.78s
+[MICRO-BATCH] Total: 1.0376 | Global: 0.6758 | Region: 0.7236 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 84] AvgLoss: 1.037598 | Global: 0.675781 | Region: 0.723633 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.78s
+[MICRO-BATCH] Total: 1.8137 | Global: 1.3997 | Region: 0.8281 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 85] AvgLoss: 1.813721 | Global: 1.399658 | Region: 0.828125 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 1.2937 | Global: 0.8564 | Region: 0.8745 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 86] AvgLoss: 1.293701 | Global: 0.856445 | Region: 0.874512 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 1.7767 | Global: 0.8677 | Region: 1.8180 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 87] AvgLoss: 1.776697 | Global: 0.867676 | Region: 1.818043 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 2.9701 | Global: 1.8949 | Region: 2.1503 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 88] AvgLoss: 2.970057 | Global: 1.894922 | Region: 2.150269 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 1.9997 | Global: 0.8857 | Region: 2.2279 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 89] AvgLoss: 1.999674 | Global: 0.885742 | Region: 2.227865 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 2.2658 | Global: 2.2658 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 90] AvgLoss: 2.265846 | Global: 2.265846 | Region: 0.000000 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.869890
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.1553 | Global: 0.8052 | Region: 0.7002 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 91] AvgLoss: 1.155273 | Global: 0.805176 | Region: 0.700195 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.89s
+[MICRO-BATCH] Total: 1.6526 | Global: 1.1964 | Region: 0.9125 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 92] AvgLoss: 1.652649 | Global: 1.196411 | Region: 0.912476 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 1.2772 | Global: 0.7395 | Region: 1.0753 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 93] AvgLoss: 1.277161 | Global: 0.739502 | Region: 1.075317 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 2.0542 | Global: 2.0542 | Region: 0.0000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 94] AvgLoss: 2.054199 | Global: 2.054199 | Region: 0.000000 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.77s
+[MICRO-BATCH] Total: 1.1861 | Global: 0.5361 | Region: 1.3000 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 5][Batch 95] AvgLoss: 1.186127 | Global: 0.536133 | Region: 1.299988 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.2460 | Global: 0.8315 | Region: 0.8289 | HardNeg: 0.0000
+  2%|▎         | 6/240 [04:30<2:52:22, 44.20s/it][ACCUMULATED][Epoch 0][Step 5][Batch 96] AvgLoss: 1.245972 | Global: 0.831543 | Region: 0.828857 | Hard: 0.000000 | LR: 1.04e-06 | Time: 0.78s
+[MICRO-BATCH] Total: 1.6808 | Global: 1.0422 | Region: 1.2771 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 97] AvgLoss: 1.680786 | Global: 1.042236 | Region: 1.277100 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.75s
+[MICRO-BATCH] Total: 1.2012 | Global: 0.8364 | Region: 0.7295 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 98] AvgLoss: 1.201172 | Global: 0.836426 | Region: 0.729492 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.4832 | Global: 1.0542 | Region: 0.8579 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 99] AvgLoss: 1.483170 | Global: 1.054214 | Region: 0.857910 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.2070 | Global: 0.8564 | Region: 0.7012 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 100] AvgLoss: 1.207031 | Global: 0.856445 | Region: 0.701172 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+
+====================================================================================================
+[统计] 最近10个batch平均Loss: 1.414354
+====================================================================================================
+
+[MICRO-BATCH] Total: 1.5708 | Global: 1.2153 | Region: 0.7109 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 101] AvgLoss: 1.570801 | Global: 1.215332 | Region: 0.710938 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.6817 | Global: 0.9609 | Region: 1.4416 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 102] AvgLoss: 1.681725 | Global: 0.960938 | Region: 1.441574 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 1.3582 | Global: 0.9731 | Region: 0.7703 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 103] AvgLoss: 1.358215 | Global: 0.973083 | Region: 0.770264 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.1060 | Global: 0.6875 | Region: 0.8369 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 104] AvgLoss: 1.105957 | Global: 0.687500 | Region: 0.836914 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.5975 | Global: 0.8542 | Region: 1.4865 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 105] AvgLoss: 1.597473 | Global: 0.854248 | Region: 1.486450 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 1.6357 | Global: 1.2852 | Region: 0.7012 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 106] AvgLoss: 1.635742 | Global: 1.285156 | Region: 0.701172 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.79s
+[MICRO-BATCH] Total: 2.0087 | Global: 1.6408 | Region: 0.7358 | HardNeg: 0.0000
+[ACCUMULATED][Epoch 0][Step 6][Batch 107] AvgLoss: 2.008713 | Global: 1.640793 | Region: 0.735840 | Hard: 0.000000 | LR: 1.25e-06 | Time: 0.80s
+[MICRO-BATCH] Total: 1.7005 | Global: 1.3257 | Region: 0.7495 | HardNeg: 0.0000
