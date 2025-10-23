@@ -1,0 +1,3049 @@
+{
+  "RoadAccedent001_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞摩托车骑手"
+    },
+    "region": [
+      {
+        "caption": "轿车撞飞摩托车骑手，骑手摔在地上"
+      }
+    ]
+  },
+  "RoadAccedent002_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆大客车撞路牌"
+    },
+    "region": [
+      {
+        "caption": "大客车冲上人行道，撞坏路牌"
+      }
+    ]
+  },
+  "RoadAccedent003_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆自行车摔倒"
+    },
+    "region": [
+      {
+        "caption": "自行车载两人，骑行时摔倒在台阶上"
+      }
+    ]
+  },
+  "RoadAccedent004_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与黑色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent005_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆黑色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent006_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞墙冒烟"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞到墙体，产生浓烟"
+      }
+    ]
+  },
+  "RoadAccedent007_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车对撞"
+    },
+    "region": [
+      {
+        "caption": "蓝色轿车与白色轿车对撞"
+      }
+    ]
+  },
+  "RoadAccedent008_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车被撞旋转"
+    },
+    "region": [
+      {
+        "caption": "银色轿车被撞后旋转"
+      }
+    ]
+  },
+  "RoadAccedent009_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞人撞墙"
+    },
+    "region": [
+      {
+        "caption": "轿车冲上人行道撞到人群，随后撞倒墙体"
+      }
+    ]
+  },
+  "RoadAccedent010_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆大客车撞车撞人"
+    },
+    "region": [
+      {
+        "caption": "红色大客车撞击白色轿车，将轿车和一名行人撞到墙上"
+      }
+    ]
+  },
+  "RoadAccedent011_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆货车与轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "蓝色货车与香槟色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent012_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞翻滚"
+    },
+    "region": [
+      {
+        "caption": "两辆银色轿车相撞，其中一辆翻滚"
+      }
+    ]
+  },
+  "RoadAccedent013_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞行人设施"
+    },
+    "region": [
+      {
+        "caption": "银色轿车撞到行人和加油站设施"
+      }
+    ]
+  },
+  "RoadAccedent014_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 多车连环相撞"
+    },
+    "region": [
+      {
+        "caption": "汽车失控追尾前车，引发连环相撞"
+      },
+      {
+        "caption": "汽车追尾前车"
+      },
+      {
+        "caption": "汽车失控后撞向建筑物"
+      },
+      {
+        "caption": "汽车追尾前车，引发连环相撞"
+      },
+      {
+        "caption": "汽车失控追尾前车"
+      }
+    ]
+  },
+  "RoadAccedent015_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆汽车与摩托车对撞"
+    },
+    "region": [
+      {
+        "caption": "汽车与摩托车对撞"
+      }
+    ]
+  },
+  "RoadAccedent016_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车冲上人行道"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车冲向人行道"
+      }
+    ]
+  },
+  "RoadAccedent017_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent018_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆汽车撞摩托车撞树"
+    },
+    "region": [
+      {
+        "caption": "汽车撞倒摩托车，随后撞上树木"
+      }
+    ]
+  },
+  "RoadAccedent019_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆汽车撞飞摩托车骑手"
+    },
+    "region": [
+      {
+        "caption": "汽车撞飞骑摩托车的两人"
+      }
+    ]
+  },
+  "RoadAccedent020_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞飞摩托车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞飞摩托车"
+      }
+    ]
+  },
+  "RoadAccedent021_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与黑色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent022_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞倒骑车人"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车连续撞倒两名骑车的人"
+      }
+    ]
+  },
+  "RoadAccedent023_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞飞行人"
+    },
+    "region": [
+      {
+        "caption": "银色轿车撞飞路人"
+      }
+    ]
+  },
+  "RoadAccedent024_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆货车撞墙"
+    },
+    "region": [
+      {
+        "caption": "白色货车撞到墙体"
+      }
+    ]
+  },
+  "RoadAccedent025_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 一辆轿车撞墙撞树"
+    },
+    "region": [
+      {
+        "caption": "白色轿车失控撞到墙体，随后撞倒树木"
+      }
+    ]
+  },
+  "RoadAccedent026_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent027_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆白色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent028_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车与轿车相撞并倾倒"
+    },
+    "region": [
+      {
+        "caption": "黑色货车与白色轿车相撞，黑色货车倾倒"
+      }
+    ]
+  },
+  "RoadAccedent029_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞停车杆"
+    },
+    "region": [
+      {
+        "caption": "红色轿车撞上停车杆"
+      }
+    ]
+  },
+  "RoadAccedent030_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车与货车相撞"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车与白色货车相撞"
+      }
+    ]
+  },
+  "RoadAccedent031_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 三轮车倾倒相撞"
+    },
+    "region": [
+      {
+        "caption": "三轮车失控倾倒，随后与另一辆三轮车相撞"
+      }
+    ]
+  },
+  "RoadAccedent032_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞翻轿车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞翻黑色轿车"
+      }
+    ]
+  },
+  "RoadAccedent033_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与黑色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent034_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车连撞多车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与黑色轿车相撞，随后撞到停放的蓝色和黑色轿车"
+      }
+    ]
+  },
+  "RoadAccedent035_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞摩托车行人"
+    },
+    "region": [
+      {
+        "caption": "银色轿车连续撞到多辆摩托车和行人"
+      }
+    ]
+  },
+  "RoadAccedent036_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车追尾摩托车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车追尾摩托车"
+      }
+    ]
+  },
+  "RoadAccedent037_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞行人"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞倒行人"
+      }
+    ]
+  },
+  "RoadAccedent038_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车侧翻撞行人"
+    },
+    "region": [
+      {
+        "caption": "白色货车失控侧翻，撞倒行人"
+      }
+    ]
+  },
+  "RoadAccedent039_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车碾压行人"
+    },
+    "region": [
+      {
+        "caption": "白色轿车碾过行人"
+      }
+    ]
+  },
+  "RoadAccedent040_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞倒蓝色轿车"
+      }
+    ]
+  },
+  "RoadAccedent041_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 大客车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "大客车与轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent043_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两辆轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆黑色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent044_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 大客车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "大客车与轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent046_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "黄色货车撞到黑色轿车"
+      }
+    ]
+  },
+  "RoadAccedent047_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞三轮车"
+    },
+    "region": [
+      {
+        "caption": "黑色货车撞到三轮车"
+      }
+    ]
+  },
+  "RoadAccedent048_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞路障冒烟"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞到路障，产生烟雾"
+      }
+    ]
+  },
+  "RoadAccedent049_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞货物"
+    },
+    "region": [
+      {
+        "caption": "红色轿车撞到堆放的货物"
+      }
+    ]
+  },
+  "RoadAccedent051_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞行人"
+    },
+    "region": [
+      {
+        "caption": "黄色轿车撞倒行人"
+      }
+    ]
+  },
+  "RoadAccedent052_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 自行车撞轿车骑手飞起"
+    },
+    "region": [
+      {
+        "caption": "自行车撞上轿车，骑手飞起"
+      }
+    ]
+  },
+  "RoadAccedent053_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞行人"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞倒行人"
+      }
+    ]
+  },
+  "RoadAccedent054_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车与货车相撞"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车与白色货车相撞"
+      }
+    ]
+  },
+  "RoadAccedent055_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车追尾轿车"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车追尾白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent056_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车与摩托车对撞"
+    },
+    "region": [
+      {
+        "caption": "银色轿车与摩托车对撞"
+      }
+    ]
+  },
+  "RoadAccedent057_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车碰撞侧翻"
+    },
+    "region": [
+      {
+        "caption": "轿车碰撞后侧翻"
+      }
+    ]
+  },
+  "RoadAccedent058_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车被车门撞倒被货车碾过"
+    },
+    "region": [
+      {
+        "caption": "摩托车被轿车车门撞倒，随后被银色货车碾过"
+      }
+    ]
+  },
+  "RoadAccedent059_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车与摩托车相撞连撞轿车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与摩托车相撞，随后摩托车又撞向另一辆白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent060_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车相撞冒烟"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞，产生白烟"
+      }
+    ]
+  },
+  "RoadAccedent061_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 汽车冲上草坪"
+    },
+    "region": [
+      {
+        "caption": "汽车冲上草坪"
+      }
+    ]
+  },
+  "RoadAccedent062_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车对撞"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车对撞"
+      }
+    ]
+  },
+  "RoadAccedent064_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车连环相撞车轮撞建筑"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与路边车辆发生连环碰撞，飞出的车轮撞到建筑物"
+      }
+    ]
+  },
+  "RoadAccedent065_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞摩托车"
+    },
+    "region": [
+      {
+        "caption": "蓝色轿车撞倒摩托车"
+      }
+    ]
+  },
+  "RoadAccedent066_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两摩托车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆摩托车相撞"
+      }
+    ]
+  },
+  "RoadAccedent067_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车与三轮车相撞"
+    },
+    "region": [
+      {
+        "caption": "银色轿车与蓝色三轮车相撞"
+      }
+    ]
+  },
+  "RoadAccedent068_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车碾压行人"
+    },
+    "region": [
+      {
+        "caption": "白色轿车碾过行人"
+      }
+    ]
+  },
+  "RoadAccedent069_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞翻货车"
+    },
+    "region": [
+      {
+        "caption": "轿车撞翻货车"
+      }
+    ]
+  },
+  "RoadAccedent070_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞飞轿车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车将银色轿车撞出一段距离"
+      }
+    ]
+  },
+  "RoadAccedent071_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车倒车撞静止车辆"
+    },
+    "region": [
+      {
+        "caption": "银色轿车倒车时撞上多辆静止车辆"
+      }
+    ]
+  },
+  "RoadAccedent072_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车与银色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent073_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞骑车人"
+    },
+    "region": [
+      {
+        "caption": "蓝色轿车撞倒骑自行车的路人"
+      }
+    ]
+  },
+  "RoadAccedent074_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞上白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent075_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 大客车撞翻货车撞电车"
+    },
+    "region": [
+      {
+        "caption": "大客车撞翻货车，货车随后撞上有轨电车"
+      }
+    ]
+  },
+  "RoadAccedent076_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车倒车撞摩托车再撞轿车"
+    },
+    "region": [
+      {
+        "caption": "白色轿车倒车撞倒摩托车，随后前进撞上白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent077_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞行人"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞倒行人"
+      },
+      {
+        "caption": "白色轿车撞倒行人"
+      }
+    ]
+  },
+  "RoadAccedent078_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两大客车相撞"
+    },
+    "region": [
+      {
+        "caption": "红色大客车撞上另一辆红色大客车"
+      }
+    ]
+  },
+  "RoadAccedent079_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞摩托车"
+    },
+    "region": [
+      {
+        "caption": "白色货车撞倒摩托车"
+      }
+    ]
+  },
+  "RoadAccedent080_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞玻璃门"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞碎玻璃门"
+      },
+      {
+        "caption": "白色轿车撞破玻璃门"
+      }
+    ]
+  },
+  "RoadAccedent081_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞停放车辆"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞上路边停放的两辆轿车"
+      },
+      {
+        "caption": "黑色轿车撞上路边停放的两辆轿车"
+      }
+    ]
+  },
+  "RoadAccedent082_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 火车撞挖掘机"
+    },
+    "region": [
+      {
+        "caption": "火车撞上挖掘机"
+      }
+    ]
+  },
+  "RoadAccedent083_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两汽车相撞被树遮挡"
+    },
+    "region": [
+      {
+        "caption": "两辆汽车相撞，有树木遮挡"
+      }
+    ]
+  },
+  "RoadAccedent084_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 汽车撞围墙"
+    },
+    "region": [
+      {
+        "caption": "汽车撞坏围墙"
+      }
+    ]
+  },
+  "RoadAccedent085_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车与摩托车对撞"
+    },
+    "region": [
+      {
+        "caption": "白色轿车与摩托车对撞"
+      }
+    ]
+  },
+  "RoadAccedent086_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车连撞三摩托车"
+    },
+    "region": [
+      {
+        "caption": "蓝色轿车连续撞到三辆摩托车"
+      }
+    ]
+  },
+  "RoadAccedent087_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 汽车撞进超市"
+    },
+    "region": [
+      {
+        "caption": "汽车撞进超市"
+      }
+    ]
+  },
+  "RoadAccedent088_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 多车连环相撞"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车与白色大客车相撞，白色大客车又撞上黑色轿车，引发与白色轿车的连环相撞"
+      }
+    ]
+  },
+  "RoadAccedent089_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞轿车引发连环相撞"
+    },
+    "region": [
+      {
+        "caption": "白色货车撞上白色轿车，引发连环相撞"
+      }
+    ]
+  },
+  "RoadAccedent090_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞护栏冒烟"
+    },
+    "region": [
+      {
+        "caption": "轿车失控撞上护栏，产生烟雾"
+      }
+    ]
+  },
+  "RoadAccedent091_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞摩托车骑手"
+    },
+    "region": [
+      {
+        "caption": "蓝色轿车撞倒摩托车骑手"
+      }
+    ]
+  },
+  "RoadAccedent092_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车追尾轿车"
+    },
+    "region": [
+      {
+        "caption": "蓝色轿车追尾黑色轿车"
+      }
+    ]
+  },
+  "RoadAccedent094_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞自行车骑手"
+    },
+    "region": [
+      {
+        "caption": "绿色轿车撞倒自行车骑手"
+      }
+    ]
+  },
+  "RoadAccedent095_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞行人"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞到身穿红衣的行人"
+      }
+    ]
+  },
+  "RoadAccedent096_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车追尾轿车"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车追尾白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent097_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞店铺玻璃门"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞碎店铺玻璃门"
+      }
+    ]
+  },
+  "RoadAccedent098_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车碾压儿童"
+    },
+    "region": [
+      {
+        "caption": "白色货车碾过两名儿童"
+      }
+    ]
+  },
+  "RoadAccedent099_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞上白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent100_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞摩托车骑手追尾轿车"
+    },
+    "region": [
+      {
+        "caption": "银色轿车撞上摩托车骑手，随后追尾黑色轿车，骑手被撞倒"
+      }
+    ]
+  },
+  "RoadAccedent101_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 汽车飞起"
+    },
+    "region": [
+      {
+        "caption": "汽车飞起"
+      }
+    ]
+  },
+  "RoadAccedent102_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞路障"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞到路障"
+      }
+    ]
+  },
+  "RoadAccedent103_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞墙体"
+    },
+    "region": [
+      {
+        "caption": "轿车撞到墙体"
+      },
+      {
+        "caption": "室外轿车撞到墙体"
+      }
+    ]
+  },
+  "RoadAccedent104_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞树木"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞到树木"
+      }
+    ]
+  },
+  "RoadAccedent105_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞车连环相撞"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞到路边车辆，引发连环碰撞"
+      }
+    ]
+  },
+  "RoadAccedent106_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞红绿灯"
+    },
+    "region": [
+      {
+        "caption": "红色轿车撞倒红绿灯"
+      }
+    ]
+  },
+  "RoadAccedent107_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车相撞轿车撞电线杆"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞，随后一辆轿车撞倒电线杆"
+      }
+    ]
+  },
+  "RoadAccedent108_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞三轮车"
+    },
+    "region": [
+      {
+        "caption": "轿车撞倒三轮车"
+      }
+    ]
+  },
+  "RoadAccedent109_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞到轿车"
+      }
+    ]
+  },
+  "RoadAccedent110_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞行人后侧翻"
+    },
+    "region": [
+      {
+        "caption": "货车撞到路人，随后侧翻"
+      }
+    ]
+  },
+  "RoadAccedent111_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 停车杆砸轿车"
+    },
+    "region": [
+      {
+        "caption": "停车杆砸到红色轿车"
+      }
+    ]
+  },
+  "RoadAccedent112_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞绿化带"
+    },
+    "region": [
+      {
+        "caption": "轿车撞到道路中间绿化带"
+      }
+    ]
+  },
+  "RoadAccedent113_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞红绿灯"
+    },
+    "region": [
+      {
+        "caption": "轿车撞倒红绿灯"
+      }
+    ]
+  },
+  "RoadAccedent114_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车碾压行人"
+    },
+    "region": [
+      {
+        "caption": "白色轿车碾过行人"
+      }
+    ]
+  },
+  "RoadAccedent115_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞到白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent116_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞行人"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞倒行人"
+      }
+    ]
+  },
+  "RoadAccedent117_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "货车撞到黑色轿车"
+      }
+    ]
+  },
+  "RoadAccedent118_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent119_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞围栏再撞货车"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞坏围栏，随后撞到白色货车"
+      }
+    ]
+  },
+  "RoadAccedent120_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞翻轿车"
+    },
+    "region": [
+      {
+        "caption": "货车撞翻轿车"
+      }
+    ]
+  },
+  "RoadAccedent122_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞向黑色轿车"
+      }
+    ]
+  },
+  "RoadAccedent123_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞摩托车"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车撞上摩托车"
+      }
+    ]
+  },
+  "RoadAccedent124_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞两摩托车"
+    },
+    "region": [
+      {
+        "caption": "黑色轿车依次撞倒两辆摩托车"
+      }
+    ]
+  },
+  "RoadAccedent125_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车相撞冒烟"
+    },
+    "region": [
+      {
+        "caption": "两辆黑色轿车相撞，产生白烟"
+      }
+    ]
+  },
+  "RoadAccedent127_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 火车撞断货车"
+    },
+    "region": [
+      {
+        "caption": "火车撞断红色货车"
+      }
+    ]
+  },
+  "RoadAccedent128_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞人撞墙"
+    },
+    "region": [
+      {
+        "caption": "白色轿车把行人撞到墙上"
+      }
+    ]
+  },
+  "RoadAccedent129_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞四辆停放轿车"
+    },
+    "region": [
+      {
+        "caption": "轿车撞上四辆停放的轿车"
+      }
+    ]
+  },
+  "RoadAccedent130_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞停放轿车"
+    },
+    "region": [
+      {
+        "caption": "红色轿车撞上停放的白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent131_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent132_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车撞向白色轿车"
+      }
+    ]
+  },
+  "RoadAccedent133_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车骑手摔倒起火"
+    },
+    "region": [
+      {
+        "caption": "摩托车骑手滑倒，摩托车起火"
+      }
+    ]
+  },
+  "RoadAccedent134_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车与轿车对撞"
+    },
+    "region": [
+      {
+        "caption": "摩托车与轿车迎面相撞"
+      }
+    ]
+  },
+  "RoadAccedent135_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞人群"
+    },
+    "region": [
+      {
+        "caption": "轿车撞开一群人"
+      }
+    ]
+  },
+  "RoadAccedent137_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞飞人群"
+    },
+    "region": [
+      {
+        "caption": "轿车撞飞一群人"
+      }
+    ]
+  },
+  "RoadAccedent138_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞行人"
+    },
+    "region": [
+      {
+        "caption": "轿车撞到行人"
+      }
+    ]
+  },
+  "RoadAccedent139_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 大客车碾压行人"
+    },
+    "region": [
+      {
+        "caption": "黄色大客车碾过行人"
+      }
+    ]
+  },
+  "RoadAccedent140_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车与轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "摩托车与白色轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent141_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞摩托车"
+    },
+    "region": [
+      {
+        "caption": "红色货车撞倒摩托车"
+      }
+    ]
+  },
+  "RoadAccedent142_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 大客车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "白色大客车撞倒红色轿车"
+      }
+    ]
+  },
+  "RoadAccedent143_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车撞轿车"
+    },
+    "region": [
+      {
+        "caption": "摩托车倒地，撞上红色轿车"
+      }
+    ]
+  },
+  "RoadAccedent145_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车撞摩托车侧翻"
+    },
+    "region": [
+      {
+        "caption": "货车撞倒摩托车，随后侧翻"
+      }
+    ]
+  },
+  "RoadAccedent146_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 大客车倒车撞窗户"
+    },
+    "region": [
+      {
+        "caption": "大客车倒车撞碎窗户"
+      }
+    ]
+  },
+  "RoadAccedent147_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车相撞"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车相撞"
+      }
+    ]
+  },
+  "RoadAccedent148_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 两轿车对撞轿车撞墙路牌"
+    },
+    "region": [
+      {
+        "caption": "两辆轿车对撞，其中一辆又撞碎墙体和路牌"
+      }
+    ]
+  },
+  "RoadAccedent149_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 轿车撞飞行人"
+    },
+    "region": [
+      {
+        "caption": "白色轿车撞飞路人"
+      }
+    ]
+  },
+  "RoadAccedent150_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 摩托车与轿车对撞"
+    },
+    "region": [
+      {
+        "caption": "摩托车与轿车对撞"
+      }
+    ]
+  },
+  "RoadAccedent151_x264.mp4": {
+    "global": {
+      "Caption": "道路异常: 货车倾倒压轿车"
+    },
+    "region": [
+      {
+        "caption": "白色货车倾倒，压住轿车"
+      }
+    ]
+  },
+  "Robbery001_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "红头盔男子持刀抢劫商店，被店员用棒球棒赶跑"
+      }
+    ]
+  },
+  "Robbery002_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪抢劫超市，从柜台拿走物品"
+      }
+    ]
+  },
+  "Robbery003_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫超市店员并拿走物品"
+      }
+    ]
+  },
+  "Robbery004_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪进入商店"
+      },
+      {
+        "caption": "男子持枪胁迫店员并抢走钱"
+      }
+    ]
+  },
+  "Robbery005_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery006_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪在店内开火，与店员和顾客打斗"
+      }
+    ]
+  },
+  "Robbery007_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery008_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名男子持武器胁迫店员"
+      },
+      {
+        "caption": "三名男子破坏收银台并抢走钱财"
+      }
+    ]
+  },
+  "Robbery009_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery010_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪胁迫店内众人并拿走钱"
+      }
+    ]
+  },
+  "Robbery011_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "持刀男子进入柜台胁迫两名店员，另一同伙持刀恐吓后抢走钱财"
+      }
+    ]
+  },
+  "Robbery012_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery013_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪进入超市"
+      },
+      {
+        "caption": "男子持枪胁迫店员并抢走钱"
+      }
+    ]
+  },
+  "Robbery014_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群白衣男子持枪抢劫商店"
+      }
+    ]
+  },
+  "Robbery015_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "一男子持枪威胁店员，另一男子在小房间内翻找物品"
+      }
+    ]
+  },
+  "Robbery016_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名戴头盔男子抢劫商店，与店员打斗"
+      }
+    ]
+  },
+  "Robbery017_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "持刀男子胁迫店员并抢走钱和物品"
+      },
+      {
+        "caption": "持刀男子胁迫店员将抢来的财物装好"
+      }
+    ]
+  },
+  "Robbery018_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持刀男子胁迫店员并拿走钱和一袋物品"
+      }
+    ]
+  },
+  "Robbery019_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名持枪男子胁迫并殴打店员，抢走货柜物品"
+      }
+    ]
+  },
+  "Robbery020_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪抢走取款人的钱"
+      }
+    ]
+  },
+  "Robbery021_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持刀进入商店威胁店员"
+      },
+      {
+        "caption": "一男子持刀威胁店员，另一男子在货架上拿东西"
+      },
+      {
+        "caption": "两名男子在超市里翻抢东西"
+      },
+      {
+        "caption": "两名男子在超市里翻抢东西"
+      },
+      {
+        "caption": "两名男子在超市里翻抢东西并逃离商店"
+      },
+      {
+        "caption": "两名男子在超市里翻抢东西"
+      },
+      {
+        "caption": "两名男子在超市里翻抢东西并逃离商店"
+      }
+    ]
+  },
+  "Robbery022_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "持刀男子抢劫正在取钱的女子"
+      }
+    ]
+  },
+  "Robbery023_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "四人砸碎玻璃柜台，抢走物品"
+      }
+    ]
+  },
+  "Robbery024_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人斗殴"
+    },
+    "region": [
+      {
+        "caption": "一群人斗殴，其中有人持枪"
+      },
+      {
+        "caption": "白衣男子持枪向黑衣男子多次射击后离开"
+      }
+    ]
+  },
+  "Robbery025_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持枪男子抢劫时被众人制服"
+      }
+    ]
+  },
+  "Robbery026_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人进入首饰店，威胁店员并抢走首饰"
+      }
+    ]
+  },
+  "Robbery027_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人持枪进入商店抢劫，一名男子翻入柜台与店员搏斗"
+      },
+      {
+        "caption": "一群人持枪抢劫商店，威胁店员趴在地上"
+      }
+    ]
+  },
+  "Robbery028_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持枪男子进入店铺并抢走钱"
+      }
+    ]
+  },
+  "Robbery029_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人从车上下车，抢走路人手中物品"
+      }
+    ]
+  },
+  "Robbery030_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人持枪胁迫屋内人员并洗劫房屋"
+      }
+    ]
+  },
+  "Robbery031_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "两人骑摩托车，后座男子持刀抢走物品后逃跑"
+      }
+    ]
+  },
+  "Robbery032_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "一男子骑摩托车，另一男子尾随女子抢劫，随后逃跑"
+      }
+    ]
+  },
+  "Robbery033_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "持枪男子进入店铺胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery034_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群黑衣人持枪胁迫店员将首饰放入背包"
+      }
+    ]
+  },
+  "Robbery035_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人发生斗殴，有人持枪，劫匪将首饰装入背包后离开"
+      }
+    ]
+  },
+  "Robbery036_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子持枪翻入柜台，抢走钱"
+      }
+    ]
+  },
+  "Robbery037_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子殴打店员，其中一人拖住店员"
+      },
+      {
+        "caption": "男子进入柜台抢走财物"
+      }
+    ]
+  },
+  "Robbery038_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子下摩托车，抢走路人物品并发生冲突"
+      }
+    ]
+  },
+  "Robbery039_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "持刀男子胁迫店员并抢走物品"
+      }
+    ]
+  },
+  "Robbery040_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子抢走收银台的钱"
+      }
+    ]
+  },
+  "Robbery041_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪胁迫店员趴下并抢走物品"
+      }
+    ]
+  },
+  "Robbery042_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery043_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子跳入柜台胁迫店员，将钱交给另一男子"
+      }
+    ]
+  },
+  "Robbery044_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery045_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子胁迫店员并拿走钱"
+      }
+    ]
+  },
+  "Robbery046_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪戴钢铁侠面具实施抢劫"
+      }
+    ]
+  },
+  "Robbery047_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫店员和顾客并抢走钱财"
+      }
+    ]
+  },
+  "Robbery048_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "玻璃门外两名男子打斗"
+      }
+    ]
+  },
+  "Robbery049_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名黑衣男子持枪胁迫店员"
+      },
+      {
+        "caption": "一男子翻入柜台"
+      },
+      {
+        "caption": "一男子翻入柜台后取走收银台的钱"
+      },
+      {
+        "caption": "一女子持枪威胁店员"
+      },
+      {
+        "caption": "柜台内的男子翻出柜台"
+      },
+      {
+        "caption": "柜台内的男子翻出柜台"
+      }
+    ]
+  },
+  "Robbery050_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名男子抢劫车内人员"
+      }
+    ]
+  },
+  "Robbery051_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "红衣男子持枪胁迫店员，黑衣男子打碎柜台抢走物品"
+      }
+    ]
+  },
+  "Robbery052_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪进入超市，另一男子翻入柜台抢走物品"
+      }
+    ]
+  },
+  "Robbery053_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫路人并抢走物品"
+      }
+    ]
+  },
+  "Robbery054_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "几名男子持枪进入店铺，威胁店员并抢走物品"
+      }
+    ]
+  },
+  "Robbery055_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一个男子用枪威胁另一男子抢走手机"
+      }
+    ]
+  },
+  "Robbery056_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:三名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名男子持枪进入店铺，殴打保安后拿着袋子离开"
+      }
+    ]
+  },
+  "Robbery057_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪胁迫柜台内的店员"
+      }
+    ]
+  },
+  "Robbery058_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪胁迫店员装袋后离开"
+      }
+    ]
+  },
+  "Robbery059_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:三名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名男子持枪进入超市抢劫"
+      },
+      {
+        "caption": "一男子持枪进入超市"
+      },
+      {
+        "caption": "一男子持枪威胁店员趴在地上"
+      }
+    ]
+  },
+  "Robbery060_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "几名男子持枪进入店铺，胁迫店员打开收银台并拿走钱"
+      }
+    ]
+  },
+  "Robbery061_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子进入柜台殴打店员"
+      }
+    ]
+  },
+  "Robbery062_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪进入店铺，胁迫店员后抢走物品"
+      }
+    ]
+  },
+  "Robbery063_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人骑摩托抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人骑摩托车抢劫路人"
+      }
+    ]
+  },
+  "Robbery064_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子打碎玻璃门进入店铺，与店员枪战后逃走"
+      }
+    ]
+  },
+  "Robbery066_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子翻窗进入收银台，被女店员和其他店员制服"
+      }
+    ]
+  },
+  "Robbery067_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子殴打店员后进入柜台拿走钱"
+      }
+    ]
+  },
+  "Robbery068_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持刀与拿长棍的店员打斗"
+      }
+    ]
+  },
+  "Robbery069_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:三名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "三名男子持枪进入商店，威胁店员并抢走钱"
+      }
+    ]
+  },
+  "Robbery070_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人打碎玻璃展柜，抢走物品"
+      }
+    ]
+  },
+  "Robbery071_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "白衣男子持枪威胁店员并抢走钱"
+      }
+    ]
+  },
+  "Robbery072_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子骑摩托抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子骑摩托车，后座男子下车持刀威胁路人并抢走物品"
+      }
+    ]
+  },
+  "Robbery073_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群男子持枪进入店铺，打伤保安并抢走物品"
+      }
+    ]
+  },
+  "Robbery074_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子打碎玻璃门，被店员用拖把赶走"
+      }
+    ]
+  },
+  "Robbery076_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "摩托车后座男子抢走女路人的项链"
+      }
+    ]
+  },
+  "Robbery078_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子持枪威胁店员"
+      },
+      {
+        "caption": "黑衣男子持枪威胁店员"
+      },
+      {
+        "caption": "黑衣男子持枪威胁店员"
+      }
+    ]
+  },
+  "Robbery080_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子制服坐在椅子上的白衣男子并抢走财物"
+      }
+    ]
+  },
+  "Robbery081_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "一男子与店员搏斗，另一男子翻越柜台抢走东西"
+      },
+      {
+        "caption": "一男子将店员打倒在地上"
+      },
+      {
+        "caption": "两男子在柜台内翻抢东西"
+      },
+      {
+        "caption": "两男子在柜台内翻抢东西并离开"
+      }
+    ]
+  },
+  "Robbery082_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "戴黑色头套的男子胁迫白衣男子打开车厢，三名男子抢走车内物品"
+      }
+    ]
+  },
+  "Robbery083_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持长刀进入商店，胁迫店员并抢走钱和货物"
+      }
+    ]
+  },
+  "Robbery084_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持刀男子抢劫店内人员"
+      },
+      {
+        "caption": "两名持刀男子殴打店内人员"
+      },
+      {
+        "caption": "一名持刀男子追逐店铺中的人，后三人拎着包撤离"
+      }
+    ]
+  },
+  "Robbery085_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪胁迫并殴打店内人员，抢走物品后离开"
+      }
+    ]
+  },
+  "Robbery086_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "白帽男子持枪胁迫店员取出收银台的钱并抢走"
+      }
+    ]
+  },
+  "Robbery087_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "橙衣男子持刀威胁店员"
+      }
+    ]
+  },
+  "Robbery088_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子翻越铁栅栏门进入超市，与店员互殴后爬出"
+      }
+    ]
+  },
+  "Robbery089_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫女子"
+    },
+    "region": [
+      {
+        "caption": "持枪男子抢走女子的包并将其拖拽很远"
+      }
+    ]
+  },
+  "Robbery090_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名黑衣男子进入室内殴打路人，打碎柜台玻璃翻入后又爬出"
+      }
+    ]
+  },
+  "Robbery091_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子持枪进入超市，胁迫店员取出收银台的钱"
+      },
+      {
+        "caption": "黑衣男子抢走收银台的钱"
+      },
+      {
+        "caption": "黑衣男子拿走收银台中的钱"
+      }
+    ]
+  },
+  "Robbery092_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "蓝衣男子进入柜台，被拿长棍的店员赶走"
+      }
+    ]
+  },
+  "Robbery093_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "门口男子抢走小孩的手机后逃走"
+      },
+      {
+        "caption": "门口男子抢走小孩的手机后逃走"
+      }
+    ]
+  },
+  "Robbery094_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪进入超市"
+      },
+      {
+        "caption": "两名持枪男子与多名店员打斗"
+      },
+      {
+        "caption": "持枪男子恐吓店员后离开，店员用沙发堵住门"
+      }
+    ]
+  },
+  "Robbery095_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "蓝衣男子用枪胁迫黑衣男子进入房间"
+      }
+    ]
+  },
+  "Robbery096_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "白色轿车开进院子，随后车内人员下车抢劫另一辆白车上的人"
+      }
+    ]
+  },
+  "Robbery097_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "持枪男子进入店铺，威胁店员并抢走钱"
+      }
+    ]
+  },
+  "Robbery098_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪进入店铺"
+      },
+      {
+        "caption": "两名男子抢走货物和收银台的钱"
+      }
+    ]
+  },
+  "Robbery099_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子进入店铺，一人持枪与店员对峙，另一人徘徊门口，枪击后两人逃走"
+      }
+    ]
+  },
+  "Robbery100_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪进入柜台击打并制服店员，另一男子将货物装袋带走"
+      }
+    ]
+  },
+  "Robbery101_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "蓝衣男子点餐时掏出手枪，威胁店员从收银台拿出钱并抢走"
+      }
+    ]
+  },
+  "Robbery102_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子从摩托车后座下车，进入庭院抢女子的包，被女子击打，随后同伙支援，女子逃脱"
+      }
+    ]
+  },
+  "Robbery103_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子闯入收银台，与店员搏斗后抢走钱逃走"
+      }
+    ]
+  },
+  "Robbery104_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子将一名男子打倒，抢走财物后逃跑"
+      }
+    ]
+  },
+  "Robbery105_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪进入店铺，被店主持枪赶走"
+      }
+    ]
+  },
+  "Robbery106_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "蓝衣男子从摩托车后座下车，持枪威胁路人并抢走电话"
+      }
+    ]
+  },
+  "Robbery108_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持刀绑架女子，店员营救并与歹徒搏斗，最终将其赶走"
+      }
+    ]
+  },
+  "Robbery109_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "一男子持刀进入商店"
+      },
+      {
+        "caption": "一男子翻入柜台用刀威胁店员"
+      },
+      {
+        "caption": "一男子将两个店员赶出去"
+      },
+      {
+        "caption": "两个男子用刀将店员赶到一个屋子里"
+      },
+      {
+        "caption": "一个男子用刀将店员赶到一个角落"
+      },
+      {
+        "caption": "两个男子用刀将店员赶走"
+      },
+      {
+        "caption": "两个男子用刀将店员赶到一个屋子里"
+      },
+      {
+        "caption": "一个店员打开收银台，男子将其中的钱抢走"
+      }
+    ]
+  },
+  "Robbery110_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "戴白色面罩男子未付款抢走货物逃跑"
+      }
+    ]
+  },
+  "Robbery111_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群男子进入店铺，持枪威胁店员并抢走柜台内首饰"
+      }
+    ]
+  },
+  "Robbery112_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群男子追击一名男子"
+      },
+      {
+        "caption": "男子持枪赶走一群男子"
+      }
+    ]
+  },
+  "Robbery113_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "白衣白帽男子持枪击倒一名男子，吓跑另一名男子"
+      }
+    ]
+  },
+  "Robbery114_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子持枪向远处射击，玻璃被击碎后撤退"
+      }
+    ]
+  },
+  "Robbery115_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名黑衣男子进入店铺，胁迫并殴打店员，抢走钱"
+      }
+    ]
+  },
+  "Robbery116_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子殴打牵狗人，狗反击"
+      }
+    ]
+  },
+  "Robbery117_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一伙人持枪胁迫他人进入房间"
+      },
+      {
+        "caption": "黑衣女子持枪威胁白衣女子进入房间"
+      },
+      {
+        "caption": "黑衣黑帽子男子用枪威胁一男一女进入房间"
+      }
+    ]
+  },
+  "Robbery118_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持长枪进入超市，威胁店员装袋收钱，后被赶走"
+      }
+    ]
+  },
+  "Robbery119_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持枪威胁店员，打开柜子并装满背包里的钱"
+      }
+    ]
+  },
+  "Robbery120_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名男子持枪威胁店员，店员逃跑，一人翻入柜台试图打开柜子未果后逃走"
+      }
+    ]
+  },
+  "Robbery121_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子递纸条给店员后进入柜台抢走物品"
+      }
+    ]
+  },
+  "Robbery122_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "灰衣男子持枪威胁店员，被店员扔物品反击并赶走"
+      }
+    ]
+  },
+  "Robbery123_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣持刀男子试图抢走店员笔记本电脑未果，逃跑"
+      }
+    ]
+  },
+  "Robbery124_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "一男子持枪威胁店员"
+      },
+      {
+        "caption": "一男子持枪威胁店员，翻入柜台"
+      },
+      {
+        "caption": "一男子持枪威胁店员"
+      },
+      {
+        "caption": "一男子持枪威胁店员并将货柜中的商品装入袋子"
+      },
+      {
+        "caption": "店员打开收银台的时候偷袭持枪男子，夺走了男子的抢"
+      },
+      {
+        "caption": "店员与男子互相殴打"
+      },
+      {
+        "caption": "店员阻止抢劫男子逃走"
+      },
+      {
+        "caption": "店员与男子互相殴打"
+      }
+    ]
+  },
+  "Robbery125_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子冲进超市用电棍击打店员，与另一男子殴打店员并抢走钱"
+      }
+    ]
+  },
+  "Robbery126_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子与女店员打斗后抢走收银台的钱"
+      }
+    ]
+  },
+  "Robbery127_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子持刀绑架另一男子，后被众人制服"
+      }
+    ]
+  },
+  "Robbery128_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子冲进超市殴打店员，被两名店员制服"
+      }
+    ]
+  },
+  "Robbery129_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣歹徒持刀威胁女店员打开收银台并抢走钱"
+      }
+    ]
+  },
+  "Robbery130_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣持枪男子威胁蓝衣男店员打开收银台并抢走钱"
+      }
+    ]
+  },
+  "Robbery131_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "蓝衣男子持枪威胁并用雨伞殴打女店员，后被打跑"
+      }
+    ]
+  },
+  "Robbery132_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "戴面罩黑衣男子持枪抢劫商店，被店员持长刀赶走"
+      }
+    ]
+  },
+  "Robbery133_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "白衣男子与黑衣男子开枪射击并殴打另一名黑衣男子"
+      }
+    ]
+  },
+  "Robbery134_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一伙人抢劫"
+    },
+    "region": [
+      {
+        "caption": "一群人冲进首饰店，打碎玻璃柜台并抢走首饰"
+      }
+    ]
+  },
+  "Robbery135_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持枪男子挟持黄衣男子进入超市"
+      },
+      {
+        "caption": "持枪男子被众人制服"
+      }
+    ]
+  },
+  "Robbery136_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子挟持并殴打橙衣女子"
+      }
+    ]
+  },
+  "Robbery137_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个女子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣持枪女子"
+      }
+    ]
+  },
+  "Robbery138_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个女子抢劫"
+    },
+    "region": [
+      {
+        "caption": "蓝衣女子击倒绿衣男子并持续殴打"
+      }
+    ]
+  },
+  "Robbery139_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子结账时掏出长枪，强迫店员交钱"
+      }
+    ]
+  },
+  "Robbery140_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "男子结账时掏出刀，强迫店员打开收银台并抢走钱"
+      }
+    ]
+  },
+  "Robbery141_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名蒙面歹徒冲入柜台，将钱装入背包"
+      }
+    ]
+  },
+  "Robbery142_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑帽男子持枪威胁白发店员打开收银台并抢走钱"
+      }
+    ]
+  },
+  "Robbery143_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣黑帽男子持刀闯入商店，强迫店员打开收银台并抢走钱"
+      }
+    ]
+  },
+  "Robbery144_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "电动车后座男子抢走路人的包并拖拽很远"
+      }
+    ]
+  },
+  "Robbery145_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持枪男子进入首饰店，控制店员并打碎柜台，将首饰装入背包"
+      }
+    ]
+  },
+  "Robbery146_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子持刀抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子亮刀威胁坐着的男子，后被众人制服"
+      }
+    ]
+  },
+  "Robbery147_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:两名男子持枪抢劫"
+    },
+    "region": [
+      {
+        "caption": "两名持枪男子威胁店员"
+      }
+    ]
+  },
+  "Robbery148_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "白衣男子骑自行车抢走粉衣男子的手机"
+      }
+    ]
+  },
+  "Robbery149_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "黑衣男子趴在柜台上与店员殴打"
+      }
+    ]
+  },
+  "Robbery150_x264.mp4": {
+    "global": {
+      "Caption": "抢劫异常:一个男子抢劫"
+    },
+    "region": [
+      {
+        "caption": "电动车后座男子下车抢劫路人，殴打并抢走财物后逃走"
+      }
+    ]
+  }
+}
