@@ -1,0 +1,2882 @@
+{
+    "Assault_1.mp4": {
+        "global": {
+            "Caption": "一个男子扑到了一个女子"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色衣服的男子扑到了一个穿红色上衣的女子"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_2.mp4": {
+        "global": {
+            "Caption": "一个男子推倒了一个人"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色t恤的男子推倒了一个穿黑色卫衣的人"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_3.mp4": {
+        "global": {
+            "Caption": "一个男子扇一个女子"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色t恤的男子给一个长发穿着红色裙子的女子扇了一巴掌"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_4.mp4": {
+        "global": {
+            "Caption": "一个男子攻击一个人"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑白条纹t恤的男子把穿红色卫衣的女子摔倒，踢了一脚，拖住她"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_5.mp4": {
+        "global": {
+            "Caption": "一个男子打一个女子"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色t恤的男子戴着黑色帽子，朝一个穿黑色衣服的女子脸上打了一拳"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_6.mp4": {
+        "global": {
+            "Caption": "一个男子推倒了一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色衣服的男子推倒了一个穿红色上衣的男子"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_7.mp4": {
+        "global": {
+            "Caption": "一个男子敲另一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色衣服的男子用锤子敲一个戴着蓝色帽子，穿着蓝色上衣的，正在打电话的男子"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_8.mp4": {
+        "global": {
+            "Caption": "两个人抢劫一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿着蓝色卫衣的人和一个穿着黑色上衣的人抢劫一个穿白色t恤的男子，穿蓝色卫衣的人打他的头部，倒在地上"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_9.mp4": {
+        "global": {
+            "Caption": "一个人拿刀砍另一个人"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色衣服的人多次拿刀砍击一个穿灰色衣服的人"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_10.mp4": {
+        "global": {
+            "Caption": "一个男子打一个女子"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色t恤的男子推倒一个穿黑色t恤的女子，多次用脚踢她，多次用手击打她的上身"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_11.mp4": {
+        "global": {
+            "Caption": "一个人打倒一个女子"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色衣服的人多次攻击一个穿黑色衣服的女子的头部，她倒在地上"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_12.mp4": {
+        "global": {
+            "Caption": "一个男子打一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色上衣的男子把一个穿白色t恤的男子从椅子上拽倒，多次攻击他的头部"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_13.mp4": {
+        "global": {
+            "Caption": "两个人抢劫一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色上衣的人和一个穿蓝色上衣的人推到一个穿蓝色上衣的男子，从他的裤子口袋拿东西，穿黑色上衣的人多次打他"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_14.mp4": {
+        "global": {
+            "Caption": "一个男子打一个女子"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色上衣的男子，多次向一个穿蓝色t恤长发的女子脸上扇巴掌"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Assault_15.mp4": {
+        "global": {
+            "Caption": "一个男子打一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色上衣的男子向一个穿蓝色上衣的男子脸上打了两拳，打倒，踢了一脚"
+            }
+        ],
+        "category": "Assault",
+        "dataset": "MSAD"
+    },
+    "Explosion_1.mp4": {
+        "global": {
+            "Caption": "屋子内发生了爆炸"
+        },
+        "region": [
+            {
+                "caption": "屋子内发生爆炸，文件纷飞，天花板掉落"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_2.mp4": {
+        "global": {
+            "Caption": "爆炸冲击屋顶"
+        },
+        "region": [
+            {
+                "caption": "爆炸产生的冲击屋顶，大量尘土和碎片在空气中飞扬，墙壁倒塌"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_3.mp4": {
+        "global": {
+            "Caption": "爆炸冲击室内"
+        },
+        "region": [
+            {
+                "caption": "室外发生爆炸冲击室内，物体和碎片被猛烈掀起"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_4.mp4": {
+        "global": {
+            "Caption": "爆炸冲击室内"
+        },
+        "region": [
+            {
+                "caption": "室外发生爆炸冲击室内，大量尘土和碎片在空气中飞扬"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_5.mp4": {
+        "global": {
+            "Caption": "爆炸冲击室内"
+        },
+        "region": [
+            {
+                "caption": "室外发生爆炸冲击室内，玻璃碎裂，大量尘土在空气中飞扬"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_6.mp4": {
+        "global": {
+            "Caption": "爆炸冲击屋顶"
+        },
+        "region": [
+            {
+                "caption": "爆炸产生的冲击屋顶，大量尘土和碎片在空气中飞扬，墙壁倒塌"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_7.mp4": {
+        "global": {
+            "Caption": "烟花发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "一个穿着蓝色t恤的男子点燃烟花，发生爆炸，产生大量白烟"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_8.mp4": {
+        "global": {
+            "Caption": "鞭炮发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "鞭炮发生爆炸产生大量白烟"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_9.mp4": {
+        "global": {
+            "Caption": "室内发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "室内发生爆炸，大量尘土和碎片在空气中飞扬"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_10.mp4": {
+        "global": {
+            "Caption": "室外发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "室外发生爆炸，玻璃掉落碎裂，大量尘土和碎片在空气中飞扬"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_11.mp4": {
+        "global": {
+            "Caption": "爆炸冲击室内"
+        },
+        "region": [
+            {
+                "caption": "爆炸冲击室内，家具、隔栏、装饰物被严重掀翻和损毁，地面散落大量杂物"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_12.mp4": {
+        "global": {
+            "Caption": "轮胎发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "一个男子给轮胎充气，轮胎发生爆炸"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_13.mp4": {
+        "global": {
+            "Caption": "卡车发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "一辆绿色卡车发生爆炸，天花板掉落，大量尘土和碎片在空气中飞扬"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_14.mp4": {
+        "global": {
+            "Caption": "房子发生爆炸"
+        },
+        "region": [
+            {
+                "caption": "一个黄色房子发生爆炸燃烧，墙壁倒塌"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Explosion_15.mp4": {
+        "global": {
+            "Caption": "爆炸冲击屋内"
+        },
+        "region": [
+            {
+                "caption": "爆炸冲击导致玻璃被吹倒压到一个穿白色衣服的成人，两个人穿红色上衣的小孩和一个穿白色衣服的小孩，"
+            }
+        ],
+        "category": "Explosion",
+        "dataset": "MSAD"
+    },
+    "Fighting_1.mp4": {
+        "global": {
+            "Caption": "两个男子打两个男子"
+        },
+        "region": [
+            {
+                "caption": "一个白色背心的男子和一个穿黑色上衣的男子与一个穿黑色书上衣和一个穿橙色上衣的男子互殴"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_2.mp4": {
+        "global": {
+            "Caption": "两个男子摔跤"
+        },
+        "region": [
+            {
+                "caption": "两个赤裸上身穿着黑色裤子的男子进行摔跤"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_3.mp4": {
+        "global": {
+            "Caption": "两队人混战"
+        },
+        "region": [
+            {
+                "caption": "四个人有肢体冲突，另外两个穿黑色衣服的女子从桌子拿东西相互投掷"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_4.mp4": {
+        "global": {
+            "Caption": "一个男子和一个女子互殴"
+        },
+        "region": [
+            {
+                "caption": "一个穿红色上衣的女子向一个穿黑色衣服的男子一拳，后男子打了女子一拳，踢了一脚"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_5.mp4": {
+        "global": {
+            "Caption": "两队人混战"
+        },
+        "region": [
+            {
+                "caption": "5个人有肢体冲突，另外两个穿黑色衣服的女子从桌子拿东西相互投掷"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_6.mp4": {
+        "global": {
+            "Caption": "一个男子摁住另一个男子"
+        },
+        "region": [
+            {
+                "caption": "一个穿橙色上衣的男子摁倒一个穿黑色t恤的男子"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_7.mp4": {
+        "global": {
+            "Caption": "5个人相互攻击"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色上衣的男子和一个白色上衣的男子与一个穿白色上衣，一个穿橙色上衣的男子，一个穿黑白相间上衣的男子互殴"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_8.mp4": {
+        "global": {
+            "Caption": "一个人打另一个人"
+        },
+        "region": [
+            {
+                "caption": "一个穿蓝色上衣的男子戴着蓝色帽子，向一个穿橙色t恤的男子面部打了两拳"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_9.mp4": {
+        "global": {
+            "Caption": "两个人与一个人相互攻击"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色上衣的男子和一个穿黑色t恤的男子发生肢体冲突，后又加入一个穿黑色衣服的男子踢穿黑色t恤的男子"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_10.mp4": {
+        "global": {
+            "Caption": "两个人与一个相互攻击"
+        },
+        "region": [
+            {
+                "caption": "一个穿着白色上衣的男子和一个赤裸上身的男子与一个穿黑色t恤男子互殴"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_11.mp4": {
+        "global": {
+            "Caption": "两个男子互相推搡"
+        },
+        "region": [
+            {
+                "caption": "一个穿黄色上衣的的男子和一个穿紫色上衣的男子相互推搡"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_12.mp4": {
+        "global": {
+            "Caption": "很多人混战"
+        },
+        "region": [
+            {
+                "caption": "两队人互相攻击，用桌子盘子和啤酒瓶相互投掷"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fighting_13.mp4": {
+        "global": {
+            "Caption": "两个人打两个人"
+        },
+        "region": [
+            {
+                "caption": "一个穿白色背心的男子摁住一个穿黑色上衣的男子，后来一个穿白色上衣的男子拿棍子打跑了一个穿黑色上衣的男子"
+            }
+        ],
+        "category": "Fighting",
+        "dataset": "MSAD"
+    },
+    "Fire_1.mp4": {
+        "global": {
+            "Caption": "窗帘燃烧"
+        },
+        "region": [
+            {
+                "caption": "木头墙壁燃烧烧到红色窗帘，产生大量白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_2.mp4": {
+        "global": {
+            "Caption": "房子燃烧"
+        },
+        "region": [
+            {
+                "caption": "房子剧烈燃烧，墙壁烧成黑色，产生大量白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_3.mp4": {
+        "global": {
+            "Caption": "建筑物燃烧"
+        },
+        "region": [
+            {
+                "caption": "白色建筑物燃烧，产生大量白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_4.mp4": {
+        "global": {
+            "Caption": "大量浓烟升起"
+        },
+        "region": [
+            {
+                "caption": "大量白烟像蘑菇一样升起"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_5.mp4": {
+        "global": {
+            "Caption": "建筑物燃烧"
+        },
+        "region": [
+            {
+                "caption": "白色建筑物燃烧，产生大量白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_6.mp4": {
+        "global": {
+            "Caption": "机器燃烧"
+        },
+        "region": [
+            {
+                "caption": "男子在机器旁操作时突然起火，火焰喷出"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_7.mp4": {
+        "global": {
+            "Caption": "加油站燃烧"
+        },
+        "region": [
+            {
+                "caption": "加油站剧烈燃烧，引燃油罐车，产生火光和大量黑烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_8.mp4": {
+        "global": {
+            "Caption": "垃圾桶燃烧"
+        },
+        "region": [
+            {
+                "caption": "黑色垃圾桶剧烈燃烧，产生火光"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_9.mp4": {
+        "global": {
+            "Caption": "帘幕燃烧"
+        },
+        "region": [
+            {
+                "caption": "幕布后剧烈燃烧，最后烧穿幕布"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_10.mp4": {
+        "global": {
+            "Caption": "卡车燃烧"
+        },
+        "region": [
+            {
+                "caption": "一辆银色卡车燃烧，产生火光和大量黑烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_11.mp4": {
+        "global": {
+            "Caption": "院子内燃烧"
+        },
+        "region": [
+            {
+                "caption": "院子内发生燃烧，非常的亮"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_12.mp4": {
+        "global": {
+            "Caption": "绿色布料燃烧"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色t恤戴着黑色帽子的男子点燃绿色布料，产生大量烟雾"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_13.mp4": {
+        "global": {
+            "Caption": "花束燃烧"
+        },
+        "region": [
+            {
+                "caption": "桌子上的花燃烧，烧到壁橱"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_14.mp4": {
+        "global": {
+            "Caption": "院子内燃烧"
+        },
+        "region": [
+            {
+                "caption": "院子内发生燃烧，非常的亮"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_15.mp4": {
+        "global": {
+            "Caption": "房子燃烧"
+        },
+        "region": [
+            {
+                "caption": "白色房子剧烈燃烧，产生火光和白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_16.mp4": {
+        "global": {
+            "Caption": "大量浓烟升起"
+        },
+        "region": [
+            {
+                "caption": "大量白烟像蘑菇一样升起"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_17.mp4": {
+        "global": {
+            "Caption": "房子燃烧"
+        },
+        "region": [
+            {
+                "caption": "白色房子剧烈燃烧，产生火光和白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_18.mp4": {
+        "global": {
+            "Caption": "一个屋子燃烧"
+        },
+        "region": [
+            {
+                "caption": "一个白色屋子燃烧，墙壁被烧黑，产生火光和白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_19.mp4": {
+        "global": {
+            "Caption": "蓝色机器燃烧"
+        },
+        "region": [
+            {
+                "caption": "蓝色机器剧烈燃烧，产生火光和烟雾"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_20.mp4": {
+        "global": {
+            "Caption": "一个机器爆燃"
+        },
+        "region": [
+            {
+                "caption": "红色桌子上的机器剧烈燃烧，产生白眼"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_21.mp4": {
+        "global": {
+            "Caption": "一个机器内燃烧"
+        },
+        "region": [
+            {
+                "caption": "一个机器内燃烧，一个穿白蓝格子的男子拉开门，窜出火苗"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_22.mp4": {
+        "global": {
+            "Caption": "一盆干枯的草燃烧"
+        },
+        "region": [
+            {
+                "caption": "一个穿黄色上衣的男子戴着黑色帽子，点燃一盆干枯的草"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_23.mp4": {
+        "global": {
+            "Caption": "货物燃烧"
+        },
+        "region": [
+            {
+                "caption": "货物燃烧，有大量火焰"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_24.mp4": {
+        "global": {
+            "Caption": "液体燃烧"
+        },
+        "region": [
+            {
+                "caption": "炉子中的液体溅出来，在黄色小车附近燃烧，产生白烟"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Fire_25.mp4": {
+        "global": {
+            "Caption": "院子内燃烧"
+        },
+        "region": [
+            {
+                "caption": "白衣男子倒红桶入锅，引发火花，踢桶撞锅，点燃院子。"
+            }
+        ],
+        "category": "Fire",
+        "dataset": "MSAD"
+    },
+    "Object_falling_1.mp4": {
+        "global": {
+            "Caption": "玻璃幕墙和玻璃门被吹倒，天花板掉落"
+        },
+        "region": [
+            {
+                "caption": "玻璃幕墙和玻璃门被吹倒，天花板掉落，室内物品狼藉，碎片飞溅"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_2.mp4": {
+        "global": {
+            "Caption": "玻璃幕墙和玻璃门被吹倒"
+        },
+        "region": [
+            {
+                "caption": "玻璃幕墙和玻璃门被吹倒，室内物品狼藉，碎片飞溅"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_3.mp4": {
+        "global": {
+            "Caption": "房子被吹走"
+        },
+        "region": [
+            {
+                "caption": "树木摇晃，白色玩具房子被吹走砸倒了黄色滑梯"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_4.mp4": {
+        "global": {
+            "Caption": "篮球架倒了砸到一个女子"
+        },
+        "region": [
+            {
+                "caption": "黑色的篮球架倒了砸到了一个穿紫色上衣的女子"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_5.mp4": {
+        "global": {
+            "Caption": "电视掉了下来"
+        },
+        "region": [
+            {
+                "caption": "一个穿黑色衣服的男子没有托住电视掉了下来"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_6.mp4": {
+        "global": {
+            "Caption": "橙色的梯子倒了"
+        },
+        "region": [
+            {
+                "caption": "木头梯子碰倒了橙色的梯子"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_7.mp4": {
+        "global": {
+            "Caption": "一个垃圾桶滑了下去"
+        },
+        "region": [
+            {
+                "caption": "一个垃圾桶从白色汽车后滑落，里面的垃圾掉了出来"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_8.mp4": {
+        "global": {
+            "Caption": "一棵树倒了"
+        },
+        "region": [
+            {
+                "caption": "一个人用锯子锯倒树"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_9.mp4": {
+        "global": {
+            "Caption": "天花板掉落，碎片飞扬"
+        },
+        "region": [
+            {
+                "caption": "白色天花板掉落，大量碎片飞扬"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_10.mp4": {
+        "global": {
+            "Caption": "泥石流推到了墙壁"
+        },
+        "region": [
+            {
+                "caption": "泥石流推到了红色的墙壁"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_11.mp4": {
+        "global": {
+            "Caption": "摩托车碰倒了信箱"
+        },
+        "region": [
+            {
+                "caption": "一辆黄色的电动车碰倒了一个白色信箱"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_12.mp4": {
+        "global": {
+            "Caption": "一个轮胎滚过来"
+        },
+        "region": [
+            {
+                "caption": "一个轮胎滚过来击中白色房梁"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_13.mp4": {
+        "global": {
+            "Caption": "蹦床滚过来"
+        },
+        "region": [
+            {
+                "caption": "一个黑色蹦床滚到了路中间"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_14.mp4": {
+        "global": {
+            "Caption": "葡萄酒掉在地上"
+        },
+        "region": [
+            {
+                "caption": "很多葡萄酒从酒柜中倾倒，掉在地上"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_15.mp4": {
+        "global": {
+            "Caption": "卡车碰倒了道口闸"
+        },
+        "region": [
+            {
+                "caption": "一辆银色卡车碰倒了黑黄相间的道口闸"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_16.mp4": {
+        "global": {
+            "Caption": "天花板掉下来"
+        },
+        "region": [
+            {
+                "caption": "白色的天花板掉下来砸到黄色木地板上"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_17.mp4": {
+        "global": {
+            "Caption": "一辆汽车飞过来"
+        },
+        "region": [
+            {
+                "caption": "一辆红色汽车飞过来，砸倒了一棵树"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_18.mp4": {
+        "global": {
+            "Caption": "一辆汽车飞过来"
+        },
+        "region": [
+            {
+                "caption": "一辆红色汽车飞过来，砸到了行人和一辆蓝色汽车，砸倒了一棵树"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_19.mp4": {
+        "global": {
+            "Caption": "玻璃门碎裂"
+        },
+        "region": [
+            {
+                "caption": "玻璃门碎裂，玻璃渣掉在地上"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_20.mp4": {
+        "global": {
+            "Caption": "一棵树倒了"
+        },
+        "region": [
+            {
+                "caption": "一棵树倒下砸到了屋子的黑色屋顶"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_21.mp4": {
+        "global": {
+            "Caption": "天花板掉下来"
+        },
+        "region": [
+            {
+                "caption": "天花板从楼梯上掉下来"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "Object_falling_22.mp4": {
+        "global": {
+            "Caption": "晾衣架滑走了"
+        },
+        "region": [
+            {
+                "caption": "一个黄色晾衣架挂满白色布料，从车库中滑出来"
+            }
+        ],
+        "category": "Object_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_1.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_2.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_3.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_4.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_5.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_6.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_7.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_8.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_9.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_10.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_11.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_12.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_13.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_14.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_15.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_16.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_17.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_18.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_19.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_20.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_21.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_22.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_23.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_24.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_25.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_26.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_27.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_28.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_29.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_30.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_31.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_32.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_33.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_34.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_35.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_36.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_37.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_38.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_39.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_40.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_41.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_42.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "People_falling_43.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "People_falling",
+        "dataset": "MSAD"
+    },
+    "Robbery_1.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_2.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_3.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_4.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_5.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_6.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_7.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_8.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_9.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_10.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_11.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_12.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_13.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_14.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_15.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_16.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_17.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_18.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_19.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_20.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_21.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_22.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_23.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_24.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_25.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_26.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_27.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_28.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Robbery_29.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Robbery",
+        "dataset": "MSAD"
+    },
+    "Shooting_1.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_2.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_3.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_4.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_5.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_6.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_7.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_8.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_9.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_10.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_11.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_12.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_13.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_14.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_15.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_16.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Shooting_17.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Shooting",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_1.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_2.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_3.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_4.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_5.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_6.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_7.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_8.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_9.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_10.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_11.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_12.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_13.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_14.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_15.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_16.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_17.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_18.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_19.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_20.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_21.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_22.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_23.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_24.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_25.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_26.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_27.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_28.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_29.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_30.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_31.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_32.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_33.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_34.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_35.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_36.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_37.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_38.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Traffic_accident_39.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Traffic_accident",
+        "dataset": "MSAD"
+    },
+    "Vandalism_1.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_2.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_3.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_4.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_5.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_6.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_7.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_8.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_9.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_10.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_11.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Vandalism_12.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Vandalism",
+        "dataset": "MSAD"
+    },
+    "Water_incident_1.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_2.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_3.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_4.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_5.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_6.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_7.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_8.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_9.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    },
+    "Water_incident_10.mp4": {
+        "global": {
+            "Caption": ""
+        },
+        "region": [
+            {
+                "caption": ""
+            }
+        ],
+        "category": "Water_incident",
+        "dataset": "MSAD"
+    }
+}

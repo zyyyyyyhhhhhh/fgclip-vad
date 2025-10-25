@@ -761,6 +761,9 @@ class FGCLIPModel(CLIPModel):
         # ✅ 只使用全局对比学习 (image_embeds ↔ long_text_embeds)
         loss_itcl = self.clip_loss_global_only(image_embeds, long_text_embeds, rank, image)
 
+        if getattr(self, "disable_global_loss", False):
+            loss_itcl = loss_itcl * 0.0
+
         # 初始化loss（只包含全局对比）
         loss = loss_itcl
         

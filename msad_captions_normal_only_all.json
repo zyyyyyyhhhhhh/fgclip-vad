@@ -1,0 +1,4803 @@
+{
+    "Normal_Testing/MSAD_normal_testing_1.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "商店没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_2.mp4": {
+        "global": {
+            "Caption": "一个场景为人行道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人在从人行道走过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_3.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在前门聊天，一些人从前门走进房子里"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_4.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_5.mp4": {
+        "global": {
+            "Caption": "一个场景为家庭内的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一只狗在家庭内玩耍"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_6.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人走进停车场"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_7.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内结账"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_8.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内挑选商品"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_9.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在停车场内关闭车门和后备箱"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_10.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "火车站内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_11.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_12.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_13.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车站经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_14.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内散步"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_15.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人坐在餐厅内用餐，一些人在餐厅内走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_16.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从道路上的斑马线走过，一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_17.mp4": {
+        "global": {
+            "Caption": "一个场景为水果摊的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在水果摊内走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_18.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街散步、逛街"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_19.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角及旁边火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在街道上走动，旁边火车轨道上一辆火车经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_20.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "餐厅内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_21.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在道路上走动，一些轿车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_22.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在道路上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_23.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在道路上走动，一些电动车和轿车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_24.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_25.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_26.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_27.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "步行街没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_28.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，许多人在街道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_29.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在前门的长椅上，一些人、三轮车和摩托车从前门的道路上经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_30.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在公园内观赏风景，一个人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_31.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人坐在公园的长椅上"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_32.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_33.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_34.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_35.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_36.mp4": {
+        "global": {
+            "Caption": "一个场景为沙滩的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在沙滩上玩耍，一些人在沙滩前的海上玩耍"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_37.mp4": {
+        "global": {
+            "Caption": "一个场景为高速公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_38.mp4": {
+        "global": {
+            "Caption": "一个场景为高速公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在高速公路上行驶，高速公路旁有一个人骑单车离开"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_39.mp4": {
+        "global": {
+            "Caption": "一个场景为高速公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_40.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆叉车在仓库内运作"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_41.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "火车站内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_42.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车站经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_43.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_44.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内散步"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_45.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "前门没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_46.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一只浣熊在前门进食，另一只浣熊在前门附近走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_47.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "停车场没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_48.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_49.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在道路上行驶，一些人在道路上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_50.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道上行走，一些人坐在街道旁的凳子上，一些卡车和轿车经过街道"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_51.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_52.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "办公室内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_53.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车、卡车和巴士在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_54.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内散步"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_55.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场和火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人和轿车在火车轨道及停车场旁的道路上经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_56.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场门口外的道路上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_57.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场门口外的道路上走动，一些轿车在停车场门口外的道路上经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_58.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆车从停车场门口驶出，一些人站在停车场门口外的公交车站，一个人在停车场门口外的道路上走动，一些轿车在停车场门口外的道路上经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_59.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在火车站内走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_60.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在停车场内行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_61.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在停车场内行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_62.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车在停车场内行驶，一些自行车从停车场经过，一些人在停车场内走过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_63.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_64.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车、卡车和巴士在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_65.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上驶过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_66.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从前门经过，一些摩托车、电动车、三轮车和卡车从前门的道路经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_67.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从前门经过，一些人在前门的凳子上坐着，一些电动车和三轮车从前门的道路经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_68.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场附近走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_69.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人经过停车场，一辆轿车驶入停车场停放"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_70.mp4": {
+        "global": {
+            "Caption": "一个场景为海滨的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在海滨走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_71.mp4": {
+        "global": {
+            "Caption": "一个场景为运河街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在运河街道上走动，一些船只在运河上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_72.mp4": {
+        "global": {
+            "Caption": "一个场景为运河街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在运河街道上走动，一些船只在运河上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_73.mp4": {
+        "global": {
+            "Caption": "一个场景为存储间的正常视频"
+        },
+        "region": [
+            {
+                "caption": "存储间没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_74.mp4": {
+        "global": {
+            "Caption": "一个场景为存储间的正常视频"
+        },
+        "region": [
+            {
+                "caption": "存储间没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_75.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在停车场内行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_76.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场内走动，一辆轿车驶入停车场，一辆停车场内停放的轿车打开闪光灯"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_77.mp4": {
+        "global": {
+            "Caption": "一个场景为工厂的正常视频"
+        },
+        "region": [
+            {
+                "caption": "工厂内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_78.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些三轮车和轿车在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_79.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些车辆在道路上行驶，一些人在道路旁的人行道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_80.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些三轮车在道路上行驶，一些人在道路上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_81.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在打扫和整理餐厅"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_82.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车轨道上驶过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_83.mp4": {
+        "global": {
+            "Caption": "一个场景为沙滩的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在沙滩上休息，一些人在沙滩前走过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_84.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些自行车、电动车和轿车从街道上经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_85.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "夜间，一些自行车、电动车和轿车从街道上经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_86.mp4": {
+        "global": {
+            "Caption": "一个场景为电车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些牛在电车轨道附近的草地上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_87.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道走动，一只猫在街道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_88.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "火车轨道没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_89.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人坐在餐厅内"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_90.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些自行车和电动车从道路上经过，一些人在道路旁走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_91.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "餐厅没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_92.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内散步"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_93.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "停车场没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_94.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "停车场没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_95.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从道路上驶过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_96.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "道路没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_97.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车和摩托车在街道上行驶，一些人在街道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_98.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车、轿车和卡车在街道上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_99.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "道路没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_100.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆电动车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_101.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从道路上驶过，一些人在道路旁走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_102.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些摩托车和轿车从道路上驶过，一些人在道路旁走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_103.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些摩托车、轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_104.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店外走动，一个人走进商店内"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_105.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_106.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_107.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多电动车、摩托车和轿车在街道上行驶，一些人在街道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_108.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多电动车、摩托车和轿车在街道上行驶，一些人在街道上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_109.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "火车站没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_110.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "火车站没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_111.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从公园经过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_112.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车轨道上驶过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_113.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_114.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_115.mp4": {
+        "global": {
+            "Caption": "一个场景为商业街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商业街上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_116.mp4": {
+        "global": {
+            "Caption": "一个场景为商业街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆卡车停在商业街的一个店铺门口，一些人在附近走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_117.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街上走动"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_118.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上驶过，一辆有轨电车从街道上轨道驶过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_119.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆有轨电车从街道上轨道驶过"
+            }
+        ]
+    },
+    "Normal_Testing/MSAD_normal_testing_120.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车在街道上行驶"
+            }
+        ]
+    },
+    
+    "Normal_Training/frontdoor/frontdoor1.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在前门搬运车上的货物"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor2.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在加油站前门走动"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor3.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车驶进加油站前门加油，一些人从车走下来"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor4.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人坐在前门的凳子上，一些猫在前门附近走动"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor5.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从小区前门驶入，一些人在小区前门附近走动"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor6.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些车辆从前门的道路驶过，一个人在前门附近走动"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor7.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人站在建筑前门等待，一些轿车从建筑前门道路经过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor8.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从建筑前门进入"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor9.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些车停在建筑前门道路边，一些人在建筑前门旁走动"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor10.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从建筑前门走过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor11.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人和摩托车从前门经过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor12.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆车驶入并停靠在前门，一个人从车走下来，一个人在前门附近走动"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor13.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车经停建筑前门，一些人站在建筑前门"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor14.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人打开门并从前门进入"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor15.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车从前门的道路经过，一些人从前门的人行道经过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor16.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人走上建筑前门"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor17.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在建筑前门进出"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor18.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人站在前门抱着一只猫，一只狗在前门等待"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor19.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车从前门的道路经过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor20.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和单车从前门的道路经过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor21.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在前门的街道上走动，一辆自行车从街道上驶过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor22.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从前门经过"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor23.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在前门整理车上的车罩"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor24.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从前门的货车上取出物品并到前门交付"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor25.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人走近前门"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor26.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆车准备停靠在前门的停车场，一个人站在前门附近"
+            }
+        ]
+    },
+    "Normal_Training/frontdoor/frontdoor27.mp4": {
+        "global": {
+            "Caption": "一个场景为前门的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人从前门走进建筑内"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway1.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway2.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "夜间一些卡车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway3.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路入口等待"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway4.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway5.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway6.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway7.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway8.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway9.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway10.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway11.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway12.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway13.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季许多卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway14.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季许多卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway15.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在跨水域公路上行驶，一些人在旁边的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway16.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway17.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多卡车和轿车在高速公路入口等待"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway18.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway19.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季许多卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway20.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车在公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway21.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多电动车、摩托车、三轮车和轿车在公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway22.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季许多卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway23.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway24.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/highway/highway25.mp4": {
+        "global": {
+            "Caption": "一个场景为公路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季一些卡车和轿车在高速公路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall1.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall2.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从商场的后勤通道经过"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall3.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall4.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall5.mp4": {
+        "global": {
+            "Caption": "一个场景为走廊的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从走廊经过"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall6.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall7.mp4": {
+        "global": {
+            "Caption": "一个场景为大厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall8.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall9.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人从门口走进大厅，一些人站在大厅内"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall10.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人推着餐车或端着餐盘从后勤通道经过"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall11.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall12.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall13.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall14.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall15.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall16.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall17.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall18.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall19.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场入口附近走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall20.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall21.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall22.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall23.mp4": {
+        "global": {
+            "Caption": "一个场景为走廊的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人推着垃圾桶从走廊经过"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall24.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall25.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall26.mp4": {
+        "global": {
+            "Caption": "一个场景为走廊的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从走廊经过"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall27.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商场内走动"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall28.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在商场内走动，一些人坐在商场内的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall29.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人推着保洁车从走廊停留"
+            }
+        ]
+    },
+    "Normal_Training/mall/mall30.mp4": {
+        "global": {
+            "Caption": "一个场景为商场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在商场内"
+            }
+        ]
+    },
+    "Normal_Training/office/office1.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人坐在办公室内"
+            }
+        ]
+    },
+    "Normal_Training/office/office2.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在办公室内将货物搬运到办公室桌子上"
+            }
+        ]
+    },
+    "Normal_Training/office/office3.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在办公室向工作人员咨询问题"
+            }
+        ]
+    },
+    "Normal_Training/office/office4.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在办公室向工作人员咨询问题"
+            }
+        ]
+    },
+    "Normal_Training/office/office5.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在办公室向工作人员咨询问题"
+            }
+        ]
+    },
+    "Normal_Training/office/office6.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在办公室向工作人员咨询问题"
+            }
+        ]
+    },
+    "Normal_Training/office/office7.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在办公室向工作人员咨询问题"
+            }
+        ]
+    },
+    "Normal_Training/office/office8.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在办公室内办公"
+            }
+        ]
+    },
+    "Normal_Training/office/office9.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从办公室经过"
+            }
+        ]
+    },
+    "Normal_Training/office/office10.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从办公室经过"
+            }
+        ]
+    },
+    "Normal_Training/office/office11.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在办公室内走动"
+            }
+        ]
+    },
+    "Normal_Training/office/office12.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在办公室内走动"
+            }
+        ]
+    },
+    "Normal_Training/office/office13.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "办公室内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Training/office/office14.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在办公室向工作人员咨询问题"
+            }
+        ]
+    },
+    "Normal_Training/office/office15.mp4": {
+        "global": {
+            "Caption": "一个场景为办公室的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在办公室内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park1.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人牵着狗坐在公园内长椅上，另一个人在给狗喂水"
+            }
+        ]
+    },
+    "Normal_Training/park/park2.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园参观"
+            }
+        ]
+    },
+    "Normal_Training/park/park3.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内散步"
+            }
+        ]
+    },
+    "Normal_Training/park/park4.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在滑冰场公园内滑冰"
+            }
+        ]
+    },
+    "Normal_Training/park/park5.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内玩耍，一些人在游乐园站着或走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park6.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在公园内围观"
+            }
+        ]
+    },
+    "Normal_Training/park/park7.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在公园内玩耍和走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park8.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园拍照，一些在公园走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park9.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车和一辆卡车从公园旁的道路经过"
+            }
+        ]
+    },
+    "Normal_Training/park/park10.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "夜晚许多人在公园聚集玩耍"
+            }
+        ]
+    },
+    "Normal_Training/park/park11.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park12.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park13.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park14.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park15.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人在滑冰场公园内滑冰，一些人坐在滑冰场旁的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/park/park16.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park17.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些狗在公园草坪上玩耍，一些人坐在公园内椅子上"
+            }
+        ]
+    },
+    "Normal_Training/park/park18.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人从公园大门走进"
+            }
+        ]
+    },
+    "Normal_Training/park/park19.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内玩耍"
+            }
+        ]
+    },
+    "Normal_Training/park/park20.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在公园内走动，一些人站在路边"
+            }
+        ]
+    },
+    "Normal_Training/park/park21.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从施工中的滑冰场公园旁经过"
+            }
+        ]
+    },
+    "Normal_Training/park/park22.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park23.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/park/park24.mp4": {
+        "global": {
+            "Caption": "一个场景为公园的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在公园内走动"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot1.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从停车场内经过，一些轿车从停车场旁的道路经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot2.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场内走动，一些轿车在停车场内行驶"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot3.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "停车场内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot4.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车和轿车从停车场驶出，一些人在停车场附近走动，一些人站着人行道上"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot5.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人登上了停车场内的一辆轿车中"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot6.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在停车场内走动，一辆轿车从停车场附近经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot7.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场附近走动，一辆轿车和卡车从停车场中间的道路驶过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot8.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆巴士和一些轿车驶入停车场，一个人在停车场内走动"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot9.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场附近走动，一辆轿车从停车场附近道路经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot10.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人关闭停车场内一辆轿车的车门"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot11.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车驶入停车场，一辆自行车在停车场内经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot12.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从停车场经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot13.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场附近走动，一辆电动车从停车场出口驶出，一辆轿车从停车场附近道路经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot14.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车在停车场进出，一辆轿车驶入停车场"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot15.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从停车场内的轿车下车并走出停车场"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot16.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在停车场附近经过，一辆挖掘机在停车场旁的工地工作，一些人从停车场附近走过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot17.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "停车场内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot18.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆车在停车场内行驶"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot19.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车从停车场旁的道路经过，一些人从停车场附近走过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot20.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人走进停车场并登上一辆轿车"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot21.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "停车场内没有异常活动"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot22.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人推着推车走进停车场"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot23.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从停车场经过，一些人从停车场附近走过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot24.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车从停车场经过，一些人从停车场附近走过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot25.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在停车场行驶，一些人走出停车场"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot26.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在停车场附近走动，一些轿车从停车场附近道路经过"
+            }
+        ]
+    },
+    "Normal_Training/parkinglot/parkinglot27.mp4": {
+        "global": {
+            "Caption": "一个场景为停车场的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆卡车从停车场经过，两个人走进停车场并登上一辆轿车，一些车从停车场附近经过"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street1.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street2.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街走动，一辆电动车从步行街驶过"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street3.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street4.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街内走动，一些人站在步行街上交谈"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street5.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在步行街街道旁"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street6.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street7.avi": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street8.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在步行街旁的凳子上，一些人从步行街经过"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street9.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季一些人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street10.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在步行街旁的凳子上，一些人从步行街经过，一些人在街道上玩耍"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street11.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街上走动，一些人站在街道旁聊天，许多人聚集在街道旁的店铺内"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street12.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "冬季一些人在步行街走动"
+            }
+        ]
+    },
+        "Normal_Training/pedestrian street/pedestrian_street13.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street14.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street15.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street16.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从步行街走过"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street17.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街上走动，一个人在街边坐在椅子上，一个人站在街边"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street18.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street19.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街上走动,一些人站在街道中间"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street20.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在步行街上走动，一个人在步行街上遛狗"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street21.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street22.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street23.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street24.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street25.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一群小孩在步行街上玩游戏"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street26.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street27.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从步行街走过"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street28.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从步行街走过，一些人站在街道旁边，一些人在街道旁的台球店打台球"
+            }
+        ]
+    },
+    "Normal_Training/pedestrian street/pedestrian_street29.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人从步行街走过，一些人站在街道旁边，一些人在街道旁的台球店打台球"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant1.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在餐厅内"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant2.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅喝酒聊天"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant3.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在露天餐厅用餐，一些人站在露天餐馆拍照"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant4.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些车从餐厅旁的道路驶过，一些人从餐厅旁的人行道走过"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant5.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在餐厅内走动"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant6.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在餐厅内整理垃圾桶"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant7.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在餐厅吧台内，一个人从餐厅椅子上站起来"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant8.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在餐厅吧台内，一个人坐在餐厅内用餐，一些人在餐厅外的沙滩走动"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant9.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant10.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人坐在餐厅吧台前和吧台的服务员交谈"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant11.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在坐在餐厅内用餐，一些人在餐厅内玩飞镖游戏"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant12.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人坐在餐厅内用餐"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant13.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅，一些人从餐厅附近走过，许多轿车从餐厅旁的道路上驶过"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant14.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内用餐"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant15.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅吧台前用餐，一些人站在吧台附近"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant16.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant17.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内，一个人走到餐厅前点餐"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant18.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内喝酒聊天，一个人在餐厅弹吉他唱歌"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant19.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在餐厅内走动摆放衣物，一个人从餐厅内走出"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant20.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人坐在餐厅内用餐，一些人站在餐厅内站着或走动"
+            }
+        ]
+    },
+    "Normal_Training/restaurant/restaurant21.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人站在餐厅吧台前聊天"
+            }
+        ]
+    },
+    "Normal_Training/road/road1.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车从施工道路旁经过"
+            }
+        ]
+    },
+    "Normal_Training/road/road2.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road3.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一些人从道路上经过"
+            }
+        ]
+    },
+    "Normal_Training/road/road4.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车、轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road5.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road6.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆卡车和面包车从道路上驶过，一个人在道路旁人行道经过"
+            }
+        ]
+    },
+    "Normal_Training/road/road7.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road8.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在道路旁走动，一辆轿车从道路经过"
+            }
+        ]
+    },
+    "Normal_Training/road/road9.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在道路旁的卡车车尾装卸货物，一个人在道路旁走动"
+            }
+        ]
+    },
+    "Normal_Training/road/road10.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road11.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在道路旁走动，一个人骑上电动车到道路中间"
+            }
+        ]
+    },
+    "Normal_Training/road/road12.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road13.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一些人在道路旁的公园走动"
+            }
+        ]
+    },
+    "Normal_Training/road/road14.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road15.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road16.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road17.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆车从道路驶过，一个人在道路上经过"
+            }
+        ]
+    },
+    "Normal_Training/road/road18.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road19.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车和轿车在道路上行驶，一些人在道路旁行走"
+            }
+        ]
+    },
+    "Normal_Training/road/road20.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在道路上行驶，一些人在道路旁行走"
+            }
+        ]
+    },
+    "Normal_Training/road/road21.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road22.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road23.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人从道路上走过"
+            }
+        ]
+    },
+    "Normal_Training/road/road24.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road25.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车、轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road26.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一些人在道路旁行走"
+            }
+        ]
+    },
+    "Normal_Training/road/road27.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和一辆巴士在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road28.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road29.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和一辆巴士在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road30.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在道路旁行走，一辆轿车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road31.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road32.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一个人从道路上经过"
+            }
+        ]
+    },
+    "Normal_Training/road/road33.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶"
+            }
+        ]
+    },
+    "Normal_Training/road/road34.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一些工作人员和一辆挖掘机在道路旁边施工"
+            }
+        ]
+    },
+    "Normal_Training/road/road35.mp4": {
+        "global": {
+            "Caption": "一个场景为道路的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在道路上行驶，一辆飞机从道路旁的飞机场助跑起飞"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop1.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内走动"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop2.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店门口站着或走动，一些三轮车和摩托车从商店门口经过"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop3.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店门口站着或走动，一些三轮车从商店门口经过"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop4.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop5.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop6.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop7.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内用餐，一些人从餐厅内经过"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop8.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人坐在商店内，一些人从商店门口走过"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop9.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop10.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop11.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop12.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop13.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在餐厅内走动"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop14.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop15.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内走动"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop16.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物，店员在为顾客服务"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop17.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop18.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内购物，店员在收银台工作"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop19.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店外走动，一个人走进商店"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop20.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物，"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop21.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop22.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人走出商店，一个人在商店收银台结账"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop23.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在商店内购物"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop24.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在商店内购物，一些人在商店附近走动，一个人坐在商店旁的凳子上玩手机"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop25.mp4": {
+        "global": {
+            "Caption": "一个场景为商店的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个店员坐在前台，两个人站在前台前和店员交谈"
+            }
+        ]
+    },
+    "Normal_Training/shop/shop26.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道旁走过，一个人坐在街道旁摆摊，一些三轮车和轿车从街道经过"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk1.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人和一只狗从街道旁的人行道上走过"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk2.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆轿车和一些摩托车在街道上驶过，一些人站在街道旁"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk3.mp4": {
+        "global": {
+            "Caption": "一个场景为步行街的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在步行街走动"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk4.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人从街道旁的人行道上走过，一些人站在街道旁的店铺前"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk5.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些卡车从人街道驶过，一些人在街道旁的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk6.mp4": {
+        "global": {
+            "Caption": "一个场景为餐厅的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人坐在餐厅内用餐，一些人经过餐厅外，一些人站在餐厅旁的街道上"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk7.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上等待交通或行驶，许多人在街道旁的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk8.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多巴士和轿车在街道上行驶，许多人从街道旁的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk9.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些车辆在街道上行驶，一些人从街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk10.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些车辆在街道上行驶，一些人从街道上上走动"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk11.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些巴士和轿车在街道上行驶，一些人从街道旁的人行道上行走，一些人在街道旁的人行道等待上巴士"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk12.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk13.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些巴士和轿车在街道上行驶，一些人从街道旁的人行道上行走，一些工作人员在街道旁施工"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk14.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些自行车和轿车在街道上行驶，一些人从街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk15.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人聚集在街道旁，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk16.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk17.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些电动车和卡车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk18.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和摩托车在街道上行驶，一些人站在街道旁"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk19.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人在街道上行走或跑步"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk20.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk21.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在夜晚街道上走动"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk22.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多巴士和轿车在街道上行驶，许多人从街道旁的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk23.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多巴士、卡车和轿车在街道上行驶，许多人从街道旁的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk24.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道旁的人行道上行走，一辆摩托车在街道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk25.mp4": {
+        "global": {
+            "Caption": "一个场景为公交车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在公交车站等待，一辆公交车驶入公交车站"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk26.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一个人站在街道旁的店铺前"
+            }
+        ]
+    },
+    "Normal_Training/sidewalk/sidewalk27.mp4": {
+        "global": {
+            "Caption": "一个场景为街道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人从街道旁的人行道上行走，一些人坐在街道旁店铺前的椅子上"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview1.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，许多人站在街道旁等待"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview2.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview3.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和面包车在街道上行驶，一些人在街道上走过"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview4.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview5.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview6.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview7.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多轿车、卡车和巴士在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview8.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和电动车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview9.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview10.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview11.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview12.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview13.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多轿车和卡车在街道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview14.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道旁行走，一些人站在街道旁"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview15.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview16.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview17.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview18.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview19.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多电动车、轿车和卡车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview20.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多轿车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview21.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人在街道旁行走"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview22.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在街道上行驶，一些人站街道旁"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview23.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview24.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在街道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview25.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车、巴士和卡车在街道上行驶，许多人在街道旁等待"
+            }
+        ]
+    },
+    "Normal_Training/street highview/street_highview26.mp4": {
+        "global": {
+            "Caption": "一个场景为街景高处视角的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多轿车和卡车在街道上行驶，一些人在街道上行走"
+            }
+        ]
+    },
+    "Normal_Training/train/train1.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车站经过"
+            }
+        ]
+    },
+    "Normal_Training/train/train2.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆货车缓缓行驶在火车轨道上，一个站在火车上"
+            }
+        ]
+    },
+    "Normal_Training/train/train3.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train4.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train5.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train6.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train7.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train8.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上缓慢行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train9.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在火车站走动，一辆自行车在火车站骑行"
+            }
+        ]
+    },
+    "Normal_Training/train/train10.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车和卡车在火车轨道上穿行"
+            }
+        ]
+    },
+    "Normal_Training/train/train11.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train12.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车站出发，一些人在火车站上走动或坐着"
+            }
+        ]
+    },
+    "Normal_Training/train/train13.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些火车在火车站进出，一个人站在火车站等待"
+            }
+        ]
+    },
+    "Normal_Training/train/train14.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车驶入火车站，一些人在火车站走动"
+            }
+        ]
+    },
+    "Normal_Training/train/train15.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train16.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在火车站内等待"
+            }
+        ]
+    },
+    "Normal_Training/train/train17.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车驶入火车站并停靠，一些人在火车站等待"
+            }
+        ]
+    },
+    "Normal_Training/train/train18.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车驶入火车站并停靠，一些人在火车站等待"
+            }
+        ]
+    },
+    "Normal_Training/train/train19.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人站在火车站等待"
+            }
+        ]
+    },
+    "Normal_Training/train/train20.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上缓慢行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train21.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车在火车轨道上缓慢行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train22.mp4": {
+        "global": {
+            "Caption": "一个场景为火车站的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一辆火车从火车站经过"
+            }
+        ]
+    },
+    "Normal_Training/train/train23.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些轿车在火车轨道上穿行，一个工作人员站在火车轨道旁管理交通，一些人在火车轨道旁的人行道上行走"
+            }
+        ]
+    },
+    "Normal_Training/train/train24.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些火车在火车轨道上行驶"
+            }
+        ]
+    },
+    "Normal_Training/train/train25.mp4": {
+        "global": {
+            "Caption": "一个场景为火车轨道的正常视频"
+        },
+        "region": [
+            {
+                "caption": "火车轨道没有异常活动"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse1.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse2.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内分拣货物"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse3.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse4.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse5.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse6.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人坐在快递仓库的前台"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse7.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人坐在快递仓库前台，一些人在快递仓库内找快递"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse8.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse9.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库搬运货物"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse10.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse11.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse12.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内走动"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse13.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内分拣货物"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse14.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse15.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "许多人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse16.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内走动"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse17.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse18.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人走出仓库"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse19.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "两个人在仓库内工作和讨论"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse20.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse21.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一个人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse22.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "一些人在仓库内工作"
+            }
+        ]
+    },
+    "Normal_Training/warehouse/warehouse23.mp4": {
+        "global": {
+            "Caption": "一个场景为仓库的正常视频"
+        },
+        "region": [
+            {
+                "caption": "仓库没有异常活动"
+            }
+        ]
+    }
+}

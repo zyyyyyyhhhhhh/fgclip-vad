@@ -745,9 +745,18 @@ class LazySupervisedBboxDataset(Dataset):
                     region_video = torch.stack(region_frame_tensors, dim=0)  # (region_num_frames, C, H, W)
                     region_videos_list.append(region_video)
                 else:
-                    # 单个 keyframe 或没有 keyframes：使用零填充
-                    region_videos_list.append(torch.zeros((region_num_frames, 3, self.base_image_size, self.base_image_size), 
-                                                          device=video_tensor.device))
+                    # 正常视频或缺少关键帧：使用全局视频作为有效ROI
+                    total_frames = video_tensor.shape[0]
+                    if total_frames >= region_num_frames:
+                        sample_indices = torch.linspace(
+                            0, total_frames - 1, region_num_frames, device=video_tensor.device
+                        ).long()
+                        region_video = video_tensor.index_select(0, sample_indices).clone()
+                    else:
+                        pad_count = region_num_frames - total_frames
+                        pad_frames = video_tensor[-1:].repeat(pad_count, 1, 1, 1)
+                        region_video = torch.cat([video_tensor, pad_frames], dim=0).clone()
+                    region_videos_list.append(region_video)
             
             # 填充到 max_anns
             while len(region_videos_list) < self.max_anns:
