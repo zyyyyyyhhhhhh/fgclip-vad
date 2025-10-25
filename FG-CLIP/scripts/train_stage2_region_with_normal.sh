@@ -1,0 +1,119 @@
+#!/bin/bash
+
+# ============================================
+# FG-CLIP Stage 2 (Region + Normal ROI) training
+# ============================================
+
+export CUDA_VISIBLE_DEVICES=1
+export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+# 输入输出
+STAGE1_DIR="./checkpoints/fgclip_stage1_global"
+DATA_PATH="/data/zyy/dataset/UCF_Crimes_Videos/ucf_fgclip_with_v3_msad.json"
+IMAGE_FOLDER="/data/zyy/dataset"
+OUTPUT_DIR="./checkpoints/fgclip_stage2_region_with_normal"
+
+# 训练超参
+NUM_FRAMES=256
+BATCH_SIZE=2
+GRAD_ACCUM=16
+EPOCHS=5
+LEARNING_RATE=2e-6
+TEXT_LR=1e-6
+WARMUP_RATIO=0.1
+MAX_GRAD_NORM=1.0
+SAVE_STEPS=100
+SAVE_TOTAL_LIMIT=2
+LOGGING_STEPS=10
+NUM_WORKERS=1
+GRAD_CHECKPOINT=True
+AUTO_RESUME=False
+
+# LoRA 设置
+USE_LORA=true
+LORA_R=8
+LORA_ALPHA=16
+LORA_DROPOUT=0.05
+LORA_BIAS="none"
+LORA_WEIGHT_PATH=""
+
+echo "========================================"
+echo "🚀 Stage 2 Region + Normal ROI training (CUDA device 1)"
+echo "========================================"
+
+if [ ! -d "${STAGE1_DIR}" ]; then
+    echo "❌ Stage1 checkpoint 未找到: ${STAGE1_DIR}"
+    exit 1
+fi
+
+rm -rf ${OUTPUT_DIR}
+mkdir -p ${OUTPUT_DIR}
+python3 -c "import torch; torch.cuda.empty_cache(); print('✅ GPU 缓存已清理')"
+
+LORA_ARGS="--lora_enable ${USE_LORA}"
+if [ "${USE_LORA}" = true ]; then
+    LORA_ARGS="${LORA_ARGS} --lora_r ${LORA_R} --lora_alpha ${LORA_ALPHA} --lora_dropout ${LORA_DROPOUT} --lora_bias ${LORA_BIAS}"
+    if [ -n "${LORA_WEIGHT_PATH}" ]; then
+        LORA_ARGS="${LORA_ARGS} --lora_weight_path ${LORA_WEIGHT_PATH}"
+    else
+        LORA_ARGS="${LORA_ARGS} --lora_weight_path ${STAGE1_DIR}"
+    fi
+fi
+
+START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+echo "⏰ 训练开始时间: ${START_TIME}" | tee ${OUTPUT_DIR}/training_start.log
+
+python3 fgclip/train/train_fgclip_region_normal.py \
+    --model_name_or_path ${STAGE1_DIR} \
+    --base_model fgclip-weight \
+    --data_path ${DATA_PATH} \
+    --image_folder ${IMAGE_FOLDER} \
+    --output_dir ${OUTPUT_DIR} \
+    --overwrite_output_dir True \
+    --is_video True \
+    --num_frames ${NUM_FRAMES} \
+    --is_multimodal True \
+    --add_box_loss True \
+    --disable_global_loss True \
+    --use_hard_neg False \
+    --from_openai False \
+    --bf16 True \
+    --num_train_epochs ${EPOCHS} \
+    --per_device_train_batch_size ${BATCH_SIZE} \
+    --gradient_accumulation_steps ${GRAD_ACCUM} \
+    --evaluation_strategy "no" \
+    --save_strategy "steps" \
+    --save_steps ${SAVE_STEPS} \
+    --save_total_limit ${SAVE_TOTAL_LIMIT} \
+    --learning_rate ${LEARNING_RATE} \
+    --text_model_lr ${TEXT_LR} \
+    --max_grad_norm ${MAX_GRAD_NORM} \
+    --weight_decay 0.01 \
+    --warmup_ratio ${WARMUP_RATIO} \
+    --lr_scheduler_type "cosine" \
+    --logging_steps ${LOGGING_STEPS} \
+    --tf32 True \
+    --gradient_checkpointing ${GRAD_CHECKPOINT} \
+    --dataloader_num_workers ${NUM_WORKERS} \
+    --auto_resume ${AUTO_RESUME} \
+    --report_to tensorboard \
+    --seed 42 \
+    ${LORA_ARGS}
+
+TRAIN_EXIT_CODE=$?
+END_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+
+echo ""
+echo "========================================"
+if [ ${TRAIN_EXIT_CODE} -eq 0 ]; then
+    echo "✅ Stage 2 Region + Normal ROI 训练完成"
+else
+    echo "❌ Stage 2 Region + Normal ROI 异常退出 (Exit Code: ${TRAIN_EXIT_CODE})"
+fi
+echo "⏰ 开始: ${START_TIME}"
+echo "⏰ 结束: ${END_TIME}"
+echo "📂 输出目录: ${OUTPUT_DIR}"
+echo "========================================"
+
+exit ${TRAIN_EXIT_CODE}
