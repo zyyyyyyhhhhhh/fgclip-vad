@@ -13,7 +13,7 @@ import random
 import glob
 import transformers
 
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, Sampler
 from fgclip.train.clean_clip_trainer import CLIPTrainer
 
 
@@ -84,6 +84,37 @@ def parse_runtime_diag_env():
         return True, max(1, iv)
     except Exception:
         return True, 1
+
+class InterleavedNormalAbnormalSampler(Sampler):
+    """
+    交替返回正常/异常样本索引，确保每个batch内包含各一条
+    """
+    def __init__(self, dataset, shuffle: bool = True):
+        if not hasattr(dataset, "normal_indices") or not hasattr(dataset, "abnormal_indices"):
+            raise ValueError("Dataset must provide normal_indices and abnormal_indices for balanced sampling.")
+        if len(dataset.normal_indices) == 0 or len(dataset.abnormal_indices) == 0:
+            raise ValueError("Balanced sampling requires both normal and abnormal samples.")
+        self.dataset = dataset
+        self.shuffle = shuffle
+
+    def __iter__(self):
+        normals = self.dataset.normal_indices.copy()
+        abnormals = self.dataset.abnormal_indices.copy()
+
+        if self.shuffle:
+            random.shuffle(normals)
+            random.shuffle(abnormals)
+
+        max_len = max(len(normals), len(abnormals))
+        for i in range(max_len):
+            n_idx = normals[i % len(normals)]
+            a_idx = abnormals[i % len(abnormals)]
+            # 固定顺序：先正常后异常，便于 DataLoader batch_size=2 时直接成对
+            yield n_idx
+            yield a_idx
+
+    def __len__(self):
+        return 2 * max(len(self.dataset.normal_indices), len(self.dataset.abnormal_indices))
 
 
 # ============ 视频处理工具函数 ============
@@ -468,6 +499,12 @@ class LazySupervisedBboxDataset(Dataset):
         # 视频相关属性
         self.is_video = data_args.is_video
         self.num_frames = data_args.num_frames if self.is_video else 1
+
+        # 缓存正常/异常样本索引用于平衡采样
+        self.normal_indices = [idx for idx, item in enumerate(self.list_data_dict) if not item["is_abnormal"]]
+        self.abnormal_indices = [idx for idx, item in enumerate(self.list_data_dict) if item["is_abnormal"]]
+        if len(self.normal_indices) == 0 or len(self.abnormal_indices) == 0:
+            rank0_print("⚠️ Balanced sampling requires both normal and abnormal videos. Current dataset may be imbalanced.")
     
     def _convert_dict_to_list(self, data_dict: dict) -> list:
         """
@@ -754,8 +791,8 @@ class LazySupervisedBboxDataset(Dataset):
                         region_video = video_tensor.index_select(0, sample_indices).clone()
                     else:
                         pad_count = region_num_frames - total_frames
-                        pad_frames = video_tensor[-1:].repeat(pad_count, 1, 1, 1)
-                        region_video = torch.cat([video_tensor, pad_frames], dim=0).clone()
+                        padding_frames = video_tensor[-1:].repeat(pad_count, 1, 1, 1)
+                        region_video = torch.cat([video_tensor, padding_frames], dim=0).clone()
                     region_videos_list.append(region_video)
             
             # 填充到 max_anns
@@ -861,6 +898,11 @@ class LazySupervisedBboxDataset(Dataset):
 
             box_texts = torch.cat(box_texts, dim=0)
             bbox_num = torch.tensor([valid_num], device=video_tensor.device)
+            region_labels_tensor = torch.full((total_num,), -1, dtype=torch.long, device=video_tensor.device)
+            for i in range(valid_num):
+                region_item = region_data[i]
+                has_keyframe = bool(region_item.get('keyframes'))
+                region_labels_tensor[i] = 1 if has_keyframe else 0
                     
         if self.use_hard_neg:
             # ========== Hard Negative生成 ==========
@@ -931,6 +973,7 @@ class LazySupervisedBboxDataset(Dataset):
             data_dict['bbox_mask'] = bbox_mask  # ✅ 新增：bbox有效性mask (T, max_anns)
             data_dict['box_nums'] = bbox_num
             data_dict['region_videos'] = region_videos  # ✅ 新增：region独立采样的视频 (max_anns, T, C, H, W)
+            data_dict['region_labels'] = region_labels_tensor
         if self.use_hard_neg:
             data_dict['hard_texts'] = hard_texts
             data_dict['hard_infos'] = hard_boxes
@@ -1001,6 +1044,8 @@ class DataCollatorForSupervisedDataset(object):
                 batch['region_videos'] = torch.stack(region_videos_list, dim=0)  # (B, max_anns, T, C, H, W)
             else:
                 batch['region_videos'] = None
+            region_labels = [instance['region_labels'] for instance in instances]
+            batch['region_labels'] = torch.stack(region_labels, dim=0)
         if batch["use_hard_neg"] :
             hard_texts = []
             for instance in instances:
@@ -1028,6 +1073,16 @@ def make_supervised_data_module(data_args,img_preprocess,tokenizer) -> Dict:
                 eval_dataset=None,
                 data_collator=data_collator)
 
+class RegionNormalCLIPTrainer(CLIPTrainer):
+    def _get_train_sampler(self) -> Optional[torch.utils.data.Sampler]:
+        if self.train_dataset is None:
+            return None
+        if isinstance(self.train_dataset, LazySupervisedBboxDataset):
+            try:
+                return InterleavedNormalAbnormalSampler(self.train_dataset, shuffle=True)
+            except ValueError as exc:
+                rank0_print(f"[Sampler] {exc}，fallback到默认随机采样")
+        return super()._get_train_sampler()
 
 def train():
     global local_rank
@@ -1226,7 +1281,7 @@ def train():
     # NOTE Set up for two front-passes
     training_args.gradient_checkpointing_kwargs = {"use_reentrant":False}
 
-    trainer = CLIPTrainer(model=model,
+    trainer = RegionNormalCLIPTrainer(model=model,
                         args=training_args,
                         **data_module)
 

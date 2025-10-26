@@ -13,7 +13,7 @@ import random
 import glob
 import transformers
 
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, Sampler
 from fgclip.train.clean_clip_trainer import CLIPTrainer
 
 
@@ -40,6 +40,7 @@ from io import BytesIO
 import base64
 from torch.utils.data import  IterableDataset
 import random
+import math
 
 from fgclip.model.clip_strc.fgclip import FGCLIPModel
 
@@ -84,6 +85,60 @@ def parse_runtime_diag_env():
         return True, max(1, iv)
     except Exception:
         return True, 1
+
+
+class BalancedNormalAbnormalSampler(Sampler):
+    """
+    保证每个mini-batch中normal/abnormal数量一致的采样器。
+    """
+    def __init__(self, dataset, batch_size: int, shuffle: bool = True):
+        if batch_size % 2 != 0:
+            raise ValueError("BalancedNormalAbnormalSampler requires an even per-device batch size.")
+        if not hasattr(dataset, "normal_indices") or not hasattr(dataset, "abnormal_indices"):
+            raise ValueError("Dataset must expose normal_indices and abnormal_indices for balanced sampling.")
+        if len(dataset.normal_indices) == 0 or len(dataset.abnormal_indices) == 0:
+            raise ValueError("Balanced sampling needs both normal and abnormal samples.")
+        self.dataset = dataset
+        self.batch_size = batch_size
+        self.shuffle = shuffle
+        self.half = max(1, batch_size // 2)
+
+    def __iter__(self):
+        normals = self.dataset.normal_indices.copy()
+        abnormals = self.dataset.abnormal_indices.copy()
+        if self.shuffle:
+            random.shuffle(normals)
+            random.shuffle(abnormals)
+
+        num_batches = math.ceil(max(len(normals), len(abnormals)) / self.half)
+        norm_idx = 0
+        abn_idx = 0
+        for _ in range(num_batches):
+            for _ in range(self.half):
+                yield normals[norm_idx % len(normals)]
+                norm_idx += 1
+            for _ in range(self.half):
+                yield abnormals[abn_idx % len(abnormals)]
+                abn_idx += 1
+
+    def __len__(self):
+        num_batches = math.ceil(max(len(self.dataset.normal_indices), len(self.dataset.abnormal_indices)) / self.half)
+        return num_batches * self.batch_size
+
+
+class BalancedCLIPTrainer(CLIPTrainer):
+    def _get_train_sampler(self) -> Optional[torch.utils.data.Sampler]:
+        if self.train_dataset is None:
+            return None
+        try:
+            return BalancedNormalAbnormalSampler(
+                self.train_dataset,
+                batch_size=self.args.per_device_train_batch_size,
+                shuffle=True,
+            )
+        except ValueError as exc:
+            rank0_print(f"[Sampler] {exc}，fallback到默认随机采样")
+            return super()._get_train_sampler()
 
 
 # ============ 视频处理工具函数 ============
@@ -468,6 +523,12 @@ class LazySupervisedBboxDataset(Dataset):
         # 视频相关属性
         self.is_video = data_args.is_video
         self.num_frames = data_args.num_frames if self.is_video else 1
+
+        # 缓存正常/异常样本索引用于平衡采样
+        self.normal_indices = [idx for idx, item in enumerate(self.list_data_dict) if not item["is_abnormal"]]
+        self.abnormal_indices = [idx for idx, item in enumerate(self.list_data_dict) if item["is_abnormal"]]
+        if len(self.normal_indices) == 0 or len(self.abnormal_indices) == 0:
+            rank0_print("⚠️ Balanced sampling requires both normal and abnormal videos. Current dataset may be imbalanced.")
     
     def _convert_dict_to_list(self, data_dict: dict) -> list:
         """
@@ -1030,6 +1091,8 @@ def train():
 
     assert training_args.fp16 == False
     # NOTE Use HF-Transformers to train FG-CLIP no support FP16, the loss will be NAN
+    if training_args.per_device_train_batch_size % 2 != 0:
+        raise ValueError("Stage1 balanced training要求 per_device_train_batch_size 为偶数，以确保正负样本数量相同。")
 
     compute_dtype = (torch.float16 if training_args.fp16 else (torch.bfloat16 if training_args.bf16 else torch.float32))
 
@@ -1217,7 +1280,7 @@ def train():
     # NOTE Set up for two front-passes
     training_args.gradient_checkpointing_kwargs = {"use_reentrant":False}
 
-    trainer = CLIPTrainer(model=model,
+    trainer = BalancedCLIPTrainer(model=model,
                         args=training_args,
                         **data_module)
 

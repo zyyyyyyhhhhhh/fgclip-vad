@@ -75,7 +75,7 @@ python3 fgclip/train/train_fgclip_region_normal.py \
     --num_frames ${NUM_FRAMES} \
     --is_multimodal True \
     --add_box_loss True \
-    --disable_global_loss True \
+    --disable_global_loss False \
     --use_hard_neg False \
     --from_openai False \
     --bf16 True \

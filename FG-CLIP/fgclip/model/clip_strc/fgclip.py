@@ -132,21 +132,30 @@ class FGCLIPModel(CLIPModel):
         # 原因：随机初始化的roi_projection需要先学习基础对齐，否则队列中的特征都是噪声
         # ✅ 策略：前50步禁用MB，等Region loss初步收敛后自动启用
         self.use_memory_bank = False  # 初始禁用，等step 50后自动启用
-        self.memory_bank_size = 128  # 每个模态存储128个历史样本（负样本数量从N增加到N+128）
+        self.memory_bank_size = 128  # 总容量
+        if self.memory_bank_size % 2 != 0:
+            raise ValueError("memory_bank_size must be even to split normal/abnormal queues.")
+        self.memory_bank_per_class = self.memory_bank_size // 2
         self.memory_bank_warmup_steps = 50  # ✅ 修复: 50次forward调用 ≈ 6个Trainer step (gradient_accumulation=8)
         
         # 注册为buffer（不参与梯度更新，但会被保存到checkpoint）
-        self.register_buffer("region_image_queue", torch.randn(self.projection_dim, self.memory_bank_size))
-        self.register_buffer("region_text_queue", torch.randn(self.projection_dim, self.memory_bank_size))
-        self.register_buffer("queue_ptr", torch.zeros(1, dtype=torch.long))
+        self.register_buffer("region_image_queue_normal", torch.randn(self.projection_dim, self.memory_bank_per_class))
+        self.register_buffer("region_text_queue_normal", torch.randn(self.projection_dim, self.memory_bank_per_class))
+        self.register_buffer("queue_ptr_normal", torch.zeros(1, dtype=torch.long))
+        self.register_buffer("queue_is_full_normal", torch.zeros(1, dtype=torch.bool))
+
+        self.register_buffer("region_image_queue_abnormal", torch.randn(self.projection_dim, self.memory_bank_per_class))
+        self.register_buffer("region_text_queue_abnormal", torch.randn(self.projection_dim, self.memory_bank_per_class))
+        self.register_buffer("queue_ptr_abnormal", torch.zeros(1, dtype=torch.long))
+        self.register_buffer("queue_is_full_abnormal", torch.zeros(1, dtype=torch.bool))
+
         self.register_buffer("training_steps", torch.zeros(1, dtype=torch.long))  # 训练步数计数器
         
         # 初始化队列：归一化到单位向量
-        self.region_image_queue = F.normalize(self.region_image_queue, dim=0)
-        self.region_text_queue = F.normalize(self.region_text_queue, dim=0)
-        
-        # 标志位：训练初期队列未填满时使用
-        self.register_buffer("queue_is_full", torch.zeros(1, dtype=torch.bool))
+        self.region_image_queue_normal = F.normalize(self.region_image_queue_normal, dim=0)
+        self.region_text_queue_normal = F.normalize(self.region_text_queue_normal, dim=0)
+        self.region_image_queue_abnormal = F.normalize(self.region_image_queue_abnormal, dim=0)
+        self.region_text_queue_abnormal = F.normalize(self.region_text_queue_abnormal, dim=0)
 
         # Initialize weights and apply final processing
         self.post_init()
@@ -493,56 +502,78 @@ class FGCLIPModel(CLIPModel):
         return denormed_boxes
 
     @torch.no_grad()
-    def _update_memory_bank(self, image_feats, text_feats):
+    def _update_memory_bank(self, image_feats, text_feats, labels):
         """
-        更新Memory Bank (FIFO队列)
-        
+        更新Memory Bank (按normal/abnormal拆分的FIFO队列)
         Args:
-            image_feats: (N, D) 当前batch的region image特征
-            text_feats: (N, D) 当前batch的region text特征
-        
-        注意:
-            - 使用@torch.no_grad()确保不计算梯度
-            - FIFO策略：新样本替换最老的样本
-            - 队列未满时，queue_is_full=False
+            image_feats: (N, D)
+            text_feats:  (N, D)
+            labels:      (N,) 0=normal, 1=abnormal，其它值将被忽略
         """
+        if image_feats.numel() == 0:
+            return
+
+        normal_mask = labels == 0
+        abnormal_mask = labels == 1
+
+        if normal_mask.any():
+            self._update_single_queue(
+                queue_type="normal",
+                image_feats=image_feats[normal_mask],
+                text_feats=text_feats[normal_mask],
+            )
+
+        if abnormal_mask.any():
+            self._update_single_queue(
+                queue_type="abnormal",
+                image_feats=image_feats[abnormal_mask],
+                text_feats=text_feats[abnormal_mask],
+            )
+
+    @torch.no_grad()
+    def _update_single_queue(self, queue_type: str, image_feats: torch.Tensor, text_feats: torch.Tensor):
+        if image_feats.numel() == 0:
+            return
+
+        image_feats = image_feats.to(dtype=self.region_image_queue_normal.dtype)
+        text_feats = text_feats.to(dtype=self.region_text_queue_normal.dtype)
+
+        image_queue = getattr(self, f"region_image_queue_{queue_type}")
+        text_queue = getattr(self, f"region_text_queue_{queue_type}")
+        ptr_buf = getattr(self, f"queue_ptr_{queue_type}")
+        full_buf = getattr(self, f"queue_is_full_{queue_type}")
+
+        capacity = self.memory_bank_per_class
         batch_size = image_feats.shape[0]
-        
-        # 当前队列指针位置
-        ptr = int(self.queue_ptr)
-        
-        # 检查是否会超出队列容量
-        if ptr + batch_size <= self.memory_bank_size:
-            # 情况1: 队列有足够空间，直接写入
-            self.region_image_queue[:, ptr:ptr + batch_size] = image_feats.T
-            self.region_text_queue[:, ptr:ptr + batch_size] = text_feats.T
+        ptr = int(ptr_buf.item())
+
+        if batch_size > capacity:
+            # 若一次写入超过容量，仅保留最新的capacity个样本
+            image_feats = image_feats[-capacity:]
+            text_feats = text_feats[-capacity:]
+            batch_size = capacity
+
+        end_ptr = ptr + batch_size
+        if end_ptr <= capacity:
+            image_queue[:, ptr:end_ptr] = image_feats.T
+            text_queue[:, ptr:end_ptr] = text_feats.T
         else:
-            # 情况2: 队列空间不足，需要循环写入（wrap around）
-            # 先填充队列末尾剩余空间
-            remain_space = self.memory_bank_size - ptr
-            self.region_image_queue[:, ptr:] = image_feats[:remain_space].T
-            self.region_text_queue[:, ptr:] = text_feats[:remain_space].T
-            
-            # 再从队列开头写入剩余样本
-            overflow_size = batch_size - remain_space
-            self.region_image_queue[:, :overflow_size] = image_feats[remain_space:].T
-            self.region_text_queue[:, :overflow_size] = text_feats[remain_space:].T
-        
-        # 更新队列指针（循环）
-        old_ptr = ptr  # 保存旧指针用于日志
-        ptr = (ptr + batch_size) % self.memory_bank_size
-        self.queue_ptr[0] = ptr
-        
-        # 标记队列已满（至少完整循环一次）
-        was_full = self.queue_is_full.item()  # 保存之前的状态
-        if not self.queue_is_full and ptr < batch_size:
-            self.queue_is_full[0] = True
-            print(f"[MEMORY BANK] 🎉 队列首次填满！Ptr: {old_ptr}→{ptr}, 负样本数量: {batch_size}→128")
-        
-        # 周期性日志：显示队列填充进度
-        if not was_full and old_ptr % 32 == 0:  # 训练初期每32个样本打印一次
-            fill_ratio = (old_ptr / self.memory_bank_size) * 100
-            print(f"[MEMORY BANK] 📊 积累中... Ptr: {old_ptr}/{self.memory_bank_size} ({fill_ratio:.1f}%), 当前负样本: {old_ptr}")
+            remain = capacity - ptr
+            image_queue[:, ptr:] = image_feats[:remain].T
+            text_queue[:, ptr:] = text_feats[:remain].T
+            overflow = batch_size - remain
+            image_queue[:, :overflow] = image_feats[remain:].T
+            text_queue[:, :overflow] = text_feats[remain:].T
+
+        new_ptr = (ptr + batch_size) % capacity
+        ptr_buf[0] = new_ptr
+
+        if not full_buf.item() and new_ptr < batch_size:
+            full_buf[0] = True
+            if queue_type == "normal":
+                print(f"[MEMORY BANK][Normal] 队列已填满，容量={capacity}")
+            else:
+                print(f"[MEMORY BANK][Abnormal] 队列已填满，容量={capacity}")
 
     def forward_without_attn(self, x):
         # get last layer 
@@ -606,6 +637,7 @@ class FGCLIPModel(CLIPModel):
         bbox_mask: Optional[torch.BoolTensor] = None,  # ✅ 新增：bbox有效性mask (B, T, max_anns)
         box_texts: Optional[torch.LongTensor] = None,
         box_nums: Optional[torch.LongTensor] = None,
+        region_labels: Optional[torch.LongTensor] = None,
         hard_infos: Optional[torch.FloatTensor] = None,
         hard_texts: Optional[torch.LongTensor] = None,
         hard_nums: Optional[torch.LongTensor] = None,
@@ -985,12 +1017,21 @@ class FGCLIPModel(CLIPModel):
             # flatten并选取非零索引
             box_weight = box_weight.reshape(1, bbox_text_embeds.shape[0]).squeeze()
             select_index = box_weight.nonzero()
+
+            region_labels_flat = None
+            if region_labels is not None:
+                region_labels_flat = region_labels.view(-1)
             
             # ✅ 修复：安全的squeeze，避免单样本维度塌陷
             if select_index.numel() > 0:
                 valid_count = select_index.shape[0]
                 bbox_text_embeds = bbox_text_embeds[select_index, :].view(valid_count, -1)
                 bbox_image_embeds = bbox_image_embeds[select_index, :].view(valid_count, -1)
+
+                if region_labels_flat is not None:
+                    selected_labels = region_labels_flat[select_index.view(-1)]
+                else:
+                    selected_labels = torch.zeros(valid_count, dtype=torch.long, device=bbox_image_embeds.device)
                 
                 # ========== Region对比学习 with Memory Bank ==========
                 # 目标：将负样本数量从batch内的N个扩展到N+128个（Memory Bank）
@@ -1002,21 +1043,14 @@ class FGCLIPModel(CLIPModel):
                 if self.use_memory_bank:
                     # ✅ 动态Queue策略：训练初期只用batch内对比，队列填满后再使用Memory Bank
                     # 理论依据：MoCo v2论文Algorithm 1第7-8行
-                    
-                    # Step 1: 计算当前有效队列大小
-                    if self.queue_is_full:
-                        # 队列已满：使用全部128个样本
-                        effective_queue_size = self.memory_bank_size
-                    else:
-                        # 队列未满：只使用已填充的部分（queue_ptr指向下一个空位）
-                        effective_queue_size = int(self.queue_ptr)
-                    
+                    queue_image, queue_text, effective_queue_size = self._collect_memory_bank()
+                    if queue_image is not None:
+                        queue_image = queue_image.detach().clone()
+                        queue_text = queue_text.detach().clone()
+
                     # Step 2: 根据队列状态选择对比策略
-                    if effective_queue_size > 0:
+                    if queue_image is not None and effective_queue_size > 0:
                         # 有历史样本：使用Memory Bank增强对比学习
-                        queue_image = self.region_image_queue[:, :effective_queue_size].detach().clone()  # (D, K)
-                        queue_text = self.region_text_queue[:, :effective_queue_size].detach().clone()    # (D, K)
-                        
                         # ✅ 质量监控：检测队列样本的范数分布
                         with torch.no_grad():
                             queue_img_norms = queue_image.norm(p=2, dim=0)  # (K,)
@@ -1033,7 +1067,7 @@ class FGCLIPModel(CLIPModel):
                                 print(f"⚠️  [MB Quality] Queue样本范数偏低：Queue={queue_norm_mean:.4f} vs Curr={curr_norm_mean:.4f} (ratio={norm_ratio:.2f})")
                         
                         # 训练监控：显示Memory Bank状态（训练初期）
-                        if not self.queue_is_full and effective_queue_size % 32 == 0:
+                        if effective_queue_size % 32 == 0:
                             print(f"[MB-FORWARD] 使用{effective_queue_size}个历史负样本 | Batch内: {valid_count} | 总负样本: {valid_count + effective_queue_size}")
                         
                         # 拼接batch + queue作为负样本
@@ -1061,7 +1095,8 @@ class FGCLIPModel(CLIPModel):
                         # clone()确保特征副本不会反向传播
                         self._update_memory_bank(
                             bbox_image_embeds.detach().clone(), 
-                            bbox_text_embeds.detach().clone()
+                            bbox_text_embeds.detach().clone(),
+                            selected_labels.detach().clone()
                         )
                 else:
                     # Fallback: 只使用batch内对比（原始实现）
@@ -1112,10 +1147,6 @@ class FGCLIPModel(CLIPModel):
                             txt_stats = stats(txt_norms)
                             logits_stats = stats(logits)
 
-                            mb_ptr = int(self.queue_ptr.item()) if hasattr(self, 'queue_ptr') else None
-                            mb_full = bool(self.queue_is_full.item()) if hasattr(self, 'queue_is_full') else None
-                            mb_size = int(self.memory_bank_size) if hasattr(self, 'memory_bank_size') else None
-
                             print("[DIAG] Region batch diagnostics:")
                             print(f"  - valid_count={valid_count} | bbox_batch_size={bbox_text_embeds.shape[0]}")
                             print(f"  - img_norms: min={img_stats['min']:.4f}, max={img_stats['max']:.4f}, mean={img_stats['mean']:.4f}, std={img_stats['std']:.4f}, has_nan={img_stats['has_nan']}")
@@ -1123,7 +1154,12 @@ class FGCLIPModel(CLIPModel):
                             if logits_stats['min'] is not None:
                                 print(f"  - logits_i2t: min={logits_stats['min']:.4f}, max={logits_stats['max']:.4f}, mean={logits_stats['mean']:.4f}, std={logits_stats['std']:.4f}, has_nan={logits_stats['has_nan']}")
                             print(f"  - logit_scale (finegrained): {self.logit_scale_finegraind.item():.6f} (exp={self.logit_scale_finegraind.exp().item():.4f})")
-                            print(f"  - memory_bank: ptr={mb_ptr}, full={mb_full}, size={mb_size}")
+                            norm_ptr = int(self.queue_ptr_normal.item()) if hasattr(self, 'queue_ptr_normal') else None
+                            abn_ptr = int(self.queue_ptr_abnormal.item()) if hasattr(self, 'queue_ptr_abnormal') else None
+                            norm_full = bool(self.queue_is_full_normal.item()) if hasattr(self, 'queue_is_full_normal') else None
+                            abn_full = bool(self.queue_is_full_abnormal.item()) if hasattr(self, 'queue_is_full_abnormal') else None
+                            print(f"  - memory_bank(normal): ptr={norm_ptr}, full={norm_full}, capacity={self.memory_bank_per_class}")
+                            print(f"  - memory_bank(abnormal): ptr={abn_ptr}, full={abn_full}, capacity={self.memory_bank_per_class}")
                             # 检查NaN/Inf
                             any_nan = torch.isnan(bbox_image_embeds).any().item() or torch.isnan(bbox_text_embeds).any().item()
                             any_inf = torch.isinf(bbox_image_embeds).any().item() or torch.isinf(bbox_text_embeds).any().item()
@@ -1316,3 +1352,23 @@ class FGCLIPModel(CLIPModel):
         predict = logit_scale.exp() * torch.einsum('bp,bdp->bd', image_features_long, text_features_long)
         loss = F.cross_entropy(predict, labels)
         return loss
+    def _collect_memory_bank(self):
+        chunks_img = []
+        chunks_txt = []
+        sizes = []
+        for queue_type in ("normal", "abnormal"):
+            image_queue = getattr(self, f"region_image_queue_{queue_type}")
+            text_queue = getattr(self, f"region_text_queue_{queue_type}")
+            ptr = int(getattr(self, f"queue_ptr_{queue_type}").item())
+            is_full = bool(getattr(self, f"queue_is_full_{queue_type}").item())
+            size = self.memory_bank_per_class if is_full else ptr
+            if size > 0:
+                chunks_img.append(image_queue[:, :size])
+                chunks_txt.append(text_queue[:, :size])
+                sizes.append(size)
+        if not chunks_img:
+            return None, None, 0
+        image_cat = torch.cat(chunks_img, dim=1)
+        text_cat = torch.cat(chunks_txt, dim=1)
+        total = sum(sizes)
+        return image_cat, text_cat, total
